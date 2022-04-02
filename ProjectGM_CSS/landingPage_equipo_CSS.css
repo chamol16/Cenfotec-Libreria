@@ -1,7 +1,3 @@
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
 /*nav*/
 .nav{
     display: flex;
@@ -10,7 +6,6 @@ body{
     height: 100px;
     width: 100%;
     background: brown;
-
 }
 
 .nav > .brand-container{
