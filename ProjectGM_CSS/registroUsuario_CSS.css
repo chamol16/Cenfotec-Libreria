@@ -9,7 +9,7 @@
 }
 
 .nav > .brand-container{
-    width: 30%;
+    width: 50%;
     text-align: left;
     margin-left: 50px;
 }
@@ -20,20 +20,11 @@
    font-weight: bold;
 }
 
-.searching-bar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loop{
-    color: #fff;
-}
-
 .ul{
     display: flex;
     justify-content: space-evenly;
-    width: 70%;
+    width: 50%;
+    color: #fff;
 }
 
 .ul > li > a{
@@ -41,18 +32,6 @@
     color: #fff;
 }
 
-
-
-
-
-
-
-
-/*footer*/
-.footer{
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-   /*  bottom: 0;
-    position: fixed; */
+.ul > li > a:hover{
+    text-decoration: underline;
 }
