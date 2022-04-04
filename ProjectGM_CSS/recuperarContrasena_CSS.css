@@ -56,38 +56,72 @@ body{
 .recover-password-section{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    height: 700px;
+    height: 100%;
     width: 100%;
 }
+
+/*paragraph*/
+.recover-password-section > p{
+    margin: 50px;
+}
+  
+/*send-code*/
+.send-code-form{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-send-code{
+    background: #EB5E28;
+    color: #FFFCF2;
+    cursor: pointer;
+    width:130px;
+    height: 30px;
+    align-self: center;
+}
+
+/*received and change password*/
 
 .form{
     color: #252422;
     height: 90%;
-    width: 30%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    margin-top: 80px;
+    margin-top: 60px;
+
+}
+
+.input{
+    color: #403D39;
+}
+
+.input::placeholder{
+    color: #CCC5B9;
 }
 
 .mt-3{
     height: 100px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+
 .btn-form{
-    background: #EB5E28;
+   background: #EB5E28;
     color: #FFFCF2;
     cursor: pointer;
-    width:50%;
-    height: 40px;
+    width:130px;
+    height: 30px;
     align-self: center;
 }
 
