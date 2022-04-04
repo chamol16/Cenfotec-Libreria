@@ -86,7 +86,6 @@ body{
 }
 
 /*received and change password*/
-
 .form{
     color: #252422;
     height: 90%;
@@ -96,7 +95,6 @@ body{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 60px;
-
 }
 
 .input{
@@ -114,7 +112,6 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
 }
-
 
 .btn-form{
    background: #EB5E28;
