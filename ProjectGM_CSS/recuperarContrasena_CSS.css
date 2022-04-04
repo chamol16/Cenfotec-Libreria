@@ -5,7 +5,7 @@
     justify-content: space-around;
     height: 100px;
     width: 100%;
-    background: brown;
+    background: #252422;
 }
 
 .nav > .brand-container{
@@ -16,7 +16,7 @@
 
 .nav > .brand-container > a{
    text-decoration: none;
-   color: #fff;
+   color: #FFFCF2;
    font-weight: bold;
 }
 
@@ -24,19 +24,35 @@
     display: flex;
     justify-content: space-evenly;
     width: 50%;
-    color: #fff;
+}
+
+.ul li{
+    color: #FFFCF2;
 }
 
 .ul > li > a{
     text-decoration: none;
-    color: #fff;
+    color: #FFFCF2;
 }
 
+.nav > .brand-container > a:hover{
+    color: #EB5E28;
+ }
+ 
 .ul > li > a:hover{
-    text-decoration: underline;
+    color: #EB5E28;
+}
+
+i{
+    color:#FFFCF2;;
 }
 
 /*recover-password-section*/
+body{
+    background: #FFFCF2;
+    color: #252422;
+}
+
 .recover-password-section{
     display: flex;
     align-items: center;
@@ -47,9 +63,9 @@
 }
 
 .form{
+    color: #252422;
     height: 90%;
     width: 30%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -64,5 +80,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.btn-form{
+    background: #EB5E28;
+    color: #FFFCF2;
+    cursor: pointer;
+    width:50%;
+    height: 40px;
+    align-self: center;
 }
 

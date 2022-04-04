@@ -5,8 +5,7 @@
     justify-content: space-around;
     height: 100px;
     width: 100%;
-    background: brown;
-
+    background: #252422;
 }
 
 .nav > .brand-container{
@@ -17,7 +16,7 @@
 
 .nav > .brand-container > a{
    text-decoration: none;
-   color: #fff;
+   color: #FFFCF2;
    font-weight: bold;
 }
 
@@ -27,13 +26,32 @@
     width: 50%;
 }
 
+.ul li{
+    color: #FFFCF2;
+}
+
 .ul > li > a{
     text-decoration: none;
-    color: #fff;
+    color: #FFFCF2;
+}
+
+.nav > .brand-container > a:hover{
+    color: #EB5E28;
+ }
+ 
+.ul > li > a:hover{
+    color: #EB5E28;
+}
+
+i{
+    color:#FFFCF2;;
+}
+
+i:hover{
+    color:#EB5E28;;
 }
 
 /*Section fotos*/
-
 .photos-section{
     display: flex;
     flex-direction: column;
@@ -45,6 +63,11 @@
 }
 
 /*conoce al equipo*/
+body{
+    background: #FFFCF2;
+    color: #252422;
+}
+
 .conoce-container{
     display: flex;
     flex-direction: column;
