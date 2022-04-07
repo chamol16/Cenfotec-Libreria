@@ -129,7 +129,23 @@ setDistrito = () => {
     });
 };
 
+//imgs
+const displayImgDiv = document.querySelector("#display-img");
+const inputImg = document.querySelector("#input-img");
+let uploadedImg = "";
+
+subirImagen = () => {
+  //  console.log(inputImg.value);
+  const reader = new FileReader();
+  const file = inputImg.files[0];
+  reader.addEventListener("load", (files) => {
+    uploadedImg = reader.result;
+    displayImgDiv.style.backgroundImage = `url(${uploadedImg})`;
+  });
+  reader.readAsDataURL(file);
+};
+
 selectProvince.addEventListener("change", setCanton);
 selectCanton.addEventListener("change", setDistrito);
-
+inputImg.addEventListener("change", subirImagen);
 btnRegistrar.addEventListener("click", validar);

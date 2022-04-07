@@ -173,18 +173,29 @@ body{
     margin-top: 50px;
 }
 
-.img{
-    border: 1px solid #252422;
+#display-img{
     width: 120px;
     height: 120px;
+    border: 1px solid #252422;
+    background-position: center;
+    background-size: cover;
 }
 
-.btn-upload-img{
+#input-img{
+    display: none;
+}
+
+.custom-file-upload {
+    font-family: 'Roboto', sans-serif;
     background: #EB5E28;
     color: #FFFCF2;
     cursor: pointer;
-    height: 40px;
-    width: 25%;
+    height: 25px;
+    width: 100px;
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid #252422;
+    font-size: 20px;
 }
 
 /*fill fields*/
