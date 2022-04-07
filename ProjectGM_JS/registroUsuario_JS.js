@@ -20,55 +20,19 @@ const inputEmail = document.getElementById("input-email");
 const inputPassword = document.getElementById("input-password");
 const selectProvince = document.getElementById("slt-province");
 const selectCanton = document.getElementById("slt-canton");
+const selectDistrict = document.getElementById("slt-district");
 
 const btnRegistrar = document.getElementById("btn-register");
+const arrayProvincias = [
+  "San José",
+  "Alajuela",
+  "Cartago",
+  "Heredia",
+  "Guanacaste",
+  "Puntarenas",
+  "Limón",
+];
 
-/* setProvinces = () => {
-  provincias.forEach((province) => {
-    const newOptionProvince = document.createElement("option");
-    newOptionProvince.innerHTML = `${JSON.stringify(province.name).replaceAll(
-      `"`,
-      ``
-    )}`;
-    selectProvince.appendChild(newOptionProvince);
-  });
-};
-
-getCanton = (e) => {
-  let cantones = [];
-
-  if (e.target.value === "San José") {
-    cantones = cantonesSanJose;
-  } else if (e.target.value === "Alajuela") {
-    cantones = cantonesAlajuela;
-  } else if (e.target.value === "Cartago") {
-    cantones = cantonesCartago;
-  } else if (e.target.value === "Heredia") {
-    cantones = cantonesHeredia;
-  } else if (e.target.value === "Guanacaste") {
-    cantones = cantonesGuanacaste;
-  } else if (e.target.value === "Puntarenas") {
-    cantones = cantonesPuntarenas;
-  } else {
-    cantones = cantonesLimon;
-  }
-
-  cantones.forEach((canton) => {
-    var option = document.createElement("option");
-    option.text = `${JSON.stringify(canton.name).replaceAll('"', "")}`;
-    selectCanton.appendChild(option);
-  });
-};
-
-setProvinces();
-
-resetCanton = () => {
-  console.log("reset");
-};
-
-;
-selectProvince.addEventListener("change", getCanton);
- */
 setProvinces = () => {
   fetch("https://ubicaciones.paginasweb.cr/provincias.json")
     .then((response) => response.json())
@@ -84,6 +48,7 @@ setProvinces = () => {
       }
     });
 };
+
 validar = () => {
   const required = document.querySelectorAll(".required-field");
   let error = false;
@@ -117,18 +82,54 @@ validar = () => {
 
 setProvinces();
 
-verId = () => {
-  const hijos = document.querySelectorAll(".province-class");
+setCanton = () => {
   let id;
-  for (let i = 0; i < hijos.length; i++) {
-    id = hijos[i].id;
-    setCanton(id);
+  let provincia = selectProvince.value;
+  for (let i = 0; i < arrayProvincias.length; i++) {
+    if (provincia == arrayProvincias[i]) {
+      id = i + 1;
+    }
   }
+  fetch(`https://ubicaciones.paginasweb.cr/provincia/${id}/cantones.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      const idCanton = Object.keys(data);
+      const nombreCanton = Object.values(data);
+      for (let i = 0; i < idCanton.length; i++) {
+        let option = document.createElement("option");
+        option.textContent = nombreCanton[i];
+        option.className = "canton-class";
+        option.id = idCanton[i];
+        selectCanton.appendChild(option);
+      }
+    });
 };
 
-setCanton = (id) => {
-  console.log(id);
+setDistrito = () => {
+  let provinceId, cantonId;
+
+  provinceId = selectProvince.options[selectProvince.options.selectedIndex];
+  cantonId = selectCanton.options[selectCanton.options.selectedIndex];
+  //console.log(provinceId.id, cantonId.id);
+
+  fetch(
+    `https://ubicaciones.paginasweb.cr/provincia/${provinceId.id}/canton/${cantonId.id}/distritos.json`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const idDistrito = Object.keys(data);
+      const nombreDistrito = Object.values(data);
+      for (let i = 0; i < idDistrito.length; i++) {
+        let option = document.createElement("option");
+        option.textContent = nombreDistrito[i];
+        option.className = "distrito-class";
+        option.id = idDistrito[i];
+        selectDistrict.appendChild(option);
+      }
+    });
 };
-selectProvince.addEventListener("change", verId);
+
+selectProvince.addEventListener("change", setCanton);
+selectCanton.addEventListener("change", setDistrito);
 
 btnRegistrar.addEventListener("click", validar);
