@@ -34,16 +34,16 @@
     <section class="signin">
         <form action="" class="form">
             <div class="mt-3">
-                <label class="label" for="">Correo electrónico:</label>
-                <input type="email">
+                <label class="label" for="input-email">Correo electrónico:</label>
+                <input type="text" class="input" id="input-email">
             </div>
             <div class="mt-3">
-                <label class="label" for="">Contraseña:</label>
-                <input type="password">
+                <label class="label" for="input-password">Contraseña:</label>
+                <input type="password" class="input" id="input-password">
                 <a href="/ProjectGM_HTML/recuperarContrasena.html">¿Olvidaste tu contraseña?</a>
             </div>
             <div class="mt-3">
-                <button class="btn-signin">Iniciar sesión</button>
+                <button type="button" class="btn-signin" id="btn-signin">Iniciar sesión</button>
             </div>
         </form>
         <div class="create-container">
@@ -51,6 +51,13 @@
             <a class="btn-create" href="/ProjectGM_HTML/registroUsuario.html">Crea una cuenta</a>
         </div>
     </section>
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--DB users-->
+    <script src="/ProjectGM_JS/usersDB.js"></script>
+    <!--js iniciar sesion-->
+    <script src="/ProjectGM_JS/iniciarSesion.js"></script>
 
 </body>
 
