@@ -36,8 +36,8 @@
         <div class="send-code-form">
 
             <label for="">Correo electrónico:</label>
-            <input type="email" class="input">
-            <button class="btn-send-code">Enviar código</button>
+            <input type="email" class="input-email" id="input-email">
+            <button class="btn-send-code" id="btn-send-code">Enviar código</button>
 
         </div>
 
@@ -45,17 +45,23 @@
 
             <div class="mt-3">
                 <label for="">Código de verificación:</label>
-                <input type="text" class="input" placeholder="Digitá tu código">
+                <input type="text" class="required-field" placeholder="Inserte el código recibido">
             </div>
             <div class="mt-3">
                 <label for="">Nueva contraseña:</label>
-                <input type="password" class="input" placeholder="Digitá tu nueva contraseña">
+                <input type="password" class="required-field" placeholder="Digitá tu nueva contraseña">
             </div>
             <div class="mt-3">
-                <button class="btn-form">Guardar</button>
+                <button type="button" class="btn-save" id="btn-save">Guardar</button>
             </div>
         </form>
     </section>
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--script recoverPass js-->
+    <script src="/ProjectGM_JS/recuperarContrasena.js"></script>
+
 </body>
 
 </html>

@@ -62,7 +62,7 @@ validar = () => {
     }
 
     //Validación final
-    if (error == true) {
+    if (error) {
       Swal.fire({
         icon: "warning",
         title: "Usuario no registrado",
@@ -71,8 +71,8 @@ validar = () => {
     } else {
       Swal.fire({
         icon: "success",
-        title: "Usuario registrado",
-        text: "Revise su correo electrónico para validar su cuenta",
+        title: "Usuario registrado correctamente",
+        text: "Ahora puedes iniciar sesión",
       }).then(() => {
         window.location.href = "iniciarSesion.html";
       });
