@@ -22,8 +22,6 @@
         </div>
         <ul class="ul">
             <li><a href="/ProjectGM_HTML/landingPage_producto.html">Productos</a></li>
-            <li><a href="/ProjectGM_HTML/landingPage_equipo.html">Misión y Visión</a></li>
-            <li><a href="/ProjectGM_HTML/integrantes.html">Integrantes</a></li>
             <li><a href="#valores">Valores</a></li>
             <li><a href="#footer">Acerca de nosotros</a></li>
         </ul>
@@ -33,32 +31,111 @@
 
     <section>
         <div class="vista-general-equipo">
-            <div class="info-container">
+            <div class="info-container logo-container" id="logo-container">
                 <h2>Growth Minate</h2>
                 <br>
                 <img src="/ProjectGM_IMG/logo.png" alt="imagen del logo del equipo">
             </div>
             <div class="info-container">
+                <aside class="info-container mision-vision" id="mision-vision">
 
-                <h2>Misión</h2>
-                <br>
-                <p id="mision">Contribuir al desarrollo social del país, diseñando productos y servicios de alta
-                    competitividad, con
-                    un equipo capacitado y tecnologías que son de vital importancia para la producción de la compañía.
-                </p>
 
-                <h2>Visión</h2>
-                <br>
-                <p>Impulsar el desarrollo de software de alta calidad, satisfaciendo las necesidades de micro, medianas
-                    y grandes compañías. Aplicando tecnologías recientes.
-                </p>
+                    <h2>Misión</h2>
+                    <p id="mision">Contribuir al desarrollo social del país, diseñando productos y servicios de alta
+                        competitividad, con
+                        un equipo capacitado y tecnologías que son de vital importancia para la producción de la
+                        compañía.
+                    </p>
+
+                    <h2>Visión</h2>
+                    <p>Impulsar el desarrollo de software de alta calidad, satisfaciendo las necesidades de micro,
+                        medianas
+                        y grandes compañías. Aplicando tecnologías recientes.
+                    </p>
+                </aside>
+
+                <!--Integrantes section - photos section-->
+                <aside class="photos-section" id="photos-section">
+                    <div class="integrante-container conoce-container" id="integrante-container">
+                        <h1>¡Conoce al equipo!</h1>
+                        <br>
+                        <p>Nuestro equipo está conformado por un grupo de talentosos estudiantes de Cenfotec, que juntos
+                            construyen
+                            soluciones para clientes
+                            en Costa Rica que deseen ampliar su negocio e iniciar sus ventas a través de internet.</p>
+                    </div>
+                    <div class="integrante-container">
+                        <div class="photo-container">
+                            <div class="img-info-container">
+                                <img src="/ProjectGM_IMG/integrantes/ivan.jpg" alt="">
+                                <div class="integrante-info-container">
+                                    <br>
+                                    <h2>Iván Rojas</h2>
+                                    <h3>Desarrollo</h3>
+                                    <br>
+                                    <p>
+                                        Análisis, curiosidad, cooperación.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="img-info-container">
+                                <img src="/ProjectGM_IMG/integrantes/jazmin.jpg" alt="">
+                                <div class="integrante-info-container">
+                                    <br>
+                                    <h2>Jazmín Alfaro</h2>
+                                    <h3>Soporte</h3>
+                                    <br>
+                                    <p>
+                                        Rápido aprendizaje, trabajo bajo presión, trabajo en equipo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-container">
+
+                            <div class="img-info-container">
+                                <img src="/ProjectGM_IMG/integrantes/jose.jpg" alt="">
+                                <div class="integrante-info-container">
+                                    <br>
+                                    <h2>José Cabrera </h2>
+                                    <h3>Coordinador General</h3>
+                                    <br>
+                                    <p>
+                                        Buena comunicación, conocimientos de “backend” y diseño.
+
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="img-info-container">
+                                <img src="/ProjectGM_IMG/integrantes/victor.jpg" alt="">
+
+                                <div class="integrante-info-container">
+                                    <br>
+                                    <h2>Víctor Vargas</h2>
+                                    <h3>Calidad</h3>
+                                    <br>
+                                    <p>
+                                        Autodidacta, responsable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+
             </div>
+
+
+
+
         </div>
         <hr>
         <!--Producto e Integrantes-->
-        <div class="integrantes-productos-container">
-            <a href="/ProjectGM_HTML/integrantes.html">Integrantes</a>
-            <a href="/ProjectGM_HTML/landingPage_producto.html">Productos</a>
+        <div class="integrantes-productos-container" id="toggle">
+            <a href="">Integrantes</a>
+            <a href="">Misión y Visión</a>
         </div>
 
     </section>
@@ -80,10 +157,12 @@
     <footer class="footer" id="footer">
         <h2 class="footer-inside">Acerca de Nosotros</h2>
         <br>
-        <p class="footer-inside">En Growth Minate somos profesionales en el desarrollo y manejo de software, comprometidos a brindar confianza
+        <p class="footer-inside">En Growth Minate somos profesionales en el desarrollo y manejo de software,
+            comprometidos a brindar confianza
             y mejorar la calidad de vida de nuestros clientes.
         </p>
     </footer>
+    <script src="/ProjectGM_JS/landingPage_equipo.js"></script>
 </body>
 
 </html>
