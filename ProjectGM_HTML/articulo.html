@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar de las sorpresas</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset_CSS.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/articulo_CSS.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="nav">
+        <div class="brand-container">
+            <a href="/ProjectGM_HTML/libreria.html">EL BAZAR DE LAS SORPRESAS</a>
+        </div>
+        <div class="searching-bar">
+            <input type="search-input">
+            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        </div>
+        <ul class="ul">
+            <li><a href="">Perfil</a></li>
+            <li><a href="">Listas</a></li>
+            <li><a href="/ProjectGM_HTML/iniciarSesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+            <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--render book section-->
+    <section class="render-book">
+        <div class="cantidad-container">
+            <img class="book-img" id="book-img" src=""></img>
+            <h2>Cantidad</h2>
+            <input type="number" id="input-cantidad">
+        </div>
+        <div class="book-info-container">
+            <h1 id="book-name"></h1>
+            <ul>
+                <li>
+                    <h2>Autor:</h2>
+                    <h3 id="book-author"></h3>
+                </li>
+                <li>
+                    <h2>Idioma:</h2>
+                    <h3 id="book-idiom"></h3>
+                </li>
+                <li>
+                    <h2>Género literario:</h2>
+                    <h3 id="book-gender"></h3>
+                </li>
+                <li>
+                    <h2>Precio:</h2>
+                    <h3 id="book-price"></h3>
+                </li>
+                <li>
+                    <h2>Disponibilidad:</h2>
+                    <h3 id="book-stock"></h3>
+                </li>
+
+            </ul>
+            <button type="button" class="btn-anadir-carrito" id="btn-anadir-carrito">Añadir al carrito</button>
+        </div>
+
+    </section>
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--articulo page js-->
+    <script src="/ProjectGM_JS/articulo_JSS.js"></script>
+
+
+</body>
+
+</html>

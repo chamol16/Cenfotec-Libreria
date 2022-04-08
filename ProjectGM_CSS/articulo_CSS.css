@@ -1,0 +1,142 @@
+/*nav*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+  background: #252422;
+}
+
+.nav > .brand-container {
+  width: 30%;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.nav > .brand-container > a {
+  text-decoration: none;
+  color: #fffcf2;
+  font-weight: bold;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.ul li {
+  color: #fffcf2;
+}
+
+.ul > li > a {
+  text-decoration: none;
+  color: #fffcf2;
+}
+
+.nav > .brand-container > a:hover {
+  color: #eb5e28;
+}
+
+.searching-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loop {
+  color: #fffcf2;
+}
+
+.ul > li > a:hover {
+  color: #eb5e28;
+}
+
+i {
+  color: #fffcf2;
+}
+
+i:hover {
+  color: #eb5e28;
+}
+
+body {
+  background: #fffcf2;
+  color: #252422;
+}
+
+/*article section*/
+.render-book {
+  display: flex;
+  height: 600px;
+  margin: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book-img {
+  height: 250px;
+  width: 200px;
+}
+
+.book-info-container {
+  height: 80%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book-info-container > h1 {
+  font-weight: bold;
+}
+
+.book-info-container > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 200px;
+  align-items: center;
+}
+
+.book-info-container > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+}
+
+.book-info-container > ul > li > h2 {
+  font-weight: bold;
+}
+
+.btn-anadir-carrito {
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 60%;
+  height: 40px;
+}
+
+.cantidad-container {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cantidad-container > input {
+  width: 50px;
+}
+
+/*fill fields*/
+.field-error{
+  border: 2px solid #EB5E28;
+}
