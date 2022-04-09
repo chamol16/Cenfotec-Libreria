@@ -1,8 +1,9 @@
 //clear local storage
+let userConnected = JSON.parse(localStorage.getItem("loggedUser"));
 let bookSelected = JSON.parse(localStorage.getItem("bookClicked"));
 const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
-if (bookSelected) {
+if (userConnected) {
   inicioElementoA.textContent = "Cerrar sesión";
 }
 
@@ -31,28 +32,38 @@ if (bookSelected.stock) {
 //anadir al carrito
 const btnAddCart = document.getElementById("btn-anadir-carrito");
 const cantidad = document.getElementById("input-cantidad");
-addToCart = () => {
-  let error = false;
-  if (cantidad.value == 0 || cantidad.value == "") {
-    error = true;
-    cantidad.classList.add("field-error");
-  } else {
-    cantidad.classList.remove("field-error");
-  }
 
-  if (error) {
+addToCart = () => {
+  if (userConnected) {
+    let error = false;
+    if (cantidad.value == 0 || cantidad.value == "") {
+      error = true;
+      cantidad.classList.add("field-error");
+    } else {
+      cantidad.classList.remove("field-error");
+    }
+
+    if (error) {
+      Swal.fire({
+        icon: "warning",
+        title: "Cantidad no indicada",
+        text: "Por favor revise los campos resaltados",
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Artículo añadido al carrito",
+        text: "Ingresando al carrito de compras",
+      }).then(() => {
+        window.location.href = "carrito.html";
+      });
+    }
+  } else {
+    /*Routing*/
     Swal.fire({
       icon: "warning",
-      title: "Cantidad no indicada",
-      text: "Por favor revise los campos resaltados",
-    });
-  } else {
-    Swal.fire({
-      icon: "success",
-      title: "Artículo añadido al carrito",
-      text: "Ingresando al carrito de compras",
-    }).then(() => {
-      window.location.href = "carrito.html";
+      title: "Esta acción requiere un usuario",
+      text: "Para conocer los detalles de librofan debes iniciar sesión",
     });
   }
 };

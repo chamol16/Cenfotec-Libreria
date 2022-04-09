@@ -102,38 +102,30 @@
   background-image: url("/ProjectGM_IMG/bazar/reading4.jpg");
 }
 
+.socio {
+  width: 46%;
+}
+
 #socio-comercial-1 {
   background-image: url("/ProjectGM_IMG/socios-comerciales/fischel.png");
-  width: 42%;
 }
 
 #socio-comercial-2 {
   background-image: url("/ProjectGM_IMG/socios-comerciales/macdonald's.png");
-  width: 42%;
 }
 
 #socio-comercial-3 {
   background-image: url("/ProjectGM_IMG/socios-comerciales/peri.png");
-  width: 42%;
 }
 
 #socio-comercial-4 {
   background-image: url("/ProjectGM_IMG/socios-comerciales/walmart.jpg");
-  width: 42%;
 }
 
 .link-container {
   align-self: flex-start;
   font-size: 14px;
-  width: 80px;
-  height: 30px;
-  text-align: center;
-}
-
-.link-container > a {
-  color: #252422;
-}
-
-.link-container > a:hover {
-  color: #eb5e28;
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
 }
