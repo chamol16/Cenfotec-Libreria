@@ -97,6 +97,7 @@ body {
 }
 
 .mt-3 > a {
+  color: #252422;
   font-size: 14px;
   align-self: flex-end;
   margin-right: 60px;
@@ -134,4 +135,8 @@ h2 {
   font-weight: bold;
 }
 
-/*footer*/
+/*error inputs*/
+.field-error {
+  border: 2px solid #eb5e28;
+}
+

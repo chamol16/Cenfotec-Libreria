@@ -83,6 +83,8 @@ validar = () => {
       inputPassword.value.length > 12
     ) {
       passwordError = true;
+      field.classList.remove("field-error");
+      document.getElementById("input-password").classList.add("field-error");
     } else {
       field.classList.remove("field-error");
     }
@@ -106,7 +108,7 @@ validar = () => {
         title: "Usuario registrado correctamente",
         text: "Ahora puedes iniciar sesión",
       }).then(() => {
-        window.location.href = "iniciarSesion.html";
+        window.location.href = "iniciar-sesion.html";
       });
     }
   });

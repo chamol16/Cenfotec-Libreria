@@ -53,7 +53,7 @@ validCode = () => {
         title: "Contraseña guardada correctamente",
         text: "Ahora puedes iniciar sesión",
       }).then(() => {
-        window.location.href = "iniciarSesion.html";
+        window.location.href = "iniciar-sesion.html";
       });
     }
   });
