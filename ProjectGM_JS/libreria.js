@@ -11,6 +11,29 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+/*perfil and listas*/
+const perfil = document.getElementById("slt-profile");
+const listas = document.getElementById("slt-list");
+
+redirectionPerfil = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "perfil.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "historial-pedidos.html";
+  }
+};
+
+redirectionListas = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "lista-autores.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "lista-libros.html";
+  }
+};
+
+perfil.addEventListener("change", redirectionPerfil);
+listas.addEventListener("change", redirectionListas);
+
 /*click on books*/
 const books = document.querySelectorAll(".book");
 
@@ -23,7 +46,7 @@ seleccionarLibro = (e) => {
       localStorage.setItem("bookClicked", JSON.stringify(libro));
     }
   });
-  
+
   //redirect
   if (libroSeleccionado) {
     window.location.href = "articulo.html";
@@ -33,5 +56,3 @@ seleccionarLibro = (e) => {
 for (const book of books) {
   book.addEventListener("click", seleccionarLibro);
 }
-
-//localStorage.clear();

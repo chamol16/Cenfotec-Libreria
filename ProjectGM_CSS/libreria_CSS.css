@@ -66,6 +66,10 @@ body {
   color: #252422;
 }
 
+.slt-nav{
+  text-align: center;
+}
+
 /*preview-section*/
 .preview-section {
   display: flex;
