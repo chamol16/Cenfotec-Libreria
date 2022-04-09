@@ -1,80 +1,8 @@
-/*nav*/
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100px;
-  width: 100%;
-  background: #252422;
-}
-
-.nav > .brand-container {
-  width: 30%;
-  text-align: left;
-  margin-left: 50px;
-}
-
-.nav > .brand-container > a {
-  text-decoration: none;
-  color: #fffcf2;
-  font-weight: bold;
-}
-
-.ul {
-  display: flex;
-  justify-content: space-evenly;
-  width: 70%;
-}
-
-.ul li {
-  color: #fffcf2;
-}
-
-.ul > li > a {
-  text-decoration: none;
-  color: #fffcf2;
-}
-
-.nav > .brand-container > a:hover {
-  color: #eb5e28;
-}
-
-.searching-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loop {
-  color: #fffcf2;
-}
-
-.ul > li > a:hover {
-  color: #eb5e28;
-}
-
-i {
-  color: #fffcf2;
-}
-
-i:hover {
-  color: #eb5e28;
-}
-
-body {
-  background: #fffcf2;
-  color: #252422;
-}
-
-.slt-nav{
-  text-align: center;
-}
-
 /*preview-section*/
 .preview-section {
   display: flex;
   flex-direction: column;
-  height: 900px;
+  height: 100%;
   width: 100%;
   margin-top: 50px;
 }
@@ -100,8 +28,8 @@ body {
 }
 
 .img-container {
-  height: 50%;
-  width: 90%;
+  height: 200px;
+  width: 320px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -197,7 +125,9 @@ body {
 .link-container {
   align-self: flex-start;
   font-size: 14px;
-  margin-left: 30px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
 }
 
 .link-container > a {
@@ -205,44 +135,5 @@ body {
 }
 
 .link-container > a:hover {
-  color: #eb5e28;
-}
-
-/*footer*/
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 250px;
-  width: 100%;
-  background: #252422;
-  color: #fffcf2;
-  margin-top: 30px;
-}
-
-.footer-child-container {
-  height: 60%;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-.footer-ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  font-weight: bold;
-}
-
-.footer-ul > li > a {
-  font-weight: normal;
-  color: #fffcf2;
-}
-
-.footer-ul > li > a:hover {
   color: #eb5e28;
 }

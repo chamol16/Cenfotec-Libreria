@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bazar de las sorpresas</title>
-        <!--reset CSS-->
-        <link rel="stylesheet" href="/ProjectGM_CSS/reset_CSS.css">
-        <!--own CSS-->
-        <link rel="stylesheet" href="/ProjectGM_CSS/historial_pedidos_CSS.css">
-        <!--Google Fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-        <!--Font Awesome-->
-        <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar de las sorpresas</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/historial-pedidos.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
-            <!--nav-->
-            <nav class="nav">
-                <div class="brand-container">
-                    <a href="/ProjectGM_HTML/libreria.html">EL BAZAR DE LAS SORPRESAS</a>
-                </div>
-                <div class="searching-bar">
-                    <input type="search-input">
-                    <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
-                </div>
-                <ul class="ul">
-               
-                    <li><a href="/ProjectGM_HTML/iniciarSesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
-                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                </ul>
-            </nav>
-    <div>Historial pedidos</div>
+    <!--nav-->
+    <nav class="nav">
+        <div class="brand-container">
+            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
+                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
+        </div>
+        <div class="searching-bar">
+            <input type="search-input">
+            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        </div>
+        <ul class="ul">
+
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+            <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--content section-->
+    <section>Historial pedidos</section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-child-container">
+            <h2>¿Quiénes somos?</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/landing-page-producto.html">Nosotros</a></li>
+                <li><a href="/ProjectGM_HTML/librofan.html">Libro-fan</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Perfil</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Listas</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/lista-libros.html">Libros</a></li>
+                <li><a href="/ProjectGM_HTML/lista-autores.html">Autores</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>

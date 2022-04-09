@@ -1,0 +1,137 @@
+/*nav*/
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  width: 100%;
+  background: #252422;
+}
+
+.nav > .brand-container {
+  width: 30%;
+  text-align: center;
+}
+
+.nav > .brand-container > a {
+  text-decoration: none;
+  color: #fffcf2;
+  font-weight: bold;
+}
+
+.logo-producto {
+  width: 100px;
+  height: 100px;
+}
+
+.nav > .brand-container > a {
+  text-decoration: none;
+  color: #fffcf2;
+  font-weight: bold;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.ul li {
+  color: #fffcf2;
+}
+
+.ul > li > a {
+  text-decoration: none;
+  color: #fffcf2;
+}
+
+.nav > .brand-container > a:hover {
+  color: #eb5e28;
+}
+
+.ul > li > a:hover {
+  color: #eb5e28;
+}
+
+i {
+  color: #fffcf2;
+}
+
+/*signin-section*/
+
+body {
+  background: #fffcf2;
+  color: #252422;
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  background: #fffcf2;
+  color: #252422;
+}
+
+.mt-3 {
+  margin-top: 30px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mt-3 > a {
+  font-size: 14px;
+  align-self: flex-end;
+  margin-right: 60px;
+  text-decoration: none;
+}
+
+.mt-3 > a:hover {
+  text-decoration: underline;
+  color: #eb5e28;
+}
+
+.label {
+  color: #252422;
+}
+
+.btn-signin {
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 60%;
+  height: 40px;
+}
+
+.create-container > a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.create-container > a:hover {
+  text-decoration: underline;
+  color: #eb5e28;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+/*footer*/

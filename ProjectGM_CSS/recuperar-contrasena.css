@@ -1,0 +1,79 @@
+/*recover-password-section*/
+body {
+  background: #fffcf2;
+  color: #252422;
+}
+
+.recover-password-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/*paragraph*/
+.recover-password-section > p {
+  margin: 50px;
+}
+
+/*send-code*/
+.send-code-form {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn-send-code {
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 130px;
+  height: 30px;
+  align-self: center;
+}
+
+/*received and change password*/
+.form {
+  color: #252422;
+  height: 90%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.required-field {
+  color: #403d39;
+}
+
+.required-field::placeholder {
+  color: #ccc5b9;
+}
+
+.mt-3 {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.btn-save {
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 130px;
+  height: 30px;
+  align-self: center;
+}
+
+/*fill fields*/
+.field-error {
+  border: 2px solid #eb5e28;
+}

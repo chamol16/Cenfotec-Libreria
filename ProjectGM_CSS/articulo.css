@@ -1,0 +1,99 @@
+/*article section*/
+.render-book {
+  display: flex;
+  height: 600px;
+  margin: 50px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book-img {
+  height: 250px;
+  width: 180px;
+}
+
+.book-info-container {
+  height: 80%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book-info-container > h1 {
+  font-weight: bold;
+}
+
+.book-info-container > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 200px;
+  align-items: center;
+}
+
+.book-info-container > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+}
+
+.book-info-container > ul > li > h2 {
+  font-weight: bold;
+}
+
+.btn-anadir-carrito {
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 60%;
+  height: 40px;
+}
+
+.cantidad-container {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cantidad-container > input {
+  width: 50px;
+}
+
+/*fill fields*/
+.field-error {
+  border: 2px solid #eb5e28;
+}
+
+/*feathers*/
+
+.feathers {
+  display: flex;
+  margin: 15px;
+}
+
+.feathers a {
+  color: #eb5e28;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.feathers:hover a {
+  opacity: 100%;
+}
+
+.feathers a:hover ~ a {
+  opacity: 50%;
+}
+
+.feathers a.active {
+  opacity: 100%;
+}

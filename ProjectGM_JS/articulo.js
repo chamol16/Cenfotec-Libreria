@@ -58,3 +58,18 @@ addToCart = () => {
 };
 
 btnAddCart.addEventListener("click", addToCart);
+
+/*give feathers*/
+const feathers = document.querySelectorAll(".feathers a");
+
+feathers.forEach((feather, clickedIdx) => {
+  feather.addEventListener("click", () => {
+    feathers.forEach((otherFeather, otherIdx) => {
+      if (otherIdx <= clickedIdx) {
+        otherFeather.classList.add("active");
+      }
+    });
+    //console.log(`feather of index ${clickedIdx} was clicked`);
+    //POST here for keeping user data
+  });
+});
