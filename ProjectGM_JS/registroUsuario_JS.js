@@ -18,51 +18,83 @@ const inputTypeId = document.getElementById("input-type-id");
 const inputId = document.getElementById("input-id");
 const inputEmail = document.getElementById("input-email");
 const inputPassword = document.getElementById("input-password");
-const selectProvince = document.getElementById("slt-province");
-const selectCanton = document.getElementById("slt-canton");
-const selectDistrict = document.getElementById("slt-district");
-
 const btnRegistrar = document.getElementById("btn-register");
-const arrayProvincias = [
-  "San José",
-  "Alajuela",
-  "Cartago",
-  "Heredia",
-  "Guanacaste",
-  "Puntarenas",
-  "Limón",
-];
+const listaProvincias = document.querySelector("#slt-province");
+const listaCantones = document.querySelector("#slt-canton");
+const listaDistritos = document.querySelector("#slt-district");
 
-setProvinces = () => {
-  fetch("https://ubicaciones.paginasweb.cr/provincias.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const idProvincia = Object.keys(data);
-      const nombreProvincia = Object.values(data);
-      for (let i = 0; i < idProvincia.length; i++) {
-        let option = document.createElement("option");
-        option.textContent = nombreProvincia[i];
-        option.className = "province-class";
-        option.id = idProvincia[i];
-        selectProvince.appendChild(option);
-      }
-    });
+let provinciaSeleccionada;
+let cantonSeleccionado;
+const mostrarProvincias = () => {
+  distribucion.provincias.forEach((provincia) => {
+    listaProvincias.options.add(new Option(provincia.title));
+  });
 };
+const mostrarCantones = (nombreProvincia) => {
+  listaCantones.innerHTML = "";
+  listaCantones.options.add(new Option("-- Seleccione un cantón --"));
+  distribucion.provincias.forEach((provincia) => {
+    if (provinciaSeleccionada == provincia.title) {
+      provincia.cantones.forEach((canton) => {
+        listaCantones.options.add(new Option(canton.title));
+      });
+    }
+  });
+};
+const mostrarDistritos = (nombreCanton) => {
+  listaDistritos.innerHTML = "";
+  listaDistritos.options.add(new Option("-- Seleccione un distrito --"));
+  distribucion.provincias.forEach((provincia) => {
+    if (provinciaSeleccionada == provincia.title) {
+      provincia.cantones.forEach((canton) => {
+        if (cantonSeleccionado == canton.title) {
+          canton.distritos.forEach((distrito) => {
+            listaDistritos.options.add(new Option(distrito.title));
+          });
+        }
+      });
+    }
+  });
+};
+mostrarProvincias();
+listaProvincias.addEventListener("change", () => {
+  provinciaSeleccionada = listaProvincias.value;
+  mostrarCantones(provinciaSeleccionada);
+});
+listaCantones.addEventListener("change", () => {
+  cantonSeleccionado = listaCantones.value;
+  mostrarDistritos(cantonSeleccionado);
+});
 
+//validation
 validar = () => {
   const required = document.querySelectorAll(".required-field");
   let error = false;
+  let passwordError = false;
 
+  //blank spaces valid
   required.forEach((field) => {
     if (field.value == "") {
       error = true;
       field.classList.add("field-error");
+      //valid password
+    } else if (
+      inputPassword.value.length < 8 ||
+      inputPassword.value.length > 12
+    ) {
+      passwordError = true;
     } else {
       field.classList.remove("field-error");
     }
 
-    //Validación final
-    if (error) {
+    //password validation
+    if (passwordError) {
+      Swal.fire({
+        icon: "warning",
+        title: "Contraseña incorrecta",
+        text: "La contraseña debe ser entre 8 y 12 caracteres, alfanúmerica y al menos una letra mayúscula",
+      });
+    } else if (error) {
       Swal.fire({
         icon: "warning",
         title: "Usuario no registrado",
@@ -80,62 +112,12 @@ validar = () => {
   });
 };
 
-setProvinces();
-
-setCanton = () => {
-  let id;
-  let provincia = selectProvince.value;
-  for (let i = 0; i < arrayProvincias.length; i++) {
-    if (provincia == arrayProvincias[i]) {
-      id = i + 1;
-    }
-  }
-  fetch(`https://ubicaciones.paginasweb.cr/provincia/${id}/cantones.json`)
-    .then((response) => response.json())
-    .then((data) => {
-      const idCanton = Object.keys(data);
-      const nombreCanton = Object.values(data);
-      for (let i = 0; i < idCanton.length; i++) {
-        let option = document.createElement("option");
-        option.textContent = nombreCanton[i];
-        option.className = "canton-class";
-        option.id = idCanton[i];
-        selectCanton.appendChild(option);
-      }
-    });
-};
-
-setDistrito = () => {
-  let provinceId, cantonId;
-
-  provinceId = selectProvince.options[selectProvince.options.selectedIndex];
-  cantonId = selectCanton.options[selectCanton.options.selectedIndex];
-  //console.log(provinceId.id, cantonId.id);
-
-  fetch(
-    `https://ubicaciones.paginasweb.cr/provincia/${provinceId.id}/canton/${cantonId.id}/distritos.json`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      const idDistrito = Object.keys(data);
-      const nombreDistrito = Object.values(data);
-      for (let i = 0; i < idDistrito.length; i++) {
-        let option = document.createElement("option");
-        option.textContent = nombreDistrito[i];
-        option.className = "distrito-class";
-        option.id = idDistrito[i];
-        selectDistrict.appendChild(option);
-      }
-    });
-};
-
-//imgs
+//subir imagen de usuario
 const displayImgDiv = document.querySelector("#display-img");
 const inputImg = document.querySelector("#input-img");
 let uploadedImg = "";
 
 subirImagen = () => {
-  //  console.log(inputImg.value);
   const reader = new FileReader();
   const file = inputImg.files[0];
   reader.addEventListener("load", (files) => {
@@ -144,8 +126,5 @@ subirImagen = () => {
   });
   reader.readAsDataURL(file);
 };
-
-selectProvince.addEventListener("change", setCanton);
-selectCanton.addEventListener("change", setDistrito);
 inputImg.addEventListener("change", subirImagen);
 btnRegistrar.addEventListener("click", validar);
