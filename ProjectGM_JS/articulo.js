@@ -63,7 +63,7 @@ addToCart = () => {
     Swal.fire({
       icon: "warning",
       title: "Esta acción requiere un usuario",
-      text: "Para conocer los detalles de librofan debes iniciar sesión",
+      text: "Para comprar este libro primero debes iniciar sesión",
     });
   }
 };
