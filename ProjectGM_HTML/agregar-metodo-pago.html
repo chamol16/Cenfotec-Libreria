@@ -25,11 +25,10 @@
             <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
                     src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
         </div>
-        <div class="searching-bar">
-            <input type="search-input">
-            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
-        </div>
+
         <ul class="ul">
+            <li><a href="/ProjectGM_HTML/perfil.html" id="perfil">Perfil</a></li>
+            <li><a href="/ProjectGM_HTML/metodo-pago.html" id="metodo-pago">Métodos de Pago</a></li>
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
@@ -44,28 +43,30 @@
                     <i class="fa fa-cc-visa" style="color:rgb(25, 25, 184);"></i>
                     <i class="fa fa-cc-mastercard" style="color:red;"></i>
                 </div>
-                <label for="cname">Nombre de la tarjeta</label>
-                <input type="text" id="nombre-tarjeta-input" name="cardname" placeholder="Nombre Completo">
-                <label for="ccnum">Número de tarjeta</label>
-                <input type="text" id="numero-tarjeta-input" name="cardnumber" placeholder="**** **** **** ****">
+                <label for="">Nombre de la tarjeta</label>
+                <input type="text" class="input" placeholder="Nombre Completo">
+
+                <label for="">Número de tarjeta</label>
+                <input type="text" class="input" placeholder="**** **** **** ****">
+
                 <div class="row">
-                    <div class="col-50">
-                        <label for="expmonth">Exp Fecha</label>
-                        <input type="text" id="fecha-vencimiento-tarjeta-input" name="expmonth" placeholder="11/11">
+                    <div>
+                        <label for="">Exp Fecha</label>
+                        <input type="text" class="input" placeholder="11/11">
                     </div>
                     <div class="col-50">
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="codigo-seguridad-tarjeta-input" name="cvv" placeholder="111">
+                        <label for="">CVV</label>
+                        <input type="text" class="input" placeholder="111">
                     </div>
                 </div>
-                <input type="submit" value="Guardar tarjeta" class="btn" id="btn-adicionar-cuenta">
+                <button type="button" class="btn-save" id="btn-save">Guardar tarjeta</button>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script type="text/javascript" src="/ProjectGM_JS/agregar-metodo-pago.js"></script>
+    <script src="/ProjectGM_JS/agregar-metodo-pago.js"></script>
 </body>
 
 </html>

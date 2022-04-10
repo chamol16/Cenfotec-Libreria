@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bazar de las sorpresas</title>
-        <!--reset CSS-->
-        <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
-        <!--nav-footer CSS-->
-        <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
-        <!--own CSS-->
-        <link rel="stylesheet" href="/ProjectGM_CSS/metodo-pago.css">
-        <!--Google Fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-        <!--Font Awesome-->
-        <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazar de las sorpresas</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/metodo-pago.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
 
 <body>
-
-
     <!--nav-->
     <nav class="nav">
         <div class="brand-container">
@@ -29,7 +27,8 @@
         </div>
 
         <ul class="ul">
-            <li><a href="/ProjectGM_HTML/perfil.html" id="metodo-pago">Perfil</a></li>
+            <li><a href="/ProjectGM_HTML/perfil.html" id="">Perfil</a></li>
+            <li><a href="/ProjectGM_HTML/historial-pedidos.html" id="">Historial de pedidos</a></li>
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
@@ -42,35 +41,53 @@
         <div class="container">
             <form>
                 <p class="card-title mx-auto"> Tarjetas guardadas </p>
-                <div class="tarjetaGuardada">
+
+                <div class="tarjetaGuardada" id="tarjeta-1">
                     <div class="col-2"><img class="img-fluid"
                             src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /></div>
-                    <div class="col-7"> <input type="text" placeholder="**** **** **** 3193" disabled> </div>
-                    <div class="col-3 d-flex justify-content-center"> <a href="#">Remover tarjeta</a> </div>
+                    <div class="col-7">
+                        <input type="text" class="saved-card" id="saved-card-1" placeholder="**** **** **** 3193">
+                    </div>
+                    <div class="col-3 d-flex justify-content-center"> <a href="#" id="remove-1">Remover tarjeta</a>
+                    </div>
                 </div>
 
-                <div class="row row-1">
+                <div class="tarjetaGuardada" id="tarjeta-2">
                     <div class="col-2"><img class="img-fluid"
-                            src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /></div>
-                    <div class="col-7"> <input type="text" placeholder="**** **** **** 3193" disabled> </div>
-                    <div class="col-3 d-flex justify-content-center"> <a href="#">Remover tarjeta</a> </div>
+                            src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
+                    </div>
+                    <div class="col-7">
+                        <input type="text" placeholder="**** **** **** 2502">
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <a href="#" id="remove-2">Remover tarjeta</a>
+                    </div>
+                </div>
+                <div class="tarjetaGuardada" id="tarjeta-3">
+                    <div class="col-2">
+                        <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+                    </div>
+                    <div class="col-7">
+                        <input type="text" placeholder="**** **** **** 1746">
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <a href="#" id="remove-3">Remover tarjeta</a>
+                    </div>
                 </div>
 
-                <div class="row row-1">
-                    <div class="col-2"><img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
+                <div class="tarjetaGuardada" id="tarjeta-4">
+                    <div class="col-2">
+                        <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
                     </div>
-                    <div class="col-7"> <input type="text" placeholder="**** **** **** 4296" disabled> </div>
-                    <div class="col-3 d-flex justify-content-center"> <a href="#">Remover tarjeta</a> </div>
+                    <div class="col-7">
+                        <input type="text" placeholder="**** **** **** 0187">
+                    </div>
+                    <div class="col-3 d-flex justify-content-center">
+                        <a href="#" id="remove-4">Remover tarjeta</a>
+                    </div>
                 </div>
 
-                <div class="row row-1">
-                    <div class="col-2"><img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
-                    </div>
-                    <div class="col-7"> <input type="text" placeholder="**** **** **** 4296" disabled> </div>
-                    <div class="col-3 d-flex justify-content-center"> <button type="" id="tarjeta4">Remover
-                            tarjeta</button> </div>
-                </div>
-                <button class="btn d-flex mx-auto"><b>Add card</b></button>
+                <button class="btn-add" id="btn-add">Agregar nueva tarjeta</button>
             </form>
         </div>
     </div>

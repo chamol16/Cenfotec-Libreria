@@ -135,7 +135,6 @@ input[type="text"] {
   margin-bottom: 20px;
   margin-left: 30px;
   padding: 12px;
-  border: 1px solid #ccc;
   border-radius: 3px;
 }
 
@@ -151,7 +150,7 @@ label {
   font-size: 40px;
 }
 
-.btn {
+.btn-save {
   background: #403d39;
   color: #fffcf2;
   cursor: pointer;
@@ -161,7 +160,7 @@ label {
   margin-right: 20%;
 }
 
-.btn:hover {
+.btn-save:hover {
   background-color: #eb5e28;
 }
 
@@ -180,3 +179,9 @@ span.price {
     margin-bottom: 20px;
   }
 }
+
+/*error inputs*/
+.field-error {
+  border: 2px solid #eb5e28;
+}
+

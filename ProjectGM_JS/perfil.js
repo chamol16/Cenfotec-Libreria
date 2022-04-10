@@ -31,3 +31,10 @@ document.getElementById("generos-favoritos").textContent =
   userConnected.generoFavorito;
 document.getElementById("autores-favoritos").textContent =
   userConnected.autorFavorito;
+document.getElementById("img-profile").setAttribute("src", userConnected.img);
+
+/*editar perfil btn*/
+
+document.getElementById("btn-editar-perfil").addEventListener("click", () => {
+  window.location.href = "editar-perfil.html";
+});

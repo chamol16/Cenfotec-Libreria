@@ -109,11 +109,15 @@ body {
 }
 
 .btn-register {
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   height: 40px;
   width: 40%;
+}
+
+.btn-register:hover {
+  background: #eb5e28;
 }
 
 /*img-section(right-section)*/
@@ -142,7 +146,7 @@ body {
 
 .custom-file-upload {
   font-family: "Roboto", sans-serif;
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   height: 25px;
@@ -151,6 +155,10 @@ body {
   padding-top: 5px;
   border: 1px solid #252422;
   font-size: 20px;
+}
+
+.custom-file-upload:hover {
+  background: #eb5e28;
 }
 
 /*error inputs*/

@@ -114,11 +114,15 @@ body {
 }
 
 .btn-signin {
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   width: 60%;
   height: 40px;
+}
+
+.btn-signin:hover {
+  background: #eb5e28;
 }
 
 .create-container > a {
@@ -139,4 +143,3 @@ h2 {
 .field-error {
   border: 2px solid #eb5e28;
 }
-

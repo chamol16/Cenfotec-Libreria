@@ -154,7 +154,7 @@ body {
   margin-right: 20%;
 }
 
-.btn:hover {
+.btn-save:hover {
   background-color: #eb5e28;
 }
 
@@ -172,8 +172,8 @@ body {
 }
 
 #display-img {
-  width: 200px;
-  height: 200px;
+  height: 150px;
+  width: 120px;
   border: 1px solid #252422;
   background-position: center;
   background-size: cover;
@@ -184,8 +184,7 @@ body {
 }
 
 .custom-file-upload {
-  font-family: "Roboto", sans-serif;
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   height: 25px;
@@ -194,6 +193,10 @@ body {
   padding-top: 5px;
   border: 1px solid #252422;
   font-size: 20px;
+}
+
+.custom-file-upload:hover {
+  background: #eb5e28;
 }
 
 /*fill fields*/

@@ -22,6 +22,29 @@ const bookStock = document.getElementById("book-stock");
 document.getElementById("book-author").textContent = bookSelected.author;
 document.getElementById("book-img").setAttribute("src", bookSelected.img);
 
+/*perfil and listas*/
+const perfil = document.getElementById("slt-profile");
+const listas = document.getElementById("slt-list");
+
+redirectionPerfil = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "perfil.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "historial-pedidos.html";
+  }
+};
+
+redirectionListas = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "lista-autores.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "lista-libros.html";
+  }
+};
+
+perfil.addEventListener("change", redirectionPerfil);
+listas.addEventListener("change", redirectionListas);
+
 //consultar stock
 if (bookSelected.stock) {
   bookStock.textContent = "En inventario";

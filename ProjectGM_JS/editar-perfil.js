@@ -47,6 +47,8 @@ const selectAutorFav = document
   .getElementById("autores-favoritos")
   .options.add(new Option(userConnected.autorFavorito));
 
+//document.getElementById("display-img").setAttribute("src", userConnected.img);
+
 /* const inputName = document.getElementById("input-name");
 const inputFirstLastName = document.getElementById("input-first-last-name");
 const inputSecondLastName = document.getElementById("input-second-last-name");

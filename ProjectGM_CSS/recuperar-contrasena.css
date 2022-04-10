@@ -28,12 +28,16 @@ body {
 }
 
 .btn-send-code {
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   width: 130px;
   height: 30px;
   align-self: center;
+}
+
+.btn-send-code:hover {
+  background: #eb5e28;
 }
 
 /*received and change password*/
@@ -65,12 +69,16 @@ body {
 }
 
 .btn-save {
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   cursor: pointer;
   width: 130px;
   height: 30px;
   align-self: center;
+}
+
+.btn-save:hover {
+  background: #eb5e28;
 }
 
 /*fill fields*/
