@@ -1,4 +1,214 @@
-/*content CSS here*/
-section {
-  height: 500px;
+/*selection-form*/
+
+body {
+  background: #FFFCF2;
+  color: #252422;
+}
+
+.section-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-container {
+  width: 70%;
+  height: 100%;
+  padding: 50px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#banner_inicio-container {
+  /* Rectangle */
+  width: 750px;
+  height: 470px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  background: #FFFFFF;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  margin-top: 2%;
+}
+
+#banner_inicio-container2 {
+  /* Rectangle */
+  width: 750px;
+  height: 470px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  background: #FFFFFF;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+#banner_inicio-container3 {
+  /* Rectangle */
+  width: 750px;
+  height: 200px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  background: #FFFFFF;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.mt-3 {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  width: 40%;
+}
+
+.select {
+  width: 41%;
+  height: 30px;
+}
+
+.textarea-container {
+  margin-top: 10px;
+  width: 100%;
+  height: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label-textarea {
+  align-self: flex-start;
+  padding-top: 10px;
+}
+
+.textarea {
+  height: 80%;
+  resize: none;
+}
+
+
+/*google maps*/
+
+.google-maps-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 150px;
+}
+
+#map {
+  height: 100%;
+  width: 200px;
+  background-image: url('../ProjectGM_IMG/ubicacion.PNG');
+  margin-right: 10%;
+}
+
+.favoritos-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 50%;
+  margin-top: 1px;
+}
+
+.label-favoritos {
+  align-self: flex-start;
+  padding-top: 10px;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  height: 100px;
+  width: 40%;
+}
+
+.favoritos-select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #FFFCF2;
+}
+
+button {
+  background: #EB5E28;
+  color: #FFFCF2;
+  cursor: pointer;
+  height: 40px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*img-section(right-section)*/
+
+.img-container {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin-top: 50px;
+}
+
+#display-img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #252422;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../ProjectGM_IMG/default-image.jpg");
+}
+
+#input-img {
+  display: none;
+}
+
+.custom-file-upload {
+  font-family: 'Roboto', sans-serif;
+  background: #EB5E28;
+  color: #FFFCF2;
+  cursor: pointer;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid #252422;
+  font-size: 20px;
+}
+
+
+/*fill fields*/
+
+.field-error {
+  border: 2px solid #EB5E28;
 }

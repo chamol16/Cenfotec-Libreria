@@ -25,25 +25,153 @@
             <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
                     src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
         </div>
-        <div class="searching-bar">
-            <input type="search-input">
-            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
-        </div>
+
         <ul class="ul">
+            <li><a href="/ProjectGM_HTML/metodo-pago.html" id="metodo-pago">Métodos de Pago</a></li>
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
 
-    <!--content section-->
-    <section>
-        Admin profile
+
+    <!--form section-->
+    <section class="section-form">
+        <form action="" class="form-container">
+            <h4>Información General</h4>
+            <div id="banner_inicio-container">
+                <div class="mt-3">
+                    <label class="label" for="input-name">Nombre:</label>
+                    <h2 id="nombreUsuario"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-first-last-name">Primer apellido:</label>
+                    <h2 id="input-first-last-name"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-second-last-name">Segundo apellido:</label>
+                    <h2 id="input-second-last-name"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-gender">Género:</label>
+                    <h2 id="slt-gender"></h2>
+
+                </div>
+                <div class="mt-3">
+                    <label class="label" for="input-type-id">Tipo de indentificación:</label>
+                    <h2 id="slt-type-id"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-id">Número de identificación:</label>
+                    <h2 id="input-id"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-email">Correo electrónico:</label>
+                    <h2 id="input-email"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-password">Contraseña:</label>
+                    <h2 id="input-password"></h2>
+                </div>
+            </div>
+            <h4>Direcciones registradas</h4>
+            <div id="banner_inicio-container2">
+                <div class="mt-3">
+                    <label class="label" for="slt-province">Provincia:</label>
+                    <h2 id="slt-province"></h2>
+
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="slt-canton">Cantón:</label>
+                    <h2 id="slt-canton"></h2>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="slt-district">Distrito:</label>
+                    <h2 id="slt-district"></h2>
+                </div>
+
+                <div class="textarea-container">
+                    <label class="label-textarea" for="input-address">Dirección exacta:</label>
+                    <h2 id="input-address"></h2>
+                </div>
+
+                <div class="google-maps-container">
+                    <label class="label" for="">Ubicación:</label>
+                    <!--    <input type="text" class="input"> -->
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+
+            <h4>Opciones Adicionales</h4>
+            <div id="banner_inicio-container3">
+                <div class="favoritos-container">
+                    <label class="label label-favoritos" for="generos-favoritos">Géneros literarios favoritos:
+                        <br>(Opcional)</label>
+
+                    <div class="select-container">
+                        <h2 id="generos-favoritos"></h2>
 
 
-        
+                        <select class="favoritos-select" id="generos-favoritos" disabled>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option>Narrativo</option>
+                            <option>Lírico</option>
+                            <option>Dramático</option>
+                            <option>Didáctico</option>
+                        </select>
 
+                        <select name="generos-favoritos" class="favoritos-select" id="generos-favoritos" disabled>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option>Narrativo</option>
+                            <option>Lírico</option>
+                            <option>Dramático</option>
+                            <option>Didáctico</option>
+                        </select>
+                    </div>
+                </div>
 
+                <div class="favoritos-container">
+                    <label class="label label-favoritos" for="autores-favoritos">Autores
+                        favoritos:<br>(Opcional)</label>
 
+                    <div class="select-container">
+                        <h2 id="autores-favoritos"></h2>
+
+                        <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos" disabled>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">Gabriel García Márquez</option>
+                            <option value="">Miguel de Cervantes</option>
+                            <option value="">Stephen King</option>
+                        </select>
+
+                        <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos" disabled>
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">Gabriel García Márquez</option>
+                            <option value="">Miguel de Cervantes</option>
+                            <option value="">Stephen King</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+        <div class="img-container">
+            <div id="display-img"></div>
+            <div class="mt-3 btn-container">
+                <button><a href="/ProjectGM_HTML/editar-perfil.html">Editar Perfil</a></button>
+            </div>
+            </label>
+
+        </div>
     </section>
 
     <!--footer-->
@@ -70,7 +198,13 @@
             </ul>
         </div>
     </footer>
-<script src="/ProjectGM_JS/perfil.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--js Costa Rica-->
+    <script src="/ProjectGM_JS/CostaRica-DB.js"></script>
+    <script src="/ProjectGM_JS/perfil.js"></script>
+    <script src="/ProjectGM_JS/users-DB.js"></script>
 
 </body>
+
 </html>
