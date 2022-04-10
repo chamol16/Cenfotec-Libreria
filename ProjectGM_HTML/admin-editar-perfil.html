@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil administrador</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-editar.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!--nav-->
+   <nav class="nav">
+    <div class="brand-container">
+        <a href="/ProjectGM_HTML/admin-profile.html"><img class="logo-producto"
+                src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
+    </div>
+
+    <ul class="ul">
+        <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
+        <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
+        <li><a href="/ProjectGM_HTML/admin-editar-perfil.html">Editar perfil</a></li>
+        <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
+        <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+    </ul>
+
+</nav>
+
+    <!--Contenido-->
+
+
+    <section class="sct-editAdmin">
+        <form class="form-editAdmin">
+            <div class="inputContainer">
+                <label for="txt-compania">Compañía</label>
+                <h2>El bazar de las sorpresas</h2>
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-adminName">Nombre</label>
+                <input type="text" id="txt-adminName">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-lastName">Primer apellido</label>
+                <input type="text" id="txt-lastName">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-lastName-2">Segundo apellido</label>
+                <input type="text" id="txt-lastName-2">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-tel">Número de contacto</label>
+                <input type="text" id="txt-tel">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-correoPersonal">Correo personal</label>
+                <input type="email" id="txt-correoPersonal">
+            </div>
+
+        </form>
+
+        <form class="form-editAdmin">
+
+            <div class="inputContainer">
+                <label for="txt-addLocation">Ubicación</label>
+                <input type="text" id="txt-addLocation">
+            </div>
+
+            <div class="inputContainer">
+                <label for="slt-idType">Tipo de idetificación</label>
+                <select id="slt-idType">
+                    <option value="">-Tipo de identificación-</option>
+                    <option value="1">Cédula Física</option>
+                    <option value="2">Cédula Jurídica</option>
+                    <option value="3">Cédula Extranjera</option>
+                </select>
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-addNumerId">Número de Identificación</label>
+                <input type="text" id="txt-addNumerId">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-changePass">Nueva contraseña</label>
+                <input type="password" id="txt-changePass">
+            </div>
+
+            <div class="inputContainer">
+                <label for="txt-changePass-conf">Confirmar cambio</label>
+                <input type="password" id="txt-changePass-conf">
+            </div>
+
+        </form>
+
+    </section>
+
+    <div class="btn-container">
+        <button type="button" id="btn-save">Guardar</button>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer">
+        <div>
+            <a href="/ProjectGM_HTML/landing-page-producto.html">Growthminate® 2022</a>
+        </div>
+
+    </footer>
+
+    <!--js validation-->
+    <script src="/ProjectGM_JS/admin-edit-profile.js"></script>
+    <!--DB for admin logged-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
+</body>
+
+
+
+</html>

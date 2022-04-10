@@ -1,5 +1,69 @@
-/*content CSS here*/
-section {
-    height: 500px;
-  }
-  
+/*body*/
+body {
+  background: #fffcf2;
+  color: #252422;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sct-admin {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  text-align: start;
+  width: 90%;
+  height: 600px;
+  padding: 60px;
+}
+
+.adminProfile {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.h1Admin {
+  font-size: 30px;
+  text-decoration: #252422;
+}
+
+.lista > li {
+  color: #252422;
+}
+
+.lista > li > a {
+  color: #252422;
+  text-decoration: none;
+}
+
+.lista > li > a:hover {
+  color: #eb5e28;
+}
+
+/*footer*/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  width: 100%;
+  background: #252422;
+  color: #fffcf2;
+}
+
+.footer > div > a {
+  text-decoration: none;
+  color: #fffcf2;
+}
+
+.footer > div > a:hover {
+  text-decoration: none;
+  color: #eb5e28;
+}

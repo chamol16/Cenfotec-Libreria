@@ -50,7 +50,175 @@
     </nav>
 
     <!--content section-->
-    <section>Editar perfil</section>
+    <!--Contenido-->
+
+    <!--form section-->
+    <section class="section-form">
+        <form action="" class="form-container">
+            <h4>Información General</h4>
+            <div id="banner_inicio-container">
+                <div class="mt-3">
+                    <label class="label" for="nombreUsuario">Nombre:</label>
+                    <input type="text" class="input required-field" id="nombreUsuario">
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-first-last-name">Primer apellido:</label>
+                    <input type="text" class="input required-field" id="input-first-last-name">
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-second-last-name">Segundo apellido:</label>
+                    <input type="text" class="input required-field" id="input-second-last-name">
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-gender">Género:</label>
+                    <select class="select required-field" id="slt-gender">
+                        <option value="">-- Seleccione una opción --</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <label class="label" for="input-type-id">Tipo de indentificación:</label>
+                    <select class="select required-field" id="slt-type-id">
+                        <option value="">-- Seleccione una opción --</option>
+                        <option>Cédula de identidad</option>
+                        <option>Número de Seguro Social</option>
+                        <option>Tarjeta de residencia (DIMEX)</option>
+                        <option>Documento de identificación diplomático</option>
+                    </select>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-id">Número de identificación:</label>
+                    <input type="text" class="input required-field" id="input-id">
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-email">Correo electrónico:</label>
+                    <input type="email " class="input required-field" id="input-email">
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="input-password">Contraseña:</label>
+                    <input type="password" class="input required-field" id="input-password">
+                </div>
+            </div>
+            <h4>Direcciones registradas</h4>
+            <div id="banner_inicio-container2">
+                <div class="mt-3">
+                    <label class="label" for="slt-province">Provincia:</label>
+                    <select class="select required-field" id="slt-province">
+                        <option value="">-- Seleccione una opción --</option>
+                    </select>
+
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="slt-canton">Cantón:</label>
+                    <select class="select required-field" id="slt-canton">
+                        <option value="">-- Seleccione una opción --</option>
+
+
+                    </select>
+                </div>
+
+                <div class="mt-3">
+                    <label class="label" for="slt-district">Distrito:</label>
+                    <select class="select required-field" id="slt-district">
+                        <option value="">-- Seleccione una opción --</option>
+                    </select>
+                </div>
+
+                <div class="textarea-container">
+                    <label class="label-textarea" for="input-address">Dirección exacta:</label>
+                    <textarea id="input-address" class="input textarea required-field"></textarea>
+                </div>
+
+                <div class="google-maps-container">
+                    <label class="label" for="">Ubicación:</label>
+                    <!--    <input type="text" class="input"> -->
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+
+            <h4>Opciones Adicionales</h4>
+            <div id="banner_inicio-container3">
+                <div class="favoritos-container">
+                    <label class="label label-favoritos" for="generos-favoritos">Géneros literarios favoritos:
+                        <br>(Opcional)</label>
+
+                    <div class="select-container">
+                        <select class="favoritos-select" id="generos-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option>Narrativo</option>
+                            <option>Lírico</option>
+                            <option>Dramático</option>
+                            <option>Didáctico</option>
+                        </select>
+
+                        <select class="favoritos-select" id="generos-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option>Narrativo</option>
+                            <option>Lírico</option>
+                            <option>Dramático</option>
+                            <option>Didáctico</option>
+                        </select>
+
+                        <select name="generos-favoritos" class="favoritos-select" id="generos-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option>Narrativo</option>
+                            <option>Lírico</option>
+                            <option>Dramático</option>
+                            <option>Didáctico</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="favoritos-container">
+                    <label class="label label-favoritos" for="autores-favoritos">Autores
+                        favoritos:<br>(Opcional)</label>
+
+                    <div class="select-container">
+                        <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">Gabriel García Márquez</option>
+                            <option value="">Miguel de Cervantes</option>
+                            <option value="">Stephen King</option>
+                        </select>
+
+                        <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">Gabriel García Márquez</option>
+                            <option value="">Miguel de Cervantes</option>
+                            <option value="">Stephen King</option>
+                        </select>
+
+                        <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                            <option value="">-- Seleccione una opción --</option>
+                            <option value="">Gabriel García Márquez</option>
+                            <option value="">Miguel de Cervantes</option>
+                            <option value="">Stephen King</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn-save" id="btn-save">Guardar</button>
+        </form>
+        <div class="img-container">
+            <div id="display-img"></div>
+            <label for="input-img" class="custom-file-upload">
+                <input type="file" id="input-img" accept="image/jpg">
+                Cambiar
+            </label>
+
+        </div>
+    </section>
 
     <!--footer-->
     <footer class="footer">
@@ -77,7 +245,17 @@
         </div>
     </footer>
 
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--js Costa Rica-->
+    <script src="/ProjectGM_JS/CostaRica-DB.js"></script>
     <script src="/ProjectGM_JS/editar-perfil.js"></script>
+
+    <!--API Google maps-->
+    <!--   <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+ -->
+
 </body>
 
 </html>

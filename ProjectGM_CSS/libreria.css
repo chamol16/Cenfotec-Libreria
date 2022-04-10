@@ -127,5 +127,13 @@
   font-size: 14px;
   width: 120px;
   height: 40px;
-  margin-left: 10px;
+  margin-left: 15px;
+}
+
+.link-container > a {
+  color: #252422;
+}
+
+.link-container > a:hover {
+  color: #eb5e28;
 }
