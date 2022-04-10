@@ -8,3 +8,5 @@ if (userConnected) {
 logOut = () => {
   localStorage.clear();
 };
+
+inicioElementoA.addEventListener("click", logOut);

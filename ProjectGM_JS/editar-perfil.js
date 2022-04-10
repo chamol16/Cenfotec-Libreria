@@ -9,6 +9,9 @@ logOut = () => {
   localStorage.clear();
 };
 
+inicioElementoA.addEventListener("click", logOut);
+
+/*edit section*/
 const inputName = (document.getElementById("nombreUsuario").value =
   userConnected.nombre);
 const inputFirstLastName = (document.getElementById(
