@@ -34,16 +34,44 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-/*content */
-const autors = document.querySelectorAll(".autor");
+/* render data */
+const cuerpoTabla = document.querySelector("#tbl-autores tbody");
+
+const mostrarDatos = () => {
+  cuerpoTabla.innerHTML = "";
+  listaAutores.forEach((autor, idx) => {
+    let fila = cuerpoTabla.insertRow();
+    fila.id = idx + 1;
+    fila.className = "row";
+    fila.insertCell().textContent = autor.nombreCompleto;
+    fila.insertCell().textContent = autor.paisNacimiento;
+    fila.insertCell().textContent = autor.fechaNacimiento;
+    fila.insertCell().textContent = autor.fechaDefuncion;
+    if (autor.nobel) {
+      fila.insertCell().textContent = "Sí";
+    } else {
+      fila.insertCell().textContent = "No";
+    }
+  });
+};
+
+mostrarDatos();
+
+/*redirijir al perfil del autor */
+const rows = document.querySelectorAll(".row");
 
 seleccionarAutor = (e) => {
+  e.preventDefault();
+  let rowId = e.target.parentElement.id;
   let autorSeleccionado = false;
 
   listaAutores.forEach((autor) => {
-    if (e.target.id == autor.id) {
+    if (rowId == autor.id) {
       autorSeleccionado = true;
       localStorage.setItem("authorClicked", JSON.stringify(autor));
+      /*    if (libroSeleccionado) {
+        window.location.href = "perfil-libro.html";
+      } */
     }
   });
 
@@ -53,6 +81,6 @@ seleccionarAutor = (e) => {
   }
 };
 
-for (const autor of autors) {
-  autor.addEventListener("click", seleccionarAutor);
+for (const row of rows) {
+  row.addEventListener("click", seleccionarAutor);
 }

@@ -34,7 +34,7 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-/*llenar tabla de libros */
+/*render data */
 const cuerpoTabla = document.querySelector("#tbl-libros tbody");
 
 const mostrarDatos = () => {

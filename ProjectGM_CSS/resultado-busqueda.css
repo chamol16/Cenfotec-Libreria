@@ -85,27 +85,27 @@ body {
   height: 100px;
 }
 
-#book-1 {
+.book-1 {
   background-image: url("/ProjectGM_IMG/books/el_diario.jpg");
 }
 
-#book-2 {
+.book-2 {
   background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
 }
 
-#book-3 {
+.book-3 {
   background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
 }
 
-#book-4 {
+.book-4 {
   background-image: url("/ProjectGM_IMG/books/lord_of_the_rings.jpg");
 }
 
-#book-5 {
+.book-5 {
   background-image: url("/ProjectGM_IMG/books/100anos.jpg");
 }
 
-#book-6 {
+.book-6 {
   background-image: url("/ProjectGM_IMG/books/panchita.jpg");
 }
 

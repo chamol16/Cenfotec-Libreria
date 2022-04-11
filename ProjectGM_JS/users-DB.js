@@ -4,7 +4,7 @@ let listaUsuarios = [
     tipoId: "Cédula de identidad",
     id: "123456789",
     correo: "catalina@bazar.com",
-    contrasena: "admin123",
+    contrasena: "Admin123",
     nacimiento: "1994-02-25",
     nombre: "Catalina",
     primerApellido: "Pérez",

@@ -66,8 +66,8 @@ let listaAutores = [
     nombreCompleto: "Juan Carlos Onetti",
     img: "/ProjectGM_IMG/autores/",
     paisNacimiento: "Uruguay",
-    fechaNacimiento: "10-02-1955",
-    fechaDefuncion: "1-12-2011",
+    fechaNacimiento: "1955",
+    fechaDefuncion: "2011",
     genero: "masculino",
     librosPublicados: [
       "El pozo (1939)",
