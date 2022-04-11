@@ -1,5 +1,176 @@
-/*content CSS here*/
-section {
-    height: 500px;
-  }
-  
+* {
+  --colorUno: #fffcf2;
+  --colorDos: #ccc5b9;
+  --colorTres: #403d39;
+  --colorCuatro: #252422;
+  --colorCinco: #eb5e28;
+}
+
+#mainSection {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+#cartContainer {
+  border: var(--colorCuatro) solid 2px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+#cartTitle {
+  border-bottom: var(--colorCuatro) solid 2px;
+  background: var(--colorTres);
+  color: var(--colorUno);
+  display: flex;
+  align-items: center;
+}
+
+#verticalNav {
+  width: 17%;
+  height: 1000px;
+  border: var(--colorTres) solid 2px;
+}
+
+#cartSection {
+  width: 83%;
+}
+
+#btnComprar {
+  background: var(--colorCuatro);
+  color: var(--colorUno);
+  border: 2px solid var(--colorCuatro);
+  cursor: pointer;
+  font-weight: bold;
+  height: 40px;
+  margin-left: 20px;
+  width: 120px;
+}
+
+#btnComprar:hover {
+  background: var(--colorCinco);
+}
+
+#cartEnd {
+  display: flex;
+  width: 100%;
+  margin-left: -12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cartItem {
+  border-bottom: var(--colorCuatro) solid 2px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.cartItem h3 {
+  line-height: 0%;
+}
+
+.itemImage {
+  height: 150px;
+  width: 100px;
+  border-right: var(--colorCuatro) solid 2px;
+}
+
+.itemRemove {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookContainer {
+  border-bottom: 2px var(--colorCuatro) solid;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bookImage {
+  background-size: cover;
+  background-position: center;
+  width: 112.5px;
+  height: 200px;
+  margin: 5px;
+}
+
+.itemRemove {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../Media/deleteLogo.png");
+  width: 50px;
+  height: 50px;
+}
+
+.itemDescription {
+  height: 100px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.itemAmount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 10%;
+}
+
+#bookImage1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
+}
+
+#bookImage2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
+}
+
+#bookImage3 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/lord_of_the_rings.jpg");
+}
+
+#itemImage1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
+}
+
+#itemImage2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/el_diario.jpg");
+}
+
+#itemImage3 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
+}
+
+/*select*/
+.slt-nav {
+  background: #eb5e28;
+  color: #fffcf2;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+option {
+  background-color: #ea784c;
+}

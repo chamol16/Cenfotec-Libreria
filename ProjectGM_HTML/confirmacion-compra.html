@@ -5,20 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bazar de las sorpresas</title>
     <!--reset CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--own CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/lista-autores.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/confirmacion-compra.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -34,19 +27,19 @@
         </div>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
-            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
+            <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
         <ul class="ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
-                    <option class="" value="">-- Mi Perfil --</option>
-                    <option>Perfil</option>
-                    <option>Historial de pedidos</option>
+                    <option value=""> Mi Perfil </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Historial de pedidos</option>
                 </select>
             </li>
             <li>
                 <select class="slt-nav" id="slt-list">
-                    <option class="" value="">-- Listas --</option>
+                    <option class="" value=""> Listas </option>
                     <option>Autores</option>
                     <option>Libros</option>
                 </select>
@@ -56,9 +49,28 @@
         </ul>
     </nav>
 
-    <!--content section -->
-    <section>lista de Autores</section>
+    <!--content-->
+    <section class="infoCompra" id="infoCompra">
+        <div id="compra-container">
+            <div>
+                <h1 class="negrita"> Gracias, su compra se ha realizado con éxito.</h1>
+            </div>
+            <div>
+                <h3>Te hemos enviado la factura a tu correo electrónico.</h3>
+            </div>
 
+            <div>
+                <p>Número de pedido: <span class="negrita"> #125-110-422</span></p>
+                <p>Fecha de compra: <span class="negrita"> 11/04/2022</span></p>
+                <p>Monto Pagado: <span class="negrita"> $19.500</span></p>
+            </div>
+
+        </div>
+        <div id="btnContainer">
+            <button id="btnContinuar">Continuar</button>
+        </div>
+
+    </section>
 
     <!--footer-->
     <footer class="footer">
@@ -84,9 +96,8 @@
             </ul>
         </div>
     </footer>
-    <script src="/ProjectGM_JS/autores-DB.js"></script>
-    <script src="/ProjectGM_JS/lista-autores.js"></script>
 
+    <script src="/ProjectGM_JS/confirmacion-compra.js"></script>
 </body>
 
 </html>

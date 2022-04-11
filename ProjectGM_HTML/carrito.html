@@ -25,21 +25,21 @@
             <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
                     src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
         </div>
-        <div class="searching-bar">
-            <input type="search-input">
-            <a href=""><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        <div class="searching-bar-container">
+            <input type="search" class="input-search" placeholder="Buscar...">
+            <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
         <ul class="ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
-                    <option class="" value="">-- Mi Perfil --</option>
-                    <option>Perfil</option>
-                    <option>Historial de pedidos</option>
+                    <option value=""> Mi Perfil </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Historial de pedidos</option>
                 </select>
             </li>
             <li>
                 <select class="slt-nav" id="slt-list">
-                    <option class="" value="">-- Listas --</option>
+                    <option class="" value=""> Listas </option>
                     <option>Autores</option>
                     <option>Libros</option>
                 </select>
@@ -50,9 +50,93 @@
     </nav>
 
     <!--content section-->
-    <section>
-        <div>Carrito de compras</div>
+    <section class="mainSection" id="mainSection">
+        <section class="cartSection" id="cartSection">
+            <div class="cartContainer" id="cartContainer">
+                <div class="cartTitle" id="cartTitle">
+                    <h1>Carrito</h1>
+                </div>
+                <div class="cartList" id="cartList">
+                    <div class="cartItem" id="cartItem1">
+                        <div class="itemImage" id="itemImage1"></div>
+                        <div class="itemDescription" id="itemDescription1">
+                            <h3>The Hunger Games - 1 -</h3>
+                        </div>
+                        <div class="itemAmount" id="itemAmount1">
+                            <h3>$6500</h3>
+                        </div>
+                        <div class="itemRemove" id="itemRemove1"></div>
+                    </div>
+                    <div class="cartItem" id="cartItem2">
+                        <div class="itemImage" id="itemImage2"></div>
+                        <div class="itemDescription" id="itemDescription2">
+                            <div>
+                                <h3>El Diario de Ana Frank - 1 -</h3>
+                            </div>
+                        </div>
+                        <div class="itemAmount" id="itemAmount2">
+                            <h3>$7000</h3>
+                        </div>
+                        <div class="itemRemove" id="itemRemove2"></div>
+                    </div>
+                    <div class="cartItem" id="cartItem3">
+                        <div class="itemImage" id="itemImage3"></div>
+                        <div class="itemDescription" id="itemDescription3">
+                            <h3>Harry Potter and the Sorcerer's Stone - 1 -</h3>
+                        </div>
+                        <div class="itemAmount" id="itemAmount3">
+                            <h3>$6000</h3>
+                        </div>
+                        <div class="itemRemove" id="itemRemove3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cartEnd" id="cartEnd">
+                <div class="endTotal">
+                    <h3>Total a pagar: $19.500</h3>
+                </div>
+                <div><button class="btnComprar" id="btnComprar">Comprar</button></div>
+            </div>
+        </section>
     </section>
+
+    <!--     <section class="navSection" id="verticalNav">
+            <div class="bookPool" id="bookPool">
+        
+                <div class="bookThird" id="bookThird1">
+              
+                    <div class="bookContainer" id="bookContainer1">
+                        <div class="bookImage" id="bookImage1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo1">
+                            <p>Harry Potter and the Sorcerer's Stone</p>
+                            <p>J.K. Rowling</p>
+                            <p>$6000</p>
+                        </div>
+                    </div>
+                    <div class="bookContainer" id="bookContainer2">
+                        <div class="bookImage" id="bookImage2">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo2">
+                            <p>The Hunger Games</p>
+                            <p>Suzanne Collins</p>
+                            <p>$6500</p>
+                        </div>
+                    </div>
+                    <div class="bookContainer" id="bookContainer3">
+                        <div class="bookImage" id="bookImage3">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo3">
+                            <p>The Lord Of The Rings</p>
+                            <p>J.R.R. Tolkien</p>
+                            <p>$8000</p>
+                        </div>
+                    </div>
+                </div>
+        </section> -->
 
     <!--footer-->
     <footer class="footer">

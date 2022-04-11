@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/resumen-compra.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="nav">
+        <div class="brand-container">
+            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
+                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
+        </div>
+        <div class="searching-bar-container">
+            <input type="search" class="input-search" placeholder="Buscar...">
+            <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        </div>
+        <ul class="ul">
+            <li>
+                <select class="slt-nav" id="slt-profile">
+                    <option value=""> Mi Perfil </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Historial de pedidos</option>
+                </select>
+            </li>
+            <li>
+                <select class="slt-nav" id="slt-list">
+                    <option class="" value=""> Listas </option>
+                    <option>Autores</option>
+                    <option>Libros</option>
+                </select>
+            </li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+            <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+    <!--content-->
+    <section class="main-section" id="mainContainer">
+        <div class="container title" id="purchaseContainer">
+            <h1>Completar compra</h1>
+        </div>
+        <div class="container metodo-pago" id="purchaseTitle">
+            <h2>
+                Seleccionar método de pago
+            </h2>
+            <div class="radio-container">
+                <input class="metodo" type="radio" name="radios" id="radio1" />
+
+                <label for="radio1">VISA 9087</label>
+            </div>
+
+            <div class="radio-container">
+                <input class="metodo" type="radio" name="radios" id="radio2" />
+                <label for="radio2">MCARD 8319</label>
+            </div>
+
+
+
+        </div>
+        <div class="container descuento" id="paymetsContainer">
+            <div class="">
+                <input id="libroFanCheckbox" type="checkbox">
+                <label for="libroFanCheckbox">¿Aplicar descuento libro fan?</label>
+            </div>
+            <div class="descuento-child">
+                <div class="calculo-final">
+                    <h3>Total compra:</h3>
+                    <h3 id="total">$19.500</h3>
+                </div>
+                <div class="calculo-final">
+                    <h3>Total descuento:</h3>
+
+                    <h3 id="descuento">$0</h3>
+                </div>
+                <div class="calculo-final">
+                    <h3>Total a pagar:</h3>
+
+                    <h3 id="pagar">$19.500</h3>
+                </div>
+                <div><button type="button" class="button" id="btnPayment"> Pagar</button></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/ProjectGM_JS/resumen-compra.js"></script>
+</body>
+
+</html>

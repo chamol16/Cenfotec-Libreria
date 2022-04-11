@@ -1,0 +1,71 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fffcf2;
+}
+
+.sct-reportes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 90%;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 460px;
+  width: 30%;
+  align-items: center;
+}
+
+.izquierda > a {
+  text-decoration: none;
+  color: #252422;
+}
+
+.izquierda > a:hover {
+  cursor: pointer;
+  color: #eb5e28;
+}
+.derecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 70%;
+}
+
+/* tabla */
+
+.mostrarFilas > th {
+  border: 1px solid #252422;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.mostrarFilas > td {
+  border: 1px solid #252422;
+  padding: 10px;
+}
+
+.footer > div > a {
+  text-decoration: none;
+  color: #fffcf2;
+}
+
+.footer > div > a:hover {
+  text-decoration: none;
+  color: #eb5e28;
+}
+
+/*error inputs*/
+.field-error {
+  border: 2px solid #eb5e28;
+}

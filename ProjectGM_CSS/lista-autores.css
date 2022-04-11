@@ -1,4 +1,20 @@
-/*content CSS here*/
-section {
-  height: 500px;
+/*select*/
+.slt-nav {
+  background: #eb5e28;
+  color: #fffcf2;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+option {
+  background-color: #ea784c;
+}
+
+/*footer*/
+.footer {
+  bottom: 0;
+  position: absolute;
 }
