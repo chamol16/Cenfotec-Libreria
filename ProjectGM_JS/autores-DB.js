@@ -15,8 +15,9 @@ let listaAutores = [
     ],
     nobel: true,
     anoNobel: "1982",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    premiosGanados: ["Premio Nobel de Literatura"],
+    biografia:
+      "Considerado un emblema de literatura latinoamericana y uno de los máximos exponentes del realismo mágico",
   },
   {
     id: "2",
@@ -32,9 +33,10 @@ let listaAutores = [
       "Cien sonetos de amor (1956)",
     ],
     nobel: true,
-    anoNobel: "1971 ",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    anoNobel: "1971",
+    premiosGanados: ["Premio Nobel de Literatura"],
+    biografia:
+      "Considerado el más grande poeta del siglo XX en cualquier idioma",
   },
   {
     id: "3",
@@ -52,8 +54,12 @@ let listaAutores = [
     ],
     nobel: true,
     anoNobel: "1980",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    premiosGanados: [
+      "Premio Nobel de Literatura",
+      "Premio Príncipe de Asturias a las Letras",
+      "Premio Nacional de Novela de Perú",
+    ],
+    biografia: "Ferviente defensor de las ideas liberales",
   },
   {
     id: "4",
@@ -71,8 +77,9 @@ let listaAutores = [
     ],
     nobel: false,
     anoNobel: "1980",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    premiosGanados: ["ninguno"],
+    biografia:
+      "Escritor enormemente original, coherente; su mundo es un universo de un pesimismo que supera gracias a la literatura",
   },
   {
     id: "5",
@@ -84,9 +91,10 @@ let listaAutores = [
     genero: "masculino",
     librosPublicados: ["Ismaelillo (1882)", "Versos sencillos (1891)"],
     nobel: false,
-    anoNobel: "-",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    anoNobel: "",
+    premiosGanados: ["ninguno"],
+    biografia:
+      "Creador del Partido Revolucionario Cubano y organizador de la Guerra del 95, Martí es considerado el apóstol de la Independencia de Cuba",
   },
   {
     id: "6",
@@ -103,9 +111,12 @@ let listaAutores = [
       "Antología personal (1961)",
     ],
     nobel: false,
-    anoNobel: "-",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    anoNobel: "",
+    premiosGanados: [
+      "Premio Nacional de Literatura (Argentina)",
+      "Medalla de Oro del IX Premio de Poesía",
+    ],
+    biografia: "Uno de los autores más intrincados y complejos del siglo XX",
   },
 
   {
@@ -123,9 +134,10 @@ let listaAutores = [
       "Salvo el crepúsculo (1984)",
     ],
     nobel: false,
-    anoNobel: "-",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    anoNobel: "",
+    premiosGanados: ["Premio Médicis Extranjero", "Premio Konex de Honor"],
+    biografia:
+      "Maestro del cuento corto, el realismo mágico y las historias despojadas de linealidad temporal y colmadas de lo fantástico",
   },
   {
     id: "8",
@@ -143,8 +155,11 @@ let listaAutores = [
     ],
     nobel: false,
     anoNobel: "-",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    premiosGanados: [
+      "Premio Nacional de Literatura de Chile",
+      "Medalla Presidencial de la Libertad",
+    ],
+    biografia: "Escritora viva de lengua española más leída del mundo",
   },
   {
     id: "9",
@@ -161,9 +176,10 @@ let listaAutores = [
       "Los pastores de la noche (1964)",
     ],
     nobel: false,
-    anoNobel: "-",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    anoNobel: "",
+    premiosGanados: ["Premio Mundial Cino Del Duca", "Premio Lenin de la Paz"],
+    biografia:
+      "Escritor prolífico, con obras traducidos en 49 idiomas y publicados en 55 países",
   },
   {
     id: "10",
@@ -176,7 +192,8 @@ let listaAutores = [
     librosPublicados: ["El señor presidente (1943)", "Hombres de maíz (1949)"],
     nobel: true,
     anoNobel: "1967",
-    premiosGanados: ["a", "b"],
-    biografia: "a",
+    premiosGanados: ["Premio Nobel de Literatura"],
+    biografia:
+      "Exponente del realismo mágico y un ferviente opositor a la dictadura en su país",
   },
 ];

@@ -45,19 +45,19 @@
   background-position: center;
 }
 
-#book-1 {
+.book-1 {
   background-image: url("/ProjectGM_IMG/books/el_diario.jpg");
 }
 
-#book-2 {
+.book-2 {
   background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
 }
 
-#book-3 {
+.book-3 {
   background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
 }
 
-#book-4 {
+.book-4 {
   background-image: url("/ProjectGM_IMG/books/lord_of_the_rings.jpg");
 }
 
