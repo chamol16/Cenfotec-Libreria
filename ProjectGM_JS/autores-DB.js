@@ -22,7 +22,7 @@ let listaAutores = [
   {
     id: "2",
     nombreCompleto: "Pablo Neruda",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Pablo_Neruda.jpg",
     paisNacimiento: "Chile",
     fechaNacimiento: "1904",
     fechaDefuncion: "1973",
@@ -41,7 +41,7 @@ let listaAutores = [
   {
     id: "3",
     nombreCompleto: "Mario Vargas Llosa",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Mario_Vargas_Llosa.jpg",
     paisNacimiento: "Perú",
     fechaNacimiento: "1936",
     fechaDefuncion: "----",
@@ -64,7 +64,7 @@ let listaAutores = [
   {
     id: "4",
     nombreCompleto: "Juan Carlos Onetti",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Juan_Carlos_Onetti.jpg",
     paisNacimiento: "Uruguay",
     fechaNacimiento: "1955",
     fechaDefuncion: "2011",
@@ -84,7 +84,7 @@ let listaAutores = [
   {
     id: "5",
     nombreCompleto: "José Martí",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Jose_Marti.jpg",
     paisNacimiento: "Cuba",
     fechaNacimiento: "1853 ",
     fechaDefuncion: "1895",
@@ -99,7 +99,7 @@ let listaAutores = [
   {
     id: "6",
     nombreCompleto: "Jorge Luis Borges",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Jorge_Luis_Borges.jpg",
     paisNacimiento: "Argentina",
     fechaNacimiento: "1899",
     fechaDefuncion: "1986",
@@ -122,7 +122,7 @@ let listaAutores = [
   {
     id: "7",
     nombreCompleto: "Julio Cortázar",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Julio_Cortazar.jpg",
     paisNacimiento: "Argentina",
     fechaNacimiento: "1914",
     fechaDefuncion: "1984",
@@ -142,7 +142,7 @@ let listaAutores = [
   {
     id: "8",
     nombreCompleto: "Isabel Allende",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Isabel_Allende.jpg",
     paisNacimiento: "Chile",
     fechaNacimiento: "1942",
     fechaDefuncion: "----",
@@ -164,7 +164,7 @@ let listaAutores = [
   {
     id: "9",
     nombreCompleto: "Jorge Amado",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Jorge_Amado.jpg",
     paisNacimiento: "Brasil",
     fechaNacimiento: "1912",
     fechaDefuncion: "2001",
@@ -184,7 +184,7 @@ let listaAutores = [
   {
     id: "10",
     nombreCompleto: "Miguel Asturias",
-    img: "/ProjectGM_IMG/autores/",
+    img: "/ProjectGM_IMG/autores/Miguel_Asturias.jpg",
     paisNacimiento: "Guatemala",
     fechaNacimiento: "1899",
     fechaDefuncion: "1974",

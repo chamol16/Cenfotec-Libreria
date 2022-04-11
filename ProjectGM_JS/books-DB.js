@@ -47,7 +47,7 @@ let listaLibros = [
     id: "5",
     name: "Cien años de soledad",
     author: "Gabriel García Márquez",
-    img: "/ProjectGM_IMG/books/100annos.jpg",
+    img: "/ProjectGM_IMG/books/100anos.jpg",
     price: 4000,
     stock: true,
     discount: false,
