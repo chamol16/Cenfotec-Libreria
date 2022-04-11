@@ -5,6 +5,8 @@ const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
 if (userConnected) {
   inicioElementoA.textContent = "Cerrar sesión";
+} else {
+  document.getElementById("cart").style.display = "none";
 }
 
 logOut = () => {
@@ -103,7 +105,6 @@ feathers.forEach((feather, clickedIdx) => {
         otherFeather.classList.add("active");
       }
     });
-    //console.log(`feather of index ${clickedIdx} was clicked`);
-    //POST here for keeping user data
+    //POST method here for saving data
   });
 });

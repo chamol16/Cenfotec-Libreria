@@ -65,7 +65,7 @@
 .cantidad-container {
   display: flex;
   flex-direction: column;
-  height: 330px;
+  height: 400px;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -77,31 +77,6 @@
 /*fill fields*/
 .field-error {
   border: 2px solid #eb5e28;
-}
-
-/*feathers*/
-
-.feathers {
-  display: flex;
-  margin: 15px;
-}
-
-.feathers a {
-  color: #eb5e28;
-  opacity: 50%;
-  cursor: pointer;
-}
-
-.feathers:hover a {
-  opacity: 100%;
-}
-
-.feathers a:hover ~ a {
-  opacity: 50%;
-}
-
-.feathers a.active {
-  opacity: 100%;
 }
 
 /*select options*/
@@ -118,7 +93,6 @@
 option {
   background-color: #ea784c;
 }
-
 
 /*searching-bar-container*/
 .searching-bar-container {
@@ -141,18 +115,30 @@ option {
   color: #fffcf2;
 }
 
-
-/*select*/
-.slt-nav {
+/*feathers*/
+.feathers {
+  display: flex;
   background: #eb5e28;
-  color: #fffcf2;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #fffcf2;
-  border-radius: 8px;
+  width: 130px;
+  justify-content: center;
+  height: 30px;
+  align-items: center;
+  border-radius: 10px;
 }
 
-option {
-  background-color: #ea784c;
+.feathers a {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.feathers:hover a {
+  opacity: 100%;
+}
+
+.feathers a:hover ~ a {
+  opacity: 50%;
+}
+
+.feathers a.active {
+  opacity: 100%;
 }

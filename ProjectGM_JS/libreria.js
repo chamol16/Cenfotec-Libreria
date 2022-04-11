@@ -3,6 +3,8 @@ const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
 if (userConnected) {
   inicioElementoA.textContent = "Cerrar sesión";
+} else {
+  document.getElementById("cart").style.display = "none";
 }
 
 logOut = () => {
