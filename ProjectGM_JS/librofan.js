@@ -37,3 +37,14 @@ redirectionListas = (e) => {
 
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
+
+/*routing */
+document.getElementById("btn-actualizarPlan").addEventListener("click", () => {
+  Swal.fire({
+    icon: "success",
+    title: "Usuario registrado correctamente",
+    text: "Ahora puedes iniciar sesión",
+  }).then(() => {
+    window.location.href = "perfil.html";
+  });
+});
