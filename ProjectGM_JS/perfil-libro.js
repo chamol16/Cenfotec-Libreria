@@ -1,4 +1,6 @@
+//clear local storage
 let userConnected = JSON.parse(localStorage.getItem("loggedUser"));
+let bookSelected = JSON.parse(localStorage.getItem("bookClicked"));
 const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
 if (userConnected) {
@@ -19,10 +21,6 @@ redirectionPerfil = (e) => {
   if (e.target.selectedIndex == 1) {
     window.location.href = "perfil.html";
   } else if (e.target.selectedIndex == 2) {
-    window.location.href = "librofan.html";
-  } else if (e.target.selectedIndex == 3) {
-    window.location.href = "metodo-pago.html";
-  } else if (e.target.selectedIndex == 4) {
     window.location.href = "historial-pedidos.html";
   }
 };
@@ -38,18 +36,11 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-/*get date values */
-const botonSubmit = document.querySelector("#button-buscar");
-const inputFechaCalendario = document.querySelector("#fecha-pedido");
+/* data */
+document.getElementById("name").textContent = bookSelected.name;
+document.getElementById("author").textContent = bookSelected.author;
+document.getElementById("price").textContent = bookSelected.price;
+document.getElementById("gender").textContent = bookSelected.gender;
+document.getElementById("idiom").textContent = bookSelected.idiom;
 
-const obtenerDatos = () => {
-  // console.log(`Fecha: ${inputFechaCalendario.value}`);
-
-  Swal.fire({
-    icon: "success",
-    title: "Historial de pedidos actualizado",
-    text: "Puedes ver los pedidos realizados en la fecha indicada",
-  });
-};
-
-botonSubmit.addEventListener("click", obtenerDatos);
+document.getElementById("img-container").setAttribute("src", bookSelected.img);

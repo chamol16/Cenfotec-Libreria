@@ -1,6 +1,6 @@
 let listaLibros = [
   {
-    id: "book-1",
+    id: "1",
     name: "El Diario de Ana Frank",
     author: "Ana Frank",
     img: "/ProjectGM_IMG/books/el_diario.jpg",
@@ -11,7 +11,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-2",
+    id: "2",
     name: "Harry Potter and the Sorcerer's Stone",
     author: "J.K. Rowling",
     img: "/ProjectGM_IMG/books/harry_potter.jpg",
@@ -22,7 +22,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-3",
+    id: "3",
     name: "The Hunger Games",
     author: "Suzanne Collins",
     img: "/ProjectGM_IMG/books/hunger_games.jpg",
@@ -33,7 +33,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-4",
+    id: "4",
     name: "The Lord Of The Rings",
     author: "J.R.R. Tolkien",
     img: "/ProjectGM_IMG/books/lord_of_the_rings.jpg",
@@ -44,7 +44,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-5",
+    id: "5",
     name: "Cien años de soledad",
     author: "Gabriel García Márquez",
     img: "/ProjectGM_IMG/books/100annos.jpg",
@@ -55,19 +55,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-6",
-    name: "Cuentos de mi tía Panchita",
-    author: "Carmen Lyra",
-    img: "/ProjectGM_IMG/books/panchita.jpg",
-    price: 4000,
-    stock: true,
-    discount: false,
-    gender: "Cuentos",
-    idiom: "Español",
-  },
-
-  {
-    id: "book-6",
+    id: "6",
     name: "Cuentos de mi tía Panchita",
     author: "Carmen Lyra",
     img: "/ProjectGM_IMG/books/panchita.jpg",
@@ -78,7 +66,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-7",
+    id: "7",
     name: "Enigma",
     author: "Robert Harris",
     img: "/ProjectGM_IMG/books/enigma-book7.jpg",
@@ -89,7 +77,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-8",
+    id: "8",
     name: "Gantz",
     author: "Hiroya Oku",
     img: "/ProjectGM_IMG/books/gantz-book8.jpg",
@@ -100,7 +88,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-9",
+    id: "9",
     name: "Viaje al reino de los deseos",
     author: "Rafael Ángel Herra",
     img: "/ProjectGM_IMG/books/viajealreino-book9.jpg",
@@ -111,7 +99,7 @@ let listaLibros = [
     idiom: "Español",
   },
   {
-    id: "book-10",
+    id: "10",
     name: "La metamorfosis",
     author: "Franz Kafka",
     img: "/ProjectGM_IMG/books/lameta-book10.jpg",

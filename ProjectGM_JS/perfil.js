@@ -11,6 +11,12 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+/*editar perfil btn*/
+
+document.getElementById("btn-editar-perfil").addEventListener("click", () => {
+  window.location.href = "editar-perfil.html";
+});
+
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
 const listas = document.getElementById("slt-list");
@@ -59,9 +65,3 @@ document.getElementById("generos-favoritos").textContent =
 document.getElementById("autores-favoritos").textContent =
   userConnected.autorFavorito;
 document.getElementById("img-profile").setAttribute("src", userConnected.img);
-
-/*editar perfil btn*/
-
-document.getElementById("btn-editar-perfil").addEventListener("click", () => {
-  window.location.href = "editar-perfil.html";
-});

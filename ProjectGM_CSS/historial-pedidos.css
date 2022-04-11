@@ -1,3 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap");
+.placeholder-w100-h70 {
+  width: 100%;
+  height: 70px;
+  background-color: gray;
+}
+
+.style-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.style-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .font-weight-600-border-bold {
+  font-weight: 600;
+  border-bottom: 5px solid black;
+} */
+
+/* .font-weight-500-border-regular {
+  font-weight: 500;
+  border-bottom: 2px solid black;
+}
+ */
+section {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+legend {
+  padding: 0 0.1em 0 0.1em;
+  margin: 0 0 1em 1em;
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 1em 1em 0.75em 1em;
+}
+
+div#tipo-de-relatorio a h2 {
+  width: 7em;
+  font-size: 2em;
+  text-decoration: none;
+  text-align: center;
+}
+
+div#tipo-de-relatorio a {
+  text-decoration: none;
+}
+
+div#tipo-de-relatorio h2:hover {
+  border-bottom: 5px solid black;
+  font-weight: 600;
+}
+
+#tipo-de-relatorio {
+  width: 90%;
+  padding: 0 0 2.5em 0;
+}
+
+#fecha-pedido {
+  border-style: double;
+  margin-left: 10%;
+  margin-top: -5%;
+  padding: 2%;
+}
+
+#reporte-historial-pedido {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+#reporte-form-atajos label {
+  padding: 0 0 0.5em 0;
+}
+
+#button-buscar {
+  background: #403d39;
+  color: #fffcf2;
+  cursor: pointer;
+  height: 40px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: -3%;
+  align-self: flex-end;
+}
+
+#button-buscar:hover {
+  background-color: #eb5e28;
+}
+
+hr {
+  margin-bottom: 2.5em;
+}
+
+#tabla-de-datos {
+  font-size: 12px;
+  color: #252422;
+  width: 95%;
+  margin: 0.5% 2% 20% 2%;
+  height: 500px;
+
+}
+
+#tabla-de-datos table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabla-de-datos th {
+  text-align: center;
+  font-size: 1.25em;
+  padding: 1em;
+  background-color: #e76f51;
+  color: white;
+}
+
+#tabla-de-datos td {
+  text-align: center;
+  padding: 2em;
+}
+
+#tabla-de-datos tr {
+  margin: 5px 0 0 0;
+}
+
+#tabla-de-datos tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 /*searching-bar-container*/
 .searching-bar-container {
   display: flex;
@@ -32,9 +172,4 @@
 
 option {
   background-color: #ea784c;
-}
-
-/*content CSS here*/
-section {
-  height: 500px;
 }

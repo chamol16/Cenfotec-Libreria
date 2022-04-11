@@ -3,7 +3,7 @@ let listaAutores = [
     id: "1",
     nombreCompleto: "Gabriel García Márquez",
     img: "/ProjectGM_IMG/autores/Gabriel_Garcia_Marquez.jpg",
-    paisNacimiento: "Colombia",
+    paisNacimiento: "México",
     fechaNacimiento: "1927",
     fechaDefuncion: "2004",
     genero: "masculino",

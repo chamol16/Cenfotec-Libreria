@@ -11,7 +11,7 @@
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--own CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/admin-catalogos.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-filtrar-clientes.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -35,14 +35,100 @@
     </nav>
 
     <!--content-->
+    <section id="listSection">
+        <div id="titleList">
+            <h1>Administrar Usuarios</h1>
+        </div>
+        <div>
+            <table class="contentTable" id="tbl-libros">
+                <thead>
+                    <tr>
+                        <th>Editar</th>
+                        <th>Tipo</th>
+                        <th>TipoId </th>
+                        <th>Id</th>
+                        <th>Correo</th>
+                        <th>Contraseña</th>
+                        <th>Nacimiento</th>
+                        <th>Nombre</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Sexo</th>
+                        <th>País</th>
+                        <th>Provincia</th>
+                        <th>Canton</th>
+                        <th>Distrito</th>
+                        <th>Direccion</th>
+                        <th>Género Favorito</th>
+                        <th>Autor Favorito</th>
+                    </tr>
+                </thead>
 
-    filtrar clientes
+                <tbody>
+                    <tr>
+                        <td><input class="editar" type="radio" name="radios" id="user1" /></td>
+                        <td class=user1>2</td>
+                        <td class=user1> Cédula de identidad</td>
+                        <td class=user1>12345612</td>
+                        <td class=user1> fernando@gmail.com</td>
+                        <td class=user1> Cenfotec123</td>
+                        <td class=user1> 1992-01-06</td>
+                        <td class=user1> Fernando</td>
+                        <td class=user1> Sancho</td>
+                        <td class=user1> Barboza</td>
+                        <td class=user1> Masculino</td>
+                        <td class=user1> Costa Rica</td>
+                        <td class=user1> San José</td>
+                        <td class=user1> Montes de Oca</td>
+                        <td class=user1> San Pedro</td>
+                        <td class=user1> 100mts este del parque central</td>
+                        <td class=user1> Narrativo</td>
+                        <td class=user1> Gabriel García Márquez</td>
+
+
+                    </tr>
+                    <tr>
+                        <td><input class="editar" type="radio" name="radios" id="book2" /></td>
+                        <td class=user2>1</td>
+                        <td class=user2> Cédula de identidad</td>
+                        <td class=user2>123456789</td>
+                        <td class=user2> catalina@bazar.com</td>
+                        <td class=user2> admin123</td>
+                        <td class=user2> 1994-02-25</td>
+                        <td class=user2> Catalina</td>
+                        <td class=user2> Pérez</td>
+                        <td class=user2> Alvarado</td>
+                        <td class=user2> Femenino</td>
+                        <td class=user2> Costa Rica</td>
+                        <td class=user2> Alajuela</td>
+                        <td class=user2> Grecia</td>
+                        <td class=user2> Tacares</td>
+                        <td class=user2> 300 mts norte del mercado</td>
+                        <td class=user2>-----</td>
+                        <td class=user2>-----</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <div class="btnContainer">
+        <div><button class="btn" id="btnEditar">Editar</button></div>
+        <div><button class="btn" id="btnGuardar">Guardar</button></div>
+    </div>
+
     <!--Footer-->
     <footer class="footer">
         <div>
             <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
     </footer>
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--admin filtrar clientes js-->
+    <script src="/ProjectGM_JS/admin-filtrar-clientes.js"></script>
 </body>
 
 </html>

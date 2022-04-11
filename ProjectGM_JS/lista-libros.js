@@ -34,16 +34,15 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-
-/*content */
-
+/*llenar tabla de libros */
 const cuerpoTabla = document.querySelector("#tbl-libros tbody");
 
 const mostrarDatos = () => {
   cuerpoTabla.innerHTML = "";
-  listaLibros.forEach((libro) => {
+  listaLibros.forEach((libro, idx) => {
     let fila = cuerpoTabla.insertRow();
-
+    fila.id = idx + 1;
+    fila.className = "row";
     fila.insertCell().textContent = libro.name;
     fila.insertCell().textContent = libro.author;
     fila.insertCell().textContent = libro.price;
@@ -53,3 +52,31 @@ const mostrarDatos = () => {
 };
 
 mostrarDatos();
+
+/*redirijir al perfil del libro */
+const rows = document.querySelectorAll(".row");
+
+seleccionarLibro = (e) => {
+  e.preventDefault();
+  let rowId = e.target.parentElement.id;
+  let libroSeleccionado = false;
+
+  listaLibros.forEach((libro) => {
+    if (rowId == libro.id) {
+      libroSeleccionado = true;
+      localStorage.setItem("bookClicked", JSON.stringify(libro));
+      /*    if (libroSeleccionado) {
+        window.location.href = "perfil-libro.html";
+      } */
+    }
+  });
+
+  //redirect
+  if (libroSeleccionado) {
+    window.location.href = "perfil-libro.html";
+  }
+};
+
+for (const row of rows) {
+  row.addEventListener("click", seleccionarLibro);
+}

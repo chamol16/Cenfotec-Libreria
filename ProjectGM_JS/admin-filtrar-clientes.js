@@ -24,10 +24,9 @@ const guardar = () => {
   for (const td of tds) {
     td.contentEditable = false;
   }
-
   Swal.fire({
     icon: "success",
-    title: "Datos de los libros actualizados",
+    title: "Datos de los clientes actualizados",
     text: "Puedes continuar trabajando",
   }).then(() => {
     window.location.href = "admin-profile.html";

@@ -11,7 +11,7 @@
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--own CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/admin-catalogos.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-autores-catalogo.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -35,14 +35,154 @@
     </nav>
 
     <!--content-->
-    autores
+    <section id="listSection">
+        <div id="titleList">
+            <h1>Lista de Autores</h1>
+        </div>
+        <div>
+            <table class="contentTable" id="tbl-autores">
+                <thead>
+                    <tr>
+                        <th>Autor</th>
+                        <th>Libros </th>
+                        <th>Sexo</th>
+                        <th>País</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Fecha de defunción</th>
+                        <th>Premio Nobel</th>
+                        <th>Editar</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="autor1">Gabriel García Márquez</td>
+                        <td class="autor1">Cien años de Soledad (1967),El amor en el tiempo del cólera (1985),El coronel
+                            no tiene quien le escriba (1961),Memorias de mis putas tristes (2004)</td>
+                        <td class="autor1">masculino</td>
+                        <td class="autor1">Colombia</td>
+                        <td class="autor1">1927</td>
+                        <td class="autor1">2004</td>
+                        <td class="autor1">Sí</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor1" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor2">Pablo Neruda</td>
+                        <td class="autor2">Veinte poemas de amor y una canción desesperada (1924),Canto General
+                            (1950),Cien sonetos de amor (1956)</td>
+                        <td class="autor2">masculino</td>
+                        <td class="autor2">Chile</td>
+                        <td class="autor2">1904</td>
+                        <td class="autor2">1973</td>
+                        <td class="autor2">Sí</td>
+                        <td class="autor2"><input class="editar" type="radio" name="radios" id="autor2" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor3">Mario Vargas Llosa</td>
+                        <td class="autor3">La ciudad y los perros (1963),La tía Julia y el escribidor (1977),La fiesta
+                            del Chivo (2000),Travesuras de la niña mala (2006)</td>
+                        <td class="autor3">masculino</td>
+                        <td class="autor3">Perú</td>
+                        <td class="autor3">1936</td>
+                        <td class="autor3">----</td>
+                        <td class="autor3">Sí</td>
+                        <td class="autor3"><input class="editar" type="radio" name="radios" id="autor3" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor4">Juan Carlos Onetti</td>
+                        <td class="autor4">El pozo (1939),Tierra de nadie (1941),Para esta noche (1943),La vida breve
+                            (1950)</td>
+                        <td class="autor4">masculino</td>
+                        <td class="autor4">Uruguay</td>
+                        <td class="autor4">10-02-1955</td>
+                        <td class="autor4">1-12-2011</td>
+                        <td class="autor4">No</td>
+                        <td class="autor4"><input class="editar" type="radio" name="radios" id="autor4" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor5">José Martí</td>
+                        <td class="autor5">Ismaelillo (1882),Versos sencillos (1891)</td>
+                        <td class="autor5">masculino</td>
+                        <td class="autor5">Cuba</td>
+                        <td class="autor5">1853 </td>
+                        <td class="autor5">1895</td>
+                        <td class="autor5">No</td>
+                        <td class="autor5"><input class="editar" type="radio" name="radios" id="autor5" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor6">Jorge Luis Borges</td>
+                        <td class="autor6">Inquisiciones (1925),El tamaño de mi esperanza (1926),Historia de la
+                            eternidad (1936),Antología personal (1961)</td>
+                        <td class="autor6">masculino</td>
+                        <td class="autor6">Argentina</td>
+                        <td class="autor6">1899</td>
+                        <td class="autor6">1986</td>
+                        <td class="autor6">No</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor6" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor7">Julio Cortázar</td>
+                        <td class="autor7">Rayuela (1963),Antología (1975),Argentina, años de alambradas culturales
+                            (1984),Salvo el crepúsculo (1984)</td>
+                        <td class="autor7">masculino</td>
+                        <td class="autor7">Argentina</td>
+                        <td class="autor7">1914</td>
+                        <td class="autor7">1984</td>
+                        <td class="autor7">No</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor7" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor8">Isabel Allende</td>
+                        <td class="autor8">La casa de los espíritus (1982),De amor y de sombra (1984),El bosque de los
+                            pigmeos (2004),El cuaderno de Maya (2011)</td>
+                        <td class="autor8">femenino</td>
+                        <td class="autor8">Chile</td>
+                        <td class="autor8">1942</td>
+                        <td class="autor8">----</td>
+                        <td class="autor8">No</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor8" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor9">Jorge Amado</td>
+                        <td class="autor9">Mar Muerto (1936),Capitanes de la arena (1937),Gabriela, clavo y canela
+                            (1958),Los pastores de la noche (1964)</td>
+                        <td class="autor9">masculino</td>
+                        <td class="autor9">Brasil</td>
+                        <td class="autor9">1912</td>
+                        <td class="autor9">2001</td>
+                        <td class="autor9">No</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor9" /></td>
+                    </tr>
+                    <tr>
+                        <td class="autor10">Miguel Asturias</td>
+                        <td class="autor10">El señor presidente (1943),Hombres de maíz (1949)</td>
+                        <td class="autor10">masculino</td>
+                        <td class="autor10">Guatemala</td>
+                        <td class="autor10">1899</td>
+                        <td class="autor10">1974</td>
+                        <td class="autor10">Sí</td>
+                        <td><input class="editar" type="radio" name="radios" id="autor10" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <div class="btnContainer">
+        <div><button class="btn" id="btnEditar">Editar</button></div>
+        <div><button class="btn" id="btnGuardar">Guardar</button></div>
+    </div>
     <!--Footer-->
-    <footer class="footer">
+     <footer class="footer">
         <div>
             <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
     </footer>
 
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--admin autores js-->
     <script src="/ProjectGM_JS/admin-autores-catalogo.js"></script>
 </body>
 

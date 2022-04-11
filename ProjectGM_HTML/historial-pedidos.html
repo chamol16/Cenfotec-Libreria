@@ -52,7 +52,107 @@
     </nav>
 
     <!--content section-->
-    <section>Historial pedidos</section>
+
+    <h1>Historial de pedidos</h1>
+    <div id="reporte-historial-pedido">
+
+        <form action="" class="style-flex-column">
+            <label for="fecha-pedido"></label>
+            <br />
+            <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
+                onfocus="(this.type='date')" onblur="(this.type='text')">
+        </form>
+        <button type="submit" id="button-buscar">Consultar</button>
+
+    </div>
+
+
+
+    </section>
+
+    <section id="tabla-de-datos">
+        <hr />
+        <table>
+            <tr>
+                <th>Número de pedido</th>
+                <th>Descripción de artículo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Fecha</th>
+
+            </tr>
+            <tr>
+                <td>#1</td>
+                <td>El Diario de Ana Frank</td>
+                <td>1</td>
+                <td>₡7000</td>
+                <td>04/10/2022</td>
+            </tr>
+            <tr>
+                <td>#2</td>
+                <td>Harry Potter and the Sorcerer's Stone</td>
+                <td>1</td>
+                <td>₡6000</td>
+                <td>04/07/2022</td>
+            </tr>
+            <tr>
+                <td>#3</td>
+                <td>The Hunger Games: Catching Fire</td>
+                <td>1</td>
+                <td>₡6500</td>
+                <td>04/07/2022</td>
+            </tr>
+            <tr>
+                <td>#4</td>
+                <td>The Lord Of The Rings</td>
+                <td>3</td>
+                <td>₡8000</td>
+                <td>04/06/2022</td>
+            </tr>
+            <tr>
+                <td>#5</td>
+                <td>Harry Potter and the Deathly Hallows</td>
+                <td>1</td>
+                <td>₡8000</td>
+                <td>04/04/2022</td>
+            </tr>
+            <tr>
+                <td>#6</td>
+                <td>La Metamorfosis</td>
+                <td>1</td>
+                <td>₡12000</td>
+                <td>04/03/2022</td>
+            </tr>
+            <tr>
+                <td>#7</td>
+                <td>The Hunger Games: Mockingjay </td>
+                <td>2</td>
+                <td>₡9500</td>
+                <td>03/21/2022</td>
+            </tr>
+            <tr>
+                <td>#8</td>
+                <td>The Stand: Stephen King</td>
+                <td>3</td>
+                <td>₡11500</td>
+                <td>03/20/2022</td>
+            </tr>
+            <tr>
+                <td>#9</td>
+                <td>The Fault in Our Stars</td>
+                <td>2</td>
+                <td>₡3200</td>
+                <td>02/09/2022</td>
+            </tr>
+            <tr>
+                <td>#10</td>
+                <td>The Notebook: Nicholas Sparks</td>
+                <td>1</td>
+                <td>₡15400</td>
+                <td>01/01/2022</td>
+            </tr>
+        </table>
+    </section>
 
     <!--footer-->
     <footer class="footer">
@@ -81,6 +181,9 @@
     <script src="/ProjectGM_JS/historial-pedidos.js"></script>
 
 </body>
-
+<!--script sweet Alert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--script historial pedidos js-->
+<script src="/ProjectGM_JS/historial-pedidos.js"></script>
 
 </html>

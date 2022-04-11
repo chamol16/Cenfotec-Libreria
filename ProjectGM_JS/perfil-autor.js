@@ -41,7 +41,7 @@ listas.addEventListener("change", redirectionListas);
 document.getElementById("nombre-completo").textContent =
   authorSelected.nombreCompleto;
 document.getElementById("pais-nacimiento").textContent =
-  authorSelected.paísNacimiento;
+  authorSelected.paisNacimiento;
 document.getElementById("fecha-nacimiento").textContent =
   authorSelected.fechaNacimiento;
 document.getElementById("fecha-defuncion").textContent =
