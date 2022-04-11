@@ -18,3 +18,19 @@ option {
   bottom: 0;
   position: absolute;
 }
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+.autor {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+.autor:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,7 @@
+//clear local storage
 let userConnected = JSON.parse(localStorage.getItem("loggedUser"));
+let bookSelected = JSON.parse(localStorage.getItem("bookClicked"));
+let authorSelected = JSON.parse(localStorage.getItem("authorClicked"));
 const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
 if (userConnected) {
@@ -34,25 +37,18 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-/*content */
-const autors = document.querySelectorAll(".autor");
-
-seleccionarAutor = (e) => {
-  let autorSeleccionado = false;
-
-  listaAutores.forEach((autor) => {
-    if (e.target.id == autor.id) {
-      autorSeleccionado = true;
-      localStorage.setItem("authorClicked", JSON.stringify(autor));
-    }
-  });
-
-  //redirect
-  if (autorSeleccionado) {
-    window.location.href = "perfil-autor.html";
-  }
-};
-
-for (const autor of autors) {
-  autor.addEventListener("click", seleccionarAutor);
-}
+/* data */
+document.getElementById("nombre-completo").textContent =
+  authorSelected.nombreCompleto;
+document.getElementById("pais-nacimiento").textContent =
+  authorSelected.paísNacimiento;
+document.getElementById("fecha-nacimiento").textContent =
+  authorSelected.fechaNacimiento;
+document.getElementById("fecha-defuncion").textContent =
+  authorSelected.fechaDefuncion;
+document.getElementById("genero").textContent = authorSelected.genero;
+document.getElementById("libros-publicados").textContent =
+  authorSelected.librosPublicados;
+document
+  .getElementById("img-container")
+  .setAttribute("src", authorSelected.img);

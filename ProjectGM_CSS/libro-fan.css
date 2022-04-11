@@ -1,4 +1,256 @@
-/*content CSS here*/
-section {
-  height: 500px;
+/*selection-form*/
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: bold;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  padding-top: 30%;
+  color: #252422;
+  margin-bottom: 10%;
+  margin-right: 15%;
+  margin-left: 2%;
+  margin-bottom: 20%;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 590;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  border: none;
+  margin-left: 2%;
+}
+
+body {
+  background: #fffcf2;
+  color: #252422;
+}
+
+.section-form {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
+
+.form-container {
+  width: 40%;
+  height: auto;
+  justify-content: left;
+  justify-content: space-evenly;
+}
+
+#banner_inicio-container {
+  /* Rectangle */
+  width: 100%;
+  height: 900px;
+  box-shadow: 0px 0px 3px rgba(135, 134, 134, 0.5);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: #ccc5b997;
+  border: 1px solid #403d394c;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 2%;
+  margin-bottom: -6%;
+}
+
+.pricing-container {
+  width: 300px;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.header {
+  background: #2f2f2f;
+  color: white;
+  padding: 25px;
+  font-size: 2.5em;
+  font-weight: 300;
+  border-radius: 5px 5px 0 0;
+}
+
+.headerInfo {
+  background: #2f2f2f;
+  color: white;
+  padding: 25px;
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-left: 5%;
+  border-radius: 50px 50px 50px 50px;
+  text-align: center;
+  width: 70%;
+}
+
+.price {
+  background: #eb5e28;
+  background: linear-gradient(10deg, #eb5e28 30%, #de9510 80%);
+  color: white;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.price2 {
+  background: linear-gradient(190deg, #ccc5b9, #403d39 300%, #ccc5b9 90%);
+  color: white;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.figure {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin: 0 2px;
+}
+
+.cent {
+  text-decoration: underline;
+}
+
+.itemsWrapper {
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  background: white;
+  box-shadow: inset 14px 0 white, inset 15px 0 #f2f2f2, inset -14px 0 white,
+    inset -15px 0 #f2f2f2;
+  margin-bottom: 10%;
+}
+
+.items {
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+}
+
+.details {
+  list-style: none;
+  padding: 3%;
+  background: linear-gradient(190deg, #ffffff, #ccc5b9 300%, #ffffff 90%);
+}
+
+.item {
+  padding: 7px;
+  text-transform: capitalize;
+}
+
+.input {
+  width: 40%;
+}
+
+.select {
+  width: 41%;
+  height: 30px;
+}
+
+.btn-actualizarPlan {
+  background: #403d39;
+  color: #fffcf2;
+  cursor: pointer;
+  height: 40px;
+  width: 60%;
+  padding: 2%;
+  margin-top: 10%;
+  margin-left: 100%;
+}
+
+.btn-actualizarPlan:hover {
+  background-color: #eb5e28;
+}
+
+.plan-container {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.plan-container2 {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin-top: 16.5%;
+  margin-bottom: 20%;
+}
+
+#display-img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #252422;
+  background-position: center;
+  background-size: cover;
+}
+
+#input-img {
+  display: none;
+}
+
+.custom-file-upload {
+  font-family: "Roboto", sans-serif;
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid #252422;
+  font-size: 20px;
+}
+/*fill fields*/
+
+.field-error {
+  border: 2px solid #eb5e28;
+}
+
+/*searching-bar-container*/
+.searching-bar-container {
+  display: flex;
+  width: 350px;
+  height: 80px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.input-search {
+  background: #eb5e28;
+  color: #fffcf2;
+  height: 33px;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+.input-search::placeholder {
+  color: #fffcf2;
+}
+
+/*select*/
+.slt-nav {
+  background: #eb5e28;
+  color: #fffcf2;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+option {
+  background-color: #ea784c;
 }

@@ -1,5 +1,40 @@
-/*content CSS here*/
-section{
-  height: 500px;
+/*searching-bar-container*/
+.searching-bar-container {
+  display: flex;
+  width: 350px;
+  height: 80px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.input-search {
+  background: #eb5e28;
+  color: #fffcf2;
+  height: 33px;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+.input-search::placeholder {
+  color: #fffcf2;
+}
+
+/*select*/
+.slt-nav {
+  background: #eb5e28;
+  color: #fffcf2;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #fffcf2;
+  border-radius: 8px;
+}
+
+option {
+  background-color: #ea784c;
+}
+
+/*content CSS here*/
+section {
+  height: 500px;
+}

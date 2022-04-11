@@ -1,3 +1,67 @@
+/*nav*/
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+  background: #252422;
+}
+
+.nav > .brand-container {
+  width: 20%;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.nav > .brand-container > a {
+  text-decoration: none;
+  color: #ccc5b9;
+  font-weight: bold;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.ul li {
+  color: #ccc5b9;
+}
+
+.ul > li > a {
+  text-decoration: none;
+  color: #ccc5b9;
+}
+
+.nav > .brand-container > a:hover {
+  color: #eb5e28;
+}
+
+.searching-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loop {
+  color: #fff;
+}
+
+.ul > li > a:hover {
+  color: #eb5e28;
+}
+
+i {
+  color: #ccc5b9;
+}
+
+i:hover {
+  color: #eb5e28;
+}
+
 /*selection-form*/
 
 body {
@@ -13,7 +77,7 @@ body {
 }
 
 .form-container {
-  width: 70%;
+  width: 50%;
   height: 100%;
   padding: 50px;
   margin-left: 70px;
@@ -25,7 +89,7 @@ body {
 
 #banner_inicio-container {
   /* Rectangle */
-  width: 750px;
+  width: 500px;
   height: 470px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   padding: 25px;
@@ -68,140 +132,21 @@ body {
   justify-content: space-between;
 }
 
-.input {
-  width: 40%;
-}
-
-.select {
-  width: 41%;
-  height: 30px;
-}
-
-.textarea-container {
-  margin-top: 10px;
-  width: 100%;
-  height: 140px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.label-textarea {
-  align-self: flex-start;
-  padding-top: 10px;
-}
-
-.textarea {
-  height: 80%;
-  resize: none;
-}
-
-/*google maps*/
-
-.google-maps-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 150px;
-}
-
-#map {
-  height: 100%;
-  width: 200px;
-  background-image: url("../ProjectGM_IMG/ubicacion.PNG");
-  margin-right: 10%;
-}
-
-.favoritos-container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 50%;
-  margin-top: 1px;
-}
-
-.label-favoritos {
-  align-self: flex-start;
-  padding-top: 10px;
-}
-
-.select-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  height: 100px;
-  width: 40%;
-}
-
-.favoritos-select {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  cursor: pointer;
-}
-
 /*img-section(right-section)*/
-
 .img-container {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 50%;
+  width: 400px;
   height: 300px;
   margin-top: 50px;
 }
 
-.custom-file-upload {
-  color: #fffcf2;
-  height: 25px;
-  width: 100px;
-  text-align: center;
-  padding-top: 5px;
-  border: 1px solid #252422;
-  font-size: 20px;
-}
-
 /*fill fields*/
-
 .field-error {
   border: 2px solid #eb5e28;
-}
-
-/*image*/
-
-#img-profile {
-  background-position: center;
-  background-size: cover;
-  border: 1px solid #252422;
-  height: 180px;
-  width: 140px;
-}
-
-/*btn*/
-
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.btn-editar-perfil {
-  background: #252422;
-  color: #fffcf2;
-  cursor: pointer;
-  height: 40px;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-editar-perfil:hover {
-  background: #eb5e28;
 }
 
 /*searching-bar-container*/

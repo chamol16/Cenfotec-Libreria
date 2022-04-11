@@ -25,10 +25,27 @@
             <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
                     src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
         </div>
-
+        <div class="searching-bar-container">
+            <input type="search" class="input-search" placeholder="Buscar...">
+            <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        </div>
         <ul class="ul">
-            <li><a href="/ProjectGM_HTML/perfil.html" id="perfil">Perfil</a></li>
-            <li><a href="/ProjectGM_HTML/metodo-pago.html" id="metodo-pago">Métodos de Pago</a></li>
+            <li>
+                <select class="slt-nav" id="slt-profile">
+                    <option value="">Opciones </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Libro - fan</option>
+                    <option class="option">Métodos de pago</option>
+                    <option class="option">Historial de pedidos</option>
+                </select>
+            </li>
+            <li>
+                <select class="slt-nav" id="slt-list">
+                    <option class="" value=""> Listas </option>
+                    <option>Autores</option>
+                    <option>Libros</option>
+                </select>
+            </li>
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
@@ -63,6 +80,7 @@
             </div>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

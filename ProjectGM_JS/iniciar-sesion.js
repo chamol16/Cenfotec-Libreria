@@ -49,3 +49,12 @@ finalValidation = (tipoDeUsuario, error) => {
 };
 
 btnSignIn.addEventListener("click", validarCredenciales);
+
+/*ojito pass */
+document.getElementById("btn-ver").addEventListener("click", () => {
+  if (inputPassword.type == "password") {
+    inputPassword.type = "text";
+  } else {
+    inputPassword.type = "password";
+  }
+});

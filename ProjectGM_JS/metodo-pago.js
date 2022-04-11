@@ -64,3 +64,31 @@ remove1.addEventListener("click", remover1);
 remove2.addEventListener("click", remover2);
 remove3.addEventListener("click", remover3);
 remove4.addEventListener("click", remover4);
+
+/*perfil and listas*/
+const perfil = document.getElementById("slt-profile");
+const listas = document.getElementById("slt-list");
+
+redirectionPerfil = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "perfil.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "librofan.html";
+  } else if (e.target.selectedIndex == 3) {
+    window.location.href = "metodo-pago.html";
+  } else if (e.target.selectedIndex == 4) {
+    window.location.href = "historial-pedidos.html";
+  }
+};
+
+redirectionListas = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "lista-autores.html";
+  } else if (e.target.selectedIndex == 2) {
+    window.location.href = "lista-libros.html";
+  }
+};
+
+perfil.addEventListener("change", redirectionPerfil);
+listas.addEventListener("change", redirectionListas);
+
