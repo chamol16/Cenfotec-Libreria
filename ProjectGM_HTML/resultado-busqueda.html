@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--resultado CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/resultado-busqueda.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+
+    <title>Libros</title>
+</head>
+
+<body>
+
+    <!--nav-->
+    <nav class="nav">
+        <div class="brand-container">
+            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
+                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
+        </div>
+        <div class="searching-bar-container">
+            <input type="search" class="input-search" placeholder="Buscar...">
+            <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
+        </div>
+        <ul class="ul">
+            <li>
+                <select class="slt-nav" id="slt-profile">
+                    <option value=""> Mi Perfil </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Historial de pedidos</option>
+                </select>
+            </li>
+            <li>
+                <select class="slt-nav" id="slt-list">
+                    <option class="" value=""> Listas </option>
+                    <option>Autores</option>
+                    <option>Libros</option>
+                </select>
+            </li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+            <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <section class="mainSection" id="mainSection">
+        <!--Generos literarios-->
+
+        <aside class="navSection" id="verticalNav">
+
+            <div class="aside-child">
+                <h2>Generos literarios</h2>
+                <ul>
+                    <li>Romance</li>
+                    <li>Comedia</li>
+                    <li>Biografía</li>
+                    <li>Cuento</li>
+                    <li>Drama</li>
+                </ul>
+            </div>
+            <div class="aside-child">
+
+                <h2>Autores</h2>
+                <ul>
+                    <li>Jorge L. Borge</li>
+                    <li>Grabiel G. Márquez</li>
+                    <li>Pablo Neruda</li>
+                    <li>Carmen Lyra</li>
+                    <li>Aquileo J. Echeverría</li>
+                </ul>
+            </div>
+
+
+        </aside>
+
+        <section class="booksSection" id="bookSection">
+            <!--Seccion para los libros-->
+            <div class="bookTitle" id="bookTitle">
+                <!--Seccion de titulo-->
+                <h1>Ultimas novedades en Libros</h1>
+            </div>
+            <div class="bookPool" id="bookPool">
+                <!--En esta seccion sa van a incluir los libros por secciones de tres-->
+                <!--Third1-->
+                <div class="bookThird" id="bookThird1">
+                    <!--en esta seccion van los tres libros-->
+                    <!--libro1-->
+                    <div class="bookContainer" id="bookContainer1">
+                        <div class="bookImage" id="book-1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo1">
+                            <p>El Diario de Ana Frank</p>
+                            <p>Ana Frank</p>
+                            <p>$7.000</p>
+                        </div>
+                    </div>
+                    <!--libro2-->
+                    <div class="bookContainer" id="bookContainer2">
+                        <div class="bookImage" id="book-2">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo2">
+                            <p>"Harry Potter and the...</p>
+                            <p>J.K. Rowling</p>
+                            <p>$6.000</p>
+                        </div>
+                    </div>
+                    <!--libro3-->
+                    <div class="bookContainer" id="bookContainer3">
+                        <div class="bookImage" id="book-3">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo3">
+                            <p>The Hunger Games</p>
+                            <p>Suzanne Collins</p>
+                            <p>$6.500</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Third2-->
+                <div class="bookThird" id="bookThird2">
+                    <!--en esta seccion van los tres libros-->
+                    <!--libro1-->
+                    <div class="bookContainer" id="bookContainer4">
+                        <div class="bookImage" id="book-4">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo4">
+                            <p>The Lord Of The Rings</p>
+                            <p>J.R.R. Tolkien</p>
+                            <p>$8.000</p>
+                        </div>
+                    </div>
+                    <!--libro2-->
+                    <div class="bookContainer" id="bookContainer5">
+                        <div class="bookImage" id="book-5">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo5">
+                            <p>Cien años de soledad</p>
+                            <p>Gabriel G. Márquez</p>
+                            <p>$4.000</p>
+                        </div>
+                    </div>
+                    <!--libro3-->
+                    <div class="bookContainer" id="bookContainer6">
+                        <div class="bookImage" id="book-6">
+                            <img src="" alt="">
+                        </div>
+                        <div class="bookInfo" id="bookInfo6">
+                            <p id="panchita">Cuentos de mi tía Panchita</p>
+                            <p>Carmen Lyra</p>
+                            <p>$4.000</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            </div>
+
+        </section>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-child-container">
+            <h2>¿Quiénes somos?</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/landing-page-producto.html">Nosotros</a></li>
+                <li><a href="/ProjectGM_HTML/librofan.html">Libro-fan</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Perfil</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Listas</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/lista-libros.html">Libros</a></li>
+                <li><a href="/ProjectGM_HTML/lista-autores.html">Autores</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/ProjectGM_JS/books-DB.js"></script>
+    <script src="/ProjectGM_JS/resultado-busqueda.js"></script>
+</body>
+
+</html>

@@ -61,6 +61,9 @@
   width: 100%;
   background: #252422;
   color: #fffcf2;
+  height: 140px;
+  bottom: 0;
+  position: absolute;
 }
 
 .footer > div > a {

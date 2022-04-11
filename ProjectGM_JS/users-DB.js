@@ -17,6 +17,8 @@ let listaUsuarios = [
     direccion: "300 mts norte del mercado",
     position: "Administrador General",
     schedule: "Lunes a viernes de 7:00 - 16:00",
+    telefono: "86987412",
+    oficina: "Heredia",
   },
   {
     tipo: 2,

@@ -41,12 +41,16 @@
 }
 
 #btn-save {
-  background: #eb5e28;
+  background: #403d39;
   color: #fffcf2;
   font-weight: bold;
   cursor: pointer;
   width: 110px;
   height: 40px;
+}
+
+#btn-save:hover {
+  background: #eb5e28;
 }
 
 .footer > div > a {
@@ -58,3 +62,9 @@
   text-decoration: none;
   color: #eb5e28;
 }
+
+/*error inputs*/
+.field-error {
+  border: 2px solid #eb5e28;
+}
+

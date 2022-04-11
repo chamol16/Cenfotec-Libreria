@@ -29,7 +29,6 @@
         <ul class="ul">
             <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
             <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-            <li><a href="/ProjectGM_HTML/admin-editar-perfil.html">Editar perfil</a></li>
             <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
@@ -39,33 +38,40 @@
     <!--content section-->
     <section class="sct-admin">
         <div class="adminProfile">
-            <h1 class="h1Admin">¡Bienvenido!</h1>
-            <h1>Nombre: Víctor Vargas Jiménez</h1>
-            <h2>Correo: victor@bazar.com</h2>
-            <h2>Posición: Administrador General</h2>
-            <h2>Horario: Lunes a viernes de 07:00 - 16:00</h2>
+            <h1 class="h1Admin">¡Bienvenid@!</h1>
+            <div class="name">
+                <h2 id="nombre"></h2>
+                <h2 id="primer-apellido"></h2>
+                <h2 id="segundo-apellido"></h2>
+            </div>
+            <h2 id="correo"></h2>
+            <h2 id="position"></h2>
+            <h2 id="schedule"></h2>
         </div>
 
         <div class="adminProfile">
             <h1 class="h1Admin">¿Qué te gustaría hacer?</h1>
-            <ul class="adminProfile lista">
+            <ul class="lista">
                 <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
                 <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-                <li><a href="/ProjectGM_HTML/admin-editar-perfil.html">Editar perfil</a></li>
-                <li><a href="/ProjectGM_HTML/generar-reportes.html">Generar reportes</a></li>
+                <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
             </ul>
         </div>
+
+
 
         <img class="img" src="/ProjectGM_IMG/logo-producto-negro.png" alt="growthminateLogoNegro">
 
     </section>
+    <div class="btn-container">
+        <button type="button" id="btn-admin-editar" class="btn-admin-editar">Editar perfil</button>
+    </div>
 
     <!--Footer-->
     <footer class="footer">
         <div>
-            <a href="/ProjectGM_HTML/landing-page-producto.html">Growthminate® 2022</a>
+            <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
-
     </footer>
 
     <!--js validation-->

@@ -10,3 +10,20 @@ logOut = () => {
 };
 
 inicioElementoA.addEventListener("click", logOut);
+
+/*data */
+
+document.getElementById("nombre").textContent = adminConnected.nombre;
+document.getElementById("primer-apellido").textContent =
+  adminConnected.primerApellido;
+document.getElementById("segundo-apellido").textContent =
+  adminConnected.segundoApellido;
+document.getElementById("correo").textContent = adminConnected.correo;
+document.getElementById("position").textContent = adminConnected.position;
+document.getElementById("schedule").textContent = adminConnected.schedule;
+
+/*btn editar */
+
+document.getElementById("btn-admin-editar").addEventListener("click", () => {
+  window.location.href = "admin-editar-perfil.html";
+});

@@ -19,22 +19,19 @@
 </head>
 
 <body>
-   <!--nav-->
-   <nav class="nav">
-    <div class="brand-container">
-        <a href="/ProjectGM_HTML/admin-profile.html"><img class="logo-producto"
-                src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-    </div>
+    <!--nav-->
+    <nav class="nav">
+        <div class="brand-container">
+            <a href="/ProjectGM_HTML/admin-profile.html"><img class="logo-producto"
+                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
+        </div>
 
-    <ul class="ul">
-        <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
-        <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-        <li><a href="/ProjectGM_HTML/admin-editar-perfil.html">Editar perfil</a></li>
-        <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
-        <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
-    </ul>
+        <ul class="ul">
+            <li><a href="/ProjectGM_HTML/admin-profile.html">Perfil</a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+        </ul>
 
-</nav>
+    </nav>
 
     <!--Contenido-->
 
@@ -47,28 +44,28 @@
             </div>
 
             <div class="inputContainer">
-                <label for="txt-adminName">Nombre</label>
-                <input type="text" id="txt-adminName">
+                <label for="">Nombre</label>
+                <input type="text" id="name" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-lastName">Primer apellido</label>
-                <input type="text" id="txt-lastName">
+                <label for="">Primer apellido</label>
+                <input type="text" id="first-last-name" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-lastName-2">Segundo apellido</label>
-                <input type="text" id="txt-lastName-2">
+                <label for="">Segundo apellido</label>
+                <input type="text" id="second-last-name" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-tel">Número de contacto</label>
-                <input type="text" id="txt-tel">
+                <label for="">Número de contacto</label>
+                <input type="text" id="phone" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-correoPersonal">Correo personal</label>
-                <input type="email" id="txt-correoPersonal">
+                <label for="">Correo personal</label>
+                <input type="email" id="email" class="input">
             </div>
 
         </form>
@@ -76,33 +73,32 @@
         <form class="form-editAdmin">
 
             <div class="inputContainer">
-                <label for="txt-addLocation">Ubicación</label>
-                <input type="text" id="txt-addLocation">
+                <label for="">Dirección</label>
+                <input type="text" id="address" class="input">
             </div>
-
             <div class="inputContainer">
                 <label for="slt-idType">Tipo de idetificación</label>
                 <select id="slt-idType">
-                    <option value="">-Tipo de identificación-</option>
-                    <option value="1">Cédula Física</option>
-                    <option value="2">Cédula Jurídica</option>
-                    <option value="3">Cédula Extranjera</option>
+                    <option>Cédula de identidad</option>
+                    <option>Número de Seguro Social</option>
+                    <option>Tarjeta de residencia (DIMEX)</option>
+                    <option>Documento de identificación diplomático</option>
                 </select>
             </div>
 
             <div class="inputContainer">
-                <label for="txt-addNumerId">Número de Identificación</label>
-                <input type="text" id="txt-addNumerId">
+                <label for="">Número de Identificación</label>
+                <input type="text" id="id" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-changePass">Nueva contraseña</label>
-                <input type="password" id="txt-changePass">
+                <label for="">Nueva contraseña</label>
+                <input type="password" id="password" class="input">
             </div>
 
             <div class="inputContainer">
-                <label for="txt-changePass-conf">Confirmar cambio</label>
-                <input type="password" id="txt-changePass-conf">
+                <label for="">Confirmar cambio</label>
+                <input type="password" id="confirm-password" class="input">
             </div>
 
         </form>
@@ -117,16 +113,19 @@
     <!--Footer-->
     <footer class="footer">
         <div>
-            <a href="/ProjectGM_HTML/landing-page-producto.html">Growthminate® 2022</a>
+            <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
 
     </footer>
 
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--js validation-->
     <script src="/ProjectGM_JS/admin-edit-profile.js"></script>
     <!--DB for admin logged-->
     <script src="/ProjectGM_JS/users-DB.js"></script>
 </body>
+
 
 
 
