@@ -14,6 +14,7 @@
   align-content: center;
   width: 90%;
   height: 600px;
+  margin: 50px;
 }
 
 .izquierdaPanel {
@@ -22,10 +23,10 @@
   justify-content: space-evenly;
   height: 600px;
   width: 30%;
+  margin: 50px;
 }
 
-#izq-6 {
-  font-weight: bolder;
+.izquierdaPanel > a:hover {
   color: #eb5e28;
 }
 
@@ -55,11 +56,11 @@
 #btnAgregar {
   background-color: #252422;
   color: #fffcf2;
+  cursor: pointer;
 }
 
 #btnAgregar:hover {
   background-color: #eb5e28;
-  color: #252422;
 }
 
 .txt-socioInput {
