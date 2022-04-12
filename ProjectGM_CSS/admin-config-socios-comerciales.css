@@ -1,0 +1,146 @@
+/*Body*/
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fffcf2;
+}
+
+.sct-config {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 90%;
+  height: 600px;
+}
+
+.izquierdaPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 600px;
+  width: 30%;
+}
+
+#izq-6 {
+  font-weight: bolder;
+  color: #eb5e28;
+}
+
+.derechaPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+}
+
+.izquierdaPanel > a {
+  text-decoration: none;
+  color: #252422;
+}
+
+.inputContPanel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  height: 100px;
+}
+
+#btnAgregar {
+  background-color: #252422;
+  color: #fffcf2;
+}
+
+#btnAgregar:hover {
+  background-color: #eb5e28;
+  color: #252422;
+}
+
+.txt-socioInput {
+  width: 205px;
+}
+
+.imgContainer {
+  align-self: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#displayImg {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #252422;
+  background-position: left;
+  background-size: cover;
+}
+
+#inputImg {
+  display: none;
+}
+
+.customUpload {
+  font-family: "Roboto";
+  background: #eb5e28;
+  color: #fffcf2;
+  cursor: pointer;
+  height: 25px;
+  width: 100px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid #252422;
+  font-size: 20px;
+}
+
+/*footer*/
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 120px;
+  width: 100%;
+  background: #252422;
+  color: #fffcf2;
+  bottom: 0;
+  position: absolute;
+}
+
+.footer > div > a {
+  text-decoration: none;
+  color: #fffcf2;
+}
+
+.footer > div > a:hover {
+  text-decoration: none;
+  color: #eb5e28;
+}
+
+/*btn editar*/
+.btn-container {
+  display: flex;
+  width: 380px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-admin-editar {
+  background: #403d39;
+  color: #fffcf2;
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+}
+
+.btn-admin-editar:hover {
+  background: #eb5e28;
+}
