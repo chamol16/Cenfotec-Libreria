@@ -137,4 +137,8 @@ table {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: #fff;
+  color: #252422;
+  /*   background: rgb(235, 240, 241); */
+  /*  color: #e76f51; */
 }

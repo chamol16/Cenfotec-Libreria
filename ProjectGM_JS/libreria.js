@@ -49,7 +49,6 @@ seleccionarLibro = (e) => {
     }
   });
 
-  //redirect
   if (libroSeleccionado) {
     window.location.href = "articulo.html";
   }
@@ -58,3 +57,8 @@ seleccionarLibro = (e) => {
 for (const book of books) {
   book.addEventListener("click", seleccionarLibro);
 }
+
+/*click on autors*/
+document.querySelectorAll(".autor").addEventListener("click", () => {
+  window.location.href = "lista-autores.html";
+});

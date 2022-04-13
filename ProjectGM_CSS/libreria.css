@@ -1,35 +1,42 @@
 /*preview-section*/
 .preview-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  margin-top: 50px;
 }
 
 .category-container {
-  height: 50%;
+  height: 600px;
+  width: 300px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 50px;
+  margin: 10px;
 }
 
 .category-content-container {
-  height: 100%;
-  width: 25%;
+  height: 500px;
+  border: 1px solid #ea784c;
+  border-radius: 20px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
+  color: #ea784c;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .img-container {
-  height: 200px;
-  width: 320px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,11 +45,15 @@
 
 /*books-images (content)*/
 .article-content-container {
-  height: 85%;
-  width: 40%;
-  /* background-position: center; */
+  height: 185px;
+  width: 130px;
   background-size: cover;
   background-position: center;
+}
+
+.book {
+  background-position: top;
+  cursor: pointer;
 }
 
 .book-1 {
@@ -61,12 +72,8 @@
   background-image: url("/ProjectGM_IMG/books/lord_of_the_rings.jpg");
 }
 
-.book {
-  height: 90%;
+.autor {
   background-position: top;
-}
-
-.book:hover {
   cursor: pointer;
 }
 
@@ -123,53 +130,16 @@
 }
 
 .link-container {
-  align-self: flex-start;
   font-size: 14px;
-  width: 120px;
+  width: 75%;
   height: 40px;
-  margin-left: 15px;
 }
 
 .link-container > a {
-  color: #252422;
+  color: #ea784c;
+  opacity: 50%;
 }
 
 .link-container > a:hover {
-  color: #eb5e28;
-}
-
-/*select*/
-.slt-nav {
-  background: #eb5e28;
-  color: #fffcf2;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #fffcf2;
-  border-radius: 8px;
-}
-
-option {
-  background-color: #ea784c;
-}
-
-/*searching-bar-container*/
-.searching-bar-container {
-  display: flex;
-  width: 350px;
-  height: 80px;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.input-search {
-  background: #eb5e28;
-  color: #fffcf2;
-  height: 33px;
-  border: 2px solid #fffcf2;
-  border-radius: 8px;
-}
-
-.input-search::placeholder {
-  color: #fffcf2;
+  opacity: 100%;
 }
