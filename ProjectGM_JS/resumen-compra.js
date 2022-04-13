@@ -16,13 +16,11 @@ inicioElementoA.addEventListener("click", logOut);
 /*resumen compra */
 const btnPayment = document.getElementById("btnPayment");
 const libroFan = document.getElementById("libroFanCheckbox");
-const metodos = document.querySelectorAll(".metodo");
 const total = document.getElementById("total");
 const descuento = document.getElementById("descuento");
 const pagar = document.getElementById("pagar");
 
 let isSelected = libroFan.checked;
-let metodoSelected = metodos.checked;
 
 const confirma = () => {
   isSelected = libroFan.checked;
@@ -35,30 +33,15 @@ const confirma = () => {
   }
 };
 const confirmPay = () => {
-  let listo;
-  for (const metodo of metodos) {
-    metodoSelected = metodo.checked;
-    if (metodoSelected) {
-      listo = true;
-    }
-  }
-  if (listo) {
-    swal
-      .fire({
-        icon: "success",
-        title: "Pago realizado con éxito",
-        text: "Accediendo al resumen de su compra",
-      })
-      .then(() => {
-        window.location.href = "confirmacion-compra.html";
-      });
-  } else {
-    swal.fire({
-      icon: "error",
-      title: "Error en el pago.",
-      text: "Por favor seleccione un método de pago",
+  swal
+    .fire({
+      icon: "success",
+      title: "Pago realizado con éxito",
+      text: "Accediendo al resumen de su compra",
+    })
+    .then(() => {
+      window.location.href = "confirmacion-compra.html";
     });
-  }
 };
 
 libroFan.addEventListener("change", confirma);

@@ -15,7 +15,7 @@ inicioElementoA.addEventListener("click", logOut);
 
 /* carrito content*/
 
-document.getElementById("btnComprar").addEventListener("click", () => {
+document.getElementById("btn-comprar").addEventListener("click", () => {
   window.location.href = "resumen-compra.html";
 });
 

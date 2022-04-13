@@ -51,55 +51,46 @@
     </nav>
 
     <!--content section-->
-    <section class="mainSection" id="mainSection">
-        <section class="cartSection" id="cartSection">
-            <div class="cartContainer" id="cartContainer">
-                <div class="cartTitle" id="cartTitle">
-                    <h1>Carrito</h1>
-                </div>
-                <div class="cartList" id="cartList">
-                    <div class="cartItem" id="cartItem1">
-                        <div class="itemImage" id="itemImage1"></div>
-                        <div class="itemDescription" id="itemDescription1">
-                            <h3>The Hunger Games - 1 -</h3>
-                        </div>
-                        <div class="itemAmount" id="itemAmount1">
-                            <h3>$6500</h3>
-                        </div>
-                        <div class="itemRemove" id="itemRemove1"></div>
-                    </div>
-                    <div class="cartItem" id="cartItem2">
-                        <div class="itemImage" id="itemImage2"></div>
-                        <div class="itemDescription" id="itemDescription2">
-                            <div>
-                                <h3>El Diario de Ana Frank - 1 -</h3>
-                            </div>
-                        </div>
-                        <div class="itemAmount" id="itemAmount2">
-                            <h3>$7000</h3>
-                        </div>
-                        <div class="itemRemove" id="itemRemove2"></div>
-                    </div>
-                    <div class="cartItem" id="cartItem3">
-                        <div class="itemImage" id="itemImage3"></div>
-                        <div class="itemDescription" id="itemDescription3">
-                            <h3>Harry Potter and the Sorcerer's Stone - 1 -</h3>
-                        </div>
-                        <div class="itemAmount" id="itemAmount3">
-                            <h3>$6000</h3>
-                        </div>
-                        <div class="itemRemove" id="itemRemove3"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="cartEnd" id="cartEnd">
-                <div class="endTotal">
-                    <h3>Total a pagar: $19.500</h3>
-                    <button class="btn" id="btnComprar">Comprar</button>
+    <section class="cart-section">
+        <div class="cart-title">
+            <h1>Carrito de compras</h1>
+        </div>
 
+        <div class="cart-container">
+            <div class="cart-item">
+                <input type="number" value="1" class="cantidad">
+                <img class="img-container" id="itemImage1"></img>
+                <div class="book-name-container">
+                    <h3>The Hunger Games</h3>
                 </div>
+                <h3>¢6500</h3>
+                <i class="fa-solid fa-trash-can"></i>
             </div>
-        </section>
+            <div class="cart-item">
+                <input type="number" value="1" class="cantidad">
+                <img class="img-container" id="itemImage2"></img>
+                <div class="book-name-container">
+                    <h3>El Diario de Ana Frank</h3>
+                </div>
+                <h3>¢7000</h3>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="cart-item">
+                <input type="number" value="1" class="cantidad">
+                <img class="img-container" id="itemImage3"></img>
+                <div class="book-name-container">
+                    <h3>Harry Potter and the Sorcerer's Stone</h3>
+                </div>
+                <h3>¢6000</h3>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <h3 class="negrita">Total a pagar: ¢19.500</h3>
+            <button class="btn" id="btn-comprar">Comprar</button>
+        </div>
+
     </section>
 
     <!--footer-->
@@ -126,6 +117,8 @@
             </ul>
         </div>
     </footer>
+
+    <!--script cart js-->
     <script src="/ProjectGM_JS/carrito.js"></script>
 
 </body>

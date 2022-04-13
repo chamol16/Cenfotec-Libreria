@@ -1,150 +1,106 @@
-* {
-  --colorUno: #fffcf2;
-  --colorDos: #ccc5b9;
-  --colorTres: #403d39;
-  --colorCuatro: #252422;
-  --colorCinco: #eb5e28;
-}
-
-#mainSection {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
-}
-
-#cartContainer {
-  border: var(--colorCuatro) solid 2px;
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
-
-#cartTitle {
-  border-bottom: var(--colorCuatro) solid 2px;
-  background: var(--colorTres);
-  color: var(--colorUno);
-  display: flex;
-  align-items: center;
-}
-
-#verticalNav {
-  width: 17%;
-  height: 1000px;
-  border: var(--colorTres) solid 2px;
-}
-
-#cartSection {
-  width: 83%;
-}
-
-#cartEnd {
-  display: flex;
-  width: 100%;
-  margin-left: -12px;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.cartItem {
-  border-bottom: var(--colorCuatro) solid 2px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-}
-
-.cartItem h3 {
-  line-height: 0%;
-}
-
-.itemImage {
-  height: 150px;
-  width: 100px;
-  border-right: var(--colorCuatro) solid 2px;
-}
-
-.itemRemove {
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bookContainer {
-  border-bottom: 2px var(--colorCuatro) solid;
-  height: 300px;
+.cart-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: space-evenly;
+  height: 800px;
 }
 
-.bookImage {
+.cart-title {
+  color: #ea784c;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 800px;
+  padding-left: 50px;
+}
+
+h1 {
+  color: #e76f51;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.cart-container {
+  border: 1px solid #ea784c;
+  border-radius: 20px;
+  color: #ea784c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 800px;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 700px;
+  height: 500px;
+  border-bottom: 1px solid #ea784c;
+}
+
+.cantidad {
+  width: 35px;
+  border: 1px solid #ea784c;
+  border-radius: 5px;
+}
+/*img*/
+.img-container {
+  width: 100px;
+  height: 130px;
   background-size: cover;
-  background-position: center;
-  width: 112.5px;
-  height: 200px;
-  margin: 5px;
+  background-position: top;
 }
 
-.itemRemove {
-  background-size: cover;
-  background-position: center;
-  background-image: url("../Media/deleteLogo.png");
-  width: 50px;
-  height: 50px;
-}
-
-.itemDescription {
-  height: 100px;
-  width: 70%;
+.book-name-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  width: 250px;
+  height: 80px;
 }
 
-.itemAmount {
+.cart-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100px;
-  width: 10%;
+  justify-content: space-evenly;
+  width: 800px;
+  height: 90px;
 }
 
 #bookImage1 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
 }
 
 #bookImage2 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
 }
 
 #bookImage3 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/lord_of_the_rings.jpg");
 }
 
 #itemImage1 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/hunger_games.jpg");
 }
 
 #itemImage2 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/el_diario.jpg");
 }
 
 #itemImage3 {
-  background-size: cover;
-  background-position: center;
   background-image: url("/ProjectGM_IMG/books/harry_potter.jpg");
 }
 
-.endTotal {
+.cart-footer {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }

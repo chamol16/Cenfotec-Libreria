@@ -15,7 +15,7 @@ inicioElementoA.addEventListener("click", logOut);
 
 /*route to lib */
 
-const btnConfirmar = document.getElementById("btnContinuar");
+const btnConfirmar = document.getElementById("btn-continuar");
 const pagar = () => {
   window.location.href = "libreria.html";
 };

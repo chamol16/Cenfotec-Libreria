@@ -21,15 +21,14 @@
 <body>
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
                     <option value=""> Mi Perfil </option>
@@ -44,48 +43,46 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
         </ul>
     </nav>
 
     <!--content-->
-    <section class="main-section" id="mainContainer">
-        <div class="container title" id="purchaseContainer">
-            <h1>Completar compra</h1>
-        </div>
-        <div class="container-main" id="purchaseTitle">
+    <section class="main-section">
+        <div class="content-container">
 
-            <div class="container metodo-pago">
-                <h2>
-                    Seleccionar método de pago
-                </h2>
-                <div class="radio-container">
-                    <input class="metodo" type="radio" name="radios" id="radio1" />
-
-                    <label for="radio1">VISA 9087</label>
-                </div>
-
-                <div class="radio-container">
-                    <input class="metodo" type="radio" name="radios" id="radio2" />
-                    <label for="radio2">MCARD 8319</label>
-                </div>
-
+            <div class="title">
+                <h1>Completar compra</h1>
             </div>
 
-            <div class="direccion-envio">
-                <label for="">Elije tu dirección de envío</label>
-                <select name="" id="">
-                    <option value="">Domicilio registrado</option>
-                    <option value="">Walmart - Tibás</option>
-                    <option value="">MC Donals - Paseo Colón</option>
-                    <option value="">Farmacía Fischel - San Rafael Heredia</option>
-                    <option value="">Peri - Cartago</option>
+            <div class="eleccion-container">
+                <div class="metodo-direccion-container">
+                    <label for="">Seleccionar método de pago</label>
+                    <select name="" id="" class="slt-nav">
+                        <option value="">VISA 9087</option>
+                        <option value="">MCARD 8319</option>
+                    </select>
+                </div>
 
-                </select>
+                <div class="metodo-direccion-container">
+                    <label for="">Elije tu dirección de envío</label>
+                    <select name="" id="" class="slt-nav">
+                        <option value="">Domicilio registrado</option>
+                        <option value="">Walmart - Tibás</option>
+                        <option value="">MC Donals - Paseo Colón</option>
+                        <option value="">Farmacía Fischel - San Rafael Heredia</option>
+                        <option value="">Peri - Cartago</option>
+                    </select>
+                </div>
             </div>
+
+
         </div>
-        <div class="container descuento" id="paymetsContainer">
+
+        <div class="descuento" id="paymetsContainer">
             <div class="">
                 <input id="libroFanCheckbox" type="checkbox">
                 <label for="libroFanCheckbox">¿Aplicar descuento libro fan?</label>
@@ -105,10 +102,40 @@
 
                     <h3 id="pagar">$19.500</h3>
                 </div>
-                <div><button type="button" class="button" id="btnPayment"> Pagar</button></div>
+                <div><button type="button" class=" btn button" id="btnPayment"> Pagar</button></div>
             </div>
         </div>
+
+
     </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-child-container">
+            <h2>¿Quiénes somos?</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/landing-page-producto.html">Nosotros</a></li>
+                <li><a href="/ProjectGM_HTML/librofan.html">Libro-fan</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Perfil</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
+                <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Listas</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/lista-libros.html">Libros</a></li>
+                <li><a href="/ProjectGM_HTML/lista-autores.html">Autores</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/ProjectGM_JS/resumen-compra.js"></script>
 </body>
