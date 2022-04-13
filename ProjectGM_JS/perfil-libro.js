@@ -41,7 +41,7 @@ listas.addEventListener("change", redirectionListas);
 /* data */
 document.getElementById("name").textContent = bookSelected.name;
 document.getElementById("author").textContent = bookSelected.author;
-document.getElementById("price").textContent = bookSelected.price;
+document.getElementById("price").textContent = `¢${bookSelected.price}`;
 document.getElementById("gender").textContent = bookSelected.gender;
 document.getElementById("idiom").textContent = bookSelected.idiom;
 

@@ -47,8 +47,9 @@ document.getElementById("fecha-nacimiento").textContent =
 document.getElementById("fecha-defuncion").textContent =
   authorSelected.fechaDefuncion;
 document.getElementById("genero").textContent = authorSelected.genero;
-document.getElementById("libros-publicados").textContent =
+document.getElementById("libro-famoso").textContent =
   authorSelected.librosPublicados[0];
+document.getElementById("resena").textContent = authorSelected.biografia;
 document
   .getElementById("img-container")
   .setAttribute("src", authorSelected.img);

@@ -129,7 +129,21 @@ hr {
 
 /*cuerpo primera franja*/
 #tabla-de-datos tr:nth-child(even) {
-  background: rgb(235, 240, 241);
+  /*   background: rgb(235, 240, 241); */
   border-top: 1px solid #e76f51;
   border-bottom: 1px solid #e76f51;
+}
+
+h1,
+h3 {
+  color: #e76f51;
+  font-size: 28px;
+}
+
+.row {
+  cursor: pointer;
+}
+
+.row:hover {
+  background-color: #feddc1;
 }

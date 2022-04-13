@@ -77,20 +77,20 @@
   cursor: pointer;
 }
 
-#autor-1 {
+.autor-1 {
   background-image: url("/ProjectGM_IMG/autores/Gabriel_Garcia_Marquez.jpg");
 }
 
-#autor-2 {
-  background-image: url("/ProjectGM_IMG/autores/J.K_Rowling.jpg");
+.autor-2 {
+  background-image: url("/ProjectGM_IMG/autores/Pablo_Neruda.jpg");
 }
 
-#autor-3 {
-  background-image: url("/ProjectGM_IMG/autores/Stephen_King.jpg");
+.autor-3 {
+  background-image: url("/ProjectGM_IMG/autores/Mario_Vargas_Llosa.jpg");
 }
 
-#autor-4 {
-  background-image: url("/ProjectGM_IMG/autores/William_Shakespeare.jpg");
+.autor-4 {
+  background-image: url("/ProjectGM_IMG/autores/Isabel_Allende.jpg");
 }
 
 #suscription-1 {
@@ -110,7 +110,7 @@
 }
 
 .socio {
-  width: 46%;
+  width: 40%;
 }
 
 #socio-comercial-1 {

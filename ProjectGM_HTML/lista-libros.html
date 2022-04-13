@@ -21,20 +21,19 @@
 <body>
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
-                    <option class="" value=""> Mi Perfil </option>
-                    <option>Perfil</option>
-                    <option>Historial de pedidos</option>
+                    <option value=""> Mi Perfil </option>
+                    <option class="option">Perfil</option>
+                    <option class="option">Historial de pedidos</option>
                 </select>
             </li>
             <li>
@@ -44,14 +43,16 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
-            </li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
         </ul>
     </nav>
+
     <!--content section -->
     <section id="tabla-de-datos">
-            <h1>Lista de Libros</h1>
+        <h1>Lista de Libros</h1>
         <div>
             <table class="contentTable" id="tbl-libros">
                 <thead>
@@ -81,7 +82,7 @@
         <div class="footer-child-container">
             <h2>Perfil</h2>
             <ul class="footer-ul">
-                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
                 <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
             </ul>
         </div>
@@ -93,6 +94,7 @@
             </ul>
         </div>
     </footer>
+
 
     <script src="/ProjectGM_JS/books-DB.js"></script>
     <script src="/ProjectGM_JS/lista-libros.js"></script>

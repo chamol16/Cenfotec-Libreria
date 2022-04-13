@@ -24,15 +24,14 @@
 
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
                     <option value=""> Mi Perfil </option>
@@ -47,134 +46,103 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+
         </ul>
     </nav>
 
 
-    <section class="mainSection" id="mainSection">
-        <!--Generos literarios-->
+    <section class="main-section" id="">
 
-        <aside class="navSection" id="verticalNav">
+        <aside class="aside" id="">
 
             <div class="aside-child">
-                <h2>Generos literarios</h2>
-                <ul>
-                    <li>Romance</li>
+                <h2>Géneros más buscados</h2>
+                <ul class="aside-ul">
+                    <li>Biografías</li>
                     <li>Comedia</li>
-                    <li>Biografía</li>
                     <li>Cuento</li>
                     <li>Drama</li>
+                    <li>Romance</li>
                 </ul>
             </div>
             <div class="aside-child">
 
-                <h2>Autores</h2>
-                <ul>
-                    <li>Jorge L. Borge</li>
+                <h2>Autores más leídos</h2>
+                <ul class="aside-ul">
                     <li>Grabiel G. Márquez</li>
                     <li>Pablo Neruda</li>
-                    <li>Carmen Lyra</li>
-                    <li>Aquileo J. Echeverría</li>
+                    <li>Mario Vargas Llosa</li>
+                    <li>Isabel Allende</li>
+                    <li>José Martí</li>
                 </ul>
             </div>
-
-
         </aside>
 
-        <section class="booksSection" id="bookSection">
-            <!--Seccion para los libros-->
-            <div class="bookTitle" id="bookTitle">
-                <!--Seccion de titulo-->
-                <h1>Ultimas novedades en Libros</h1>
-            </div>
-            <div class="bookPool" id="bookPool">
-                <!--En esta seccion sa van a incluir los libros por secciones de tres-->
-                <!--Third1-->
-                <div class="bookThird" id="bookThird1">
-                    <!--en esta seccion van los tres libros-->
-                    <!--libro1-->
-                    <div class="bookContainer" id="bookContainer1">
-                        <div class="bookImage book-1" id="1">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo1">
-                            <p>El Diario de Ana Frank</p>
-                            <p>Ana Frank</p>
-                            <p>$7.000</p>
-                        </div>
-                    </div>
-                    <!--libro2-->
-                    <div class="bookContainer" id="bookContainer2">
-                        <div class="bookImage book-2" id="2">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo2">
-                            <p>"Harry Potter and the...</p>
-                            <p>J.K. Rowling</p>
-                            <p>$6.000</p>
-                        </div>
-                    </div>
-                    <!--libro3-->
-                    <div class="bookContainer" id="bookContainer3">
-                        <div class="bookImage book-3" id="3">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo3">
-                            <p>The Hunger Games</p>
-                            <p>Suzanne Collins</p>
-                            <p>$6.500</p>
-                        </div>
-                    </div>
+        <section class="books-section">
 
+            <div class="division-container">
+
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-1">
+                    <ul class="">
+                        <li>El Diario de Ana Frank</li>
+                        <li>Ana Frank</li>
+                        <li>$7.000</li>
+                    </ul>
                 </div>
-                <!--Third2-->
-                <div class="bookThird" id="bookThird2">
-                    <!--en esta seccion van los tres libros-->
-                    <!--libro1-->
-                    <div class="bookContainer" id="bookContainer4">
-                        <div class="bookImage book-4" id="4">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo4">
-                            <p>The Lord Of The Rings</p>
-                            <p>J.R.R. Tolkien</p>
-                            <p>$8.000</p>
-                        </div>
-                    </div>
-                    <!--libro2-->
-                    <div class="bookContainer" id="bookContainer5">
-                        <div class="bookImage book-5" id="5">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo5">
-                            <p>Cien años de soledad</p>
-                            <p>Gabriel G. Márquez</p>
-                            <p>$4.000</p>
-                        </div>
-                    </div>
-                    <!--libro3-->
-                    <div class="bookContainer" id="bookContainer6">
-                        <div class="bookImage book-6" id="6">
-                            <img src="" alt="">
-                        </div>
-                        <div class="bookInfo" id="bookInfo6">
-                            <p id="panchita">Cuentos de mi tía Panchita</p>
-                            <p>Carmen Lyra</p>
-                            <p>$4.000</p>
-                        </div>
-                    </div>
-
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-2">
+                    <ul class="">
+                        <li>"Harry Potter and the...</li>
+                        <li>J.K. Rowling</li>
+                        <li>$6.000</li>
+                    </ul>
+                </div>
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-3">
+                    <ul class="">
+                        <li>The Hunger Games</li>
+                        <li>Suzanne Collins</li>
+                        <li>$6.500</li>
+                    </ul>
                 </div>
 
-
             </div>
+            <div class="division-container">
 
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-4">
+                    <ul class="">
+                        <li>The Lord Of The Rings</li>
+                        <li>J.R.R. Tolkien</li>
+                        <li>$8.000</li>
+                    </ul>
+                </div>
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-5">
+                    <ul class="">
+                        <li>Cien años de soledad</li>
+                        <li>Gabriel G. Márquez</li>
+                        <li>$4.000</li>
+                    </ul>
+                </div>
+                <div class="book-container">
+                    <img src="" alt="" class="img-book book-6">
+                    <ul class="">
+                        <li id="panchita">Cuentos de mi tía Panchita</li>
+                        <li>Carmen Lyra</li>
+                        <li>$4.000</li>
+                    </ul>
+                </div>
             </div>
 
         </section>
+
     </section>
+
     <!--footer-->
     <footer class="footer">
         <div class="footer-child-container">
@@ -187,7 +155,7 @@
         <div class="footer-child-container">
             <h2>Perfil</h2>
             <ul class="footer-ul">
-                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
                 <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
             </ul>
         </div>

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 150px;
+  height: 140px;
   width: 100%;
   /*  box-shadow: 0px 10px 10px -6px #ea784c; */
   box-shadow: 0px 0px 10px 0px #ea784c inset;
@@ -133,4 +133,21 @@
 
 .footer-ul > li > a:hover {
   opacity: 100%;
+}
+
+/*btn*/
+
+.btn {
+  background: #fff;
+  color: #ea784c;
+  cursor: pointer;
+  width: 60%;
+  height: 40px;
+  border: 1px solid #ea784c;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: #fff;
+  background: #ea784c;
 }

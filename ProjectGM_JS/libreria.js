@@ -59,6 +59,23 @@ for (const book of books) {
 }
 
 /*click on autors*/
-document.querySelectorAll(".autor").addEventListener("click", () => {
-  window.location.href = "lista-autores.html";
-});
+const authors = document.querySelectorAll(".autor");
+
+seleccionarAutor = (e) => {
+  let autorSeleccionado = false;
+
+  listaAutores.forEach((autor) => {
+    if (e.target.id == autor.id) {
+      autorSeleccionado = true;
+      localStorage.setItem("authorClicked", JSON.stringify(autor));
+    }
+  });
+
+  if (autorSeleccionado) {
+    window.location.href = "perfil-autor.html";
+  }
+};
+
+for (const autor of authors) {
+  autor.addEventListener("click", seleccionarAutor);
+}
