@@ -39,5 +39,6 @@ let listaUsuarios = [
     generoFavorito: "Narrativo",
     autorFavorito: "Gabriel García Márquez",
     img: "/ProjectGM_IMG/clientes/fernando_sancho_barboza.jpg",
+    libroFan: true,
   },
 ];

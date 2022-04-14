@@ -16,7 +16,7 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /*add card */
-const inputs = document.querySelectorAll(".input");
+const inputs = document.querySelectorAll(".fill");
 const btnGuardar = document.getElementById("btn-save");
 
 const validar = () => {

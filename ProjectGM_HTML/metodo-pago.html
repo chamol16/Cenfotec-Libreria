@@ -19,17 +19,17 @@
 </head>
 
 <body>
+
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
                     <option value="">Opciones </option>
@@ -46,14 +46,15 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
     </nav>
 
     <!--Contenido-->
-    <h1>Métodos de pago</h1>
-    <div class="main-container">
+    <section class="metodo-pago-section">
+        <h1>Métodos de pago</h1>
+
         <div class="container">
             <form>
                 <p class="card-title mx-auto"> Tarjetas guardadas </p>
@@ -73,7 +74,7 @@
                             src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
                     </div>
                     <div class="col-7">
-                        <input type="text" placeholder="**** **** **** 2502">
+                        <input type="text" class="saved-card" placeholder="**** **** **** 2502">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
                         <a href="#" id="remove-2">Remover tarjeta</a>
@@ -84,7 +85,7 @@
                         <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
                     </div>
                     <div class="col-7">
-                        <input type="text" placeholder="**** **** **** 1746">
+                        <input type="text" class="saved-card" placeholder="**** **** **** 1746">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
                         <a href="#" id="remove-3">Remover tarjeta</a>
@@ -96,19 +97,46 @@
                         <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
                     </div>
                     <div class="col-7">
-                        <input type="text" placeholder="**** **** **** 0187">
+                        <input type="text" class="saved-card" placeholder="**** **** **** 0187">
                     </div>
                     <div class="col-3 d-flex justify-content-center">
                         <a href="#" id="remove-4">Remover tarjeta</a>
                     </div>
                 </div>
-                <button class="btn-add" id="btn-add">Agregar nueva tarjeta</button>
+                <button class="btn btn-add" id="btn-add">Agregar nueva tarjeta</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <script src="/ProjectGM_JS/metodo-pago.js"></script>
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-child-container">
+            <h2>¿Quiénes somos?</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/landing-page-producto.html">Nosotros</a></li>
+                <li><a href="/ProjectGM_HTML/librofan.html">Libro-fan</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Perfil</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
+                <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
+            </ul>
+        </div>
+        <div class="footer-child-container">
+            <h2>Listas</h2>
+            <ul class="footer-ul">
+                <li><a href="/ProjectGM_HTML/lista-libros.html">Libros</a></li>
+                <li><a href="/ProjectGM_HTML/lista-autores.html">Autores</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!--js Sweet alert-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--js metodo de pago-->
+    <script src="/ProjectGM_JS/metodo-pago.js"></script>
 
 </body>
 

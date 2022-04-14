@@ -1,30 +1,17 @@
+.metodo-pago-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 800px;
+}
+
 h1 {
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 72px;
-  padding: 0;
-  border: none;
-  margin: 5% 35% 5% 10%;
-}
-
-span {
-  font-style: bold;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  margin: 0% 0% 40% 40%;
-}
-
-h2 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  margin: 30px 0 40px 100px;
+  font-weight: bold;
+  font-size: 28px;
+  color: #ea784c;
+  width: 50%;
 }
 
 .tarjetaGuardada {
@@ -35,29 +22,10 @@ h2 {
   margin: 6px;
 }
 
-.main-container {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 .container {
   background-color: #f2f2f2;
   padding: 5px 50px 15px 20px;
   border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type="text"] {
-  width: 80%;
-  margin-bottom: 20px;
-  margin-left: 30px;
-  padding: 12px;
-  border: 1px solid #ccc;
   border-radius: 3px;
 }
 
@@ -74,17 +42,10 @@ label {
 }
 
 .btn-add {
-  background: #403d39;
-  color: #fffcf2;
-  cursor: pointer;
   height: 40px;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-}
-
-.btn-add:hover {
-  background-color: #eb5e28;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
@@ -117,19 +78,12 @@ label {
 /**END RESPONSIVE**/
 
 .card-title {
-  font-family: "Roboto", sans-serif;
   font-size: 2em;
-  font-style: normal;
   line-height: 30px;
   margin: 5% 0% 10% 22%;
 }
 
-.active {
-  border-bottom: 2px solid black;
-  font-weight: bold;
-}
-
-input {
+.saved-card {
   border: none;
   outline: none;
   font-size: 1rem;
@@ -174,82 +128,4 @@ form .col-2,
   align-items: center;
   text-align: center;
   padding: 0 1vh;
-}
-
-/*searching-bar-container*/
-.searching-bar-container {
-  display: flex;
-  width: 350px;
-  height: 80px;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.input-search {
-  background: #eb5e28;
-  color: #fffcf2;
-  height: 33px;
-  border: 2px solid #fffcf2;
-  border-radius: 8px;
-  font-weight: normal;
-  font-size: 18px;
-}
-
-.input-search::placeholder {
-  color: #fffcf2;
-}
-
-/*select*/
-.slt-nav {
-  background: #eb5e28;
-  color: #fffcf2;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  border: 2px solid #fffcf2;
-  border-radius: 8px;
-}
-
-option {
-  background-color: #ea784c;
-}
-
-/*footer*/
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 230px;
-  width: 100%;
-  background: #252422;
-  color: #fffcf2;
-  margin-top: 30px;
-}
-
-.footer-child-container {
-  height: 100%;
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-.footer-ul {
-  height: 160px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  font-weight: bold;
-}
-
-.footer-ul > li > a {
-  font-weight: normal;
-  color: #fffcf2;
-}
-
-.footer-ul > li > a:hover {
-  color: #eb5e28;
 }

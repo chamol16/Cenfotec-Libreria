@@ -19,17 +19,17 @@
 </head>
 
 <body>
+
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
                     <option value="">Opciones </option>
@@ -46,10 +46,11 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
     </nav>
+
     <!--form section-->
     <section class="section-form">
         <form action="" class="form-container">
@@ -105,22 +106,21 @@
                     <input type="password" class="input required-field" id="input-password">
                 </div>
             </div>
+
             <h4>Direcciones registradas</h4>
-            <div id="banner_inicio-container2">
+
+            <div id="banner_inicio-container">
                 <div class="mt-3">
                     <label class="label" for="slt-province">Provincia:</label>
                     <select class="select required-field" id="slt-province">
                         <option value="">-- Seleccione una opción --</option>
                     </select>
-
                 </div>
 
                 <div class="mt-3">
                     <label class="label" for="slt-canton">Cantón:</label>
                     <select class="select required-field" id="slt-canton">
                         <option value="">-- Seleccione una opción --</option>
-
-
                     </select>
                 </div>
 
@@ -145,7 +145,8 @@
             </div>
 
             <h4>Opciones Adicionales</h4>
-            <div id="banner_inicio-container3">
+
+            <div id="banner_inicio-container">
                 <div class="favoritos-container">
                     <label class="label label-favoritos" for="generos-favoritos">Géneros literarios favoritos:
                         <br>(Opcional)</label>
@@ -204,13 +205,12 @@
                         </select>
                     </div>
                 </div>
-
             </div>
-            <button type="button" class="btn-save" id="btn-save">Guardar</button>
+            <button type="button" class="btn btn-save" id="btn-save">Guardar</button>
         </form>
         <div class="img-container">
             <div id="display-img"></div>
-            <label for="input-img" class="custom-file-upload">
+            <label for="input-img" class="btn custom-file-upload">
                 <input type="file" id="input-img" accept="image/jpg">
                 Cambiar
             </label>
@@ -230,7 +230,7 @@
         <div class="footer-child-container">
             <h2>Perfil</h2>
             <ul class="footer-ul">
-                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
                 <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
             </ul>
         </div>

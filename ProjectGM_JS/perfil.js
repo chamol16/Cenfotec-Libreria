@@ -56,8 +56,6 @@ document.getElementById("slt-gender").textContent = userConnected.genero;
 document.getElementById("slt-type-id").textContent = userConnected.tipoId;
 document.getElementById("input-id").textContent = userConnected.id;
 document.getElementById("input-email").textContent = userConnected.correo;
-document.getElementById("input-password").textContent =
-  userConnected.contrasena;
 document.getElementById("slt-province").textContent = userConnected.provincia;
 document.getElementById("slt-canton").textContent = userConnected.canton;
 document.getElementById("slt-district").textContent = userConnected.distrito;

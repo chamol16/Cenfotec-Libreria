@@ -21,15 +21,14 @@
 <body>
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
         <div class="searching-bar-container">
             <input type="search" class="input-search" placeholder="Buscar...">
             <a href="/ProjectGM_HTML/resultado-busqueda.html"><i class="fa-solid fa-magnifying-glass loop"></i></a>
         </div>
-        <ul class="ul">
+        <ul class="nav-ul">
             <li>
                 <select class="slt-nav" id="slt-profile">
                     <option value="">Opciones </option>
@@ -46,85 +45,79 @@
                     <option>Libros</option>
                 </select>
             </li>
-            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
             <li><a href="/ProjectGM_HTML/carrito.html"><i class="fa-solid fa-cart-shopping" id="cart"></i></a></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
     </nav>
 
     <!--content section-->
-    <section class="section-form">
+    <section class="main-section">
 
-        <!-- PLAN ACTUAL DEL USUARIO-->
         <form action="" class="form-container">
             <div id="banner_inicio-container">
 
                 <H1>Tu Plan</H1>
-                <H2>Actualmente cuentas con el plan:</H2>
-                <div class="headerInfo">Original</div>
-                <H2>¡Actualiza tu plan para disfrutar de los beneficios de ser Libro-Fan!</H2>
+                <H2 class="plan-h2">Actualmente cuentas con el plan:</H2>
+                <div class="tipo-plan" id="tipo-plan">Original</div>
+                <H2 class="plan-h2" id="plan-description">¡Actualiza tu plan para disfrutar de los beneficios de ser Libro-Fan!</H2>
             </div>
         </form>
 
         <!--LIBRO-FAN PLAN-->
-        <div class="plan-container">
+        <div class="btn-section">
 
-            <div class="pricing-container">
-                <div class="header">Libro-Fan</div>
-                <div class="price">
-                    <span>
-                        <sup class="text">$15,00</sup> <sup class="frequency">al mes</sup>
-                    </span>
+            <div class="plan-parent-container">
+
+                <div class="plan-container">
+                    <div class="header">
+                        <div class="plan-title">
+                            <h2>Libro-Fan</h2>
+                        </div>
+
+                        <div class="price">
+                            <span>
+                                <sup class="text">$15,00</sup> <sup class="frequency">al mes</sup>
+                            </span>
+                        </div>
+                        <div class='details'>¿Que incluye?</div>
+                    </div>
+
+                    <ul class="options">
+                        <li class='item'><b>✅</b> Envío seguro, rápido y gratuito</li>
+                        <li class="item"><b>✅</b> Ofertas exclusivas</li>
+                        <li class="item"><b>✅</b> Descuentos en todas tus compras</li>
+                    </ul>
                 </div>
-                <div class='details'>¿Que incluye?</div>
-                <div class="itemsWrapper">
-                    <ul class="items">
-                        <li class='item'><b>✅</b> Opción 1</li>
-                        <li class="item"><b>✅</b> Opción 2</li>
-                        <li class="item"><b>✅</b> Opción 3</li>
-                        <li class="item"><b>✅</b> Opción 4</li>
-                        <li class="item"><b>✅</b> Opción 5</li>
-                        <li class="item"><b>✅</b> Opción 6</li>
-                        <li class="item"><b>✅</b> Opción 7</li>
-                        <li class="item"><b>✅</b> Opción 8</li>
-                        <li class="item"><b>✅</b> Opción 9</li>
-                        <li class="item"><b>✅</b> Opción 10</li>
 
+                <div class="plan-container">
+                    <div class="header">
+                        <div class="plan-title gratis">
+                            <h2>Original</h2>
+                        </div>
+                        <div class="price2">
+                            <span>
+                                <sup class="text">Gratis</sup>
+                            </span>
+                        </div>
+                        <div class='details details-free'>¿Que incluye?</div>
+                    </div>
+                    <ul class="options">
+                        <li class='item'><b>➖</b> Envíos de 3 a 5 días</li>
+                        <li class="item"><b>➖</b> Ofertas en fechas especiales</li>
+                        <li class="item"><b>➖</b> Descuentos muy ocasionales</li>
                     </ul>
                 </div>
             </div>
-            <!-- BTN ACTUALIZAR PLAN -->
-            <button type="button" class="btn-actualizarPlan" id="btn-actualizarPlan">Actualizar cuenta</button>
-        </div>
-        <!-- PLAN GRATIS-->
-        <div class="plan-container2">
-
-            <div class="pricing-container">
-                <div class="header">Original</div>
-                <div class="price2">
-                    <span>
-                        <sup class="text">Gratis</sup>
-                    </span>
-                </div>
-                <div class='details'>¿Que incluye?</div>
-                <div class="itemsWrapper">
-                    <ul class="items">
-                        <li class='item'><b>➖</b> Opción 1</li>
-                        <li class="item"><b>➖</b> Opción 2</li>
-                        <li class="item"><b>➖</b> Opción 3</li>
-                        <li class="item"><b>➖</b> Opción 4</li>
-                        <li class="item"><b>➖</b> Opción 5</li>
-                        <li class="item"><b>➖</b> Opción 6</li>
-                        <li class="item"><b>➖</b> Opción 7</li>
-                        <li class="item"><b>➖</b> Opción 8</li>
-                        <li class="item"><b>➖</b> Opción 9</li>
-                        <li class="item"><b>➖</b> Opción 10</li>
-
-                    </ul>
-                </div>
+            <div class="btn-container">
+                <button type="button" class="btn btn-actualizarPlan" id="btn-actualizarPlan">Actualizar cuenta</button>
             </div>
-
         </div>
+
+
     </section>
+
+
+
 
 
     <!--footer-->
@@ -139,7 +132,7 @@
         <div class="footer-child-container">
             <h2>Perfil</h2>
             <ul class="footer-ul">
-                <li><a href="/ProjectGM_HTML/editar-perfil.html">Editar perfil</a></li>
+                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
                 <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
             </ul>
         </div>

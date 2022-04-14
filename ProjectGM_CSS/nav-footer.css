@@ -19,7 +19,8 @@
 .logo-producto {
   width: 130px;
   height: 120px;
-  background-image: url("/ProjectGM_IMG/logo-producto-negro.png");
+  /*   background-image: url("/ProjectGM_IMG/logo-producto-negro.png"); */
+  background-image: url("/ProjectGM_IMG/logo-naranja-negro.png");
   background-position: center;
   background-size: cover;
 }
@@ -152,6 +153,6 @@
   background: #ea784c;
 }
 
-.negrita{
+.negrita {
   font-weight: bold;
 }
