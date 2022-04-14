@@ -78,6 +78,10 @@
   background-position: top;
 }
 
+.book:hover {
+  cursor: pointer;
+}
+
 .book-1 {
   background-image: url("/ProjectGM_IMG/books/el_diario.jpg");
 }

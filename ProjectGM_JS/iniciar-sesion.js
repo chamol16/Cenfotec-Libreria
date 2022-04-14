@@ -58,3 +58,4 @@ document.getElementById("btn-ver").addEventListener("click", () => {
     inputPassword.type = "password";
   }
 });
+

@@ -20,7 +20,7 @@
   width: 130px;
   height: 120px;
   /*   background-image: url("/ProjectGM_IMG/logo-producto-negro.png"); */
-  background-image: url("/ProjectGM_IMG/logo-naranja-negro.png");
+  background-image: url("/ProjectGM_IMG/logo-producto-negro.png");
   background-position: center;
   background-size: cover;
 }
@@ -133,6 +133,18 @@
 }
 
 .footer-ul > li > a:hover {
+  opacity: 100%;
+}
+
+.footer-ul > li {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #fff;
+  opacity: 50%;
+  font-weight: normal;
+}
+
+.footer-ul > li:hover {
   opacity: 100%;
 }
 

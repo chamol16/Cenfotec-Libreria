@@ -86,7 +86,7 @@
             <div class="division-container">
 
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-1">
+                    <div class="img-book book-1 book" id="1"></div>
                     <ul class="">
                         <li>El Diario de Ana Frank</li>
                         <li>Ana Frank</li>
@@ -94,7 +94,7 @@
                     </ul>
                 </div>
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-2">
+                    <div class="img-book book-2 book" id="2"></div>
                     <ul class="">
                         <li>"Harry Potter and the...</li>
                         <li>J.K. Rowling</li>
@@ -102,7 +102,7 @@
                     </ul>
                 </div>
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-3">
+                    <div class="img-book book-3 book" id="3"></div>
                     <ul class="">
                         <li>The Hunger Games</li>
                         <li>Suzanne Collins</li>
@@ -114,7 +114,7 @@
             <div class="division-container">
 
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-4">
+                    <div class="img-book book-4 book" id="4"></div>
                     <ul class="">
                         <li>The Lord Of The Rings</li>
                         <li>J.R.R. Tolkien</li>
@@ -122,7 +122,7 @@
                     </ul>
                 </div>
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-5">
+                    <div class="img-book book-5 book" id="5"></div>
                     <ul class="">
                         <li>Cien años de soledad</li>
                         <li>Gabriel G. Márquez</li>
@@ -130,7 +130,7 @@
                     </ul>
                 </div>
                 <div class="book-container">
-                    <img src="" alt="" class="img-book book-6">
+                    <div class="img-book book-6 book" id="6"></div>
                     <ul class="">
                         <li id="panchita">Cuentos de mi tía Panchita</li>
                         <li>Carmen Lyra</li>
@@ -149,14 +149,14 @@
             <h2>¿Quiénes somos?</h2>
             <ul class="footer-ul">
                 <li><a href="/ProjectGM_HTML/landing-page-producto.html">Nosotros</a></li>
-                <li><a href="/ProjectGM_HTML/librofan.html">Libro-fan</a></li>
+                <li class="acceso" id="libro-fan">Libro-fan</li>
             </ul>
         </div>
         <div class="footer-child-container">
             <h2>Perfil</h2>
             <ul class="footer-ul">
-                <li><a href="/ProjectGM_HTML/perfil.html">Mi perfil</a></li>
-                <li><a href="/ProjectGM_HTML/historial-pedidos.html">Historial de pedidos</a></li>
+                <li class="acceso" id="perfil">Mi perfil</li>
+                <li class="acceso" id="historial-pedidos">Historial de pedidos</li>
             </ul>
         </div>
         <div class="footer-child-container">
@@ -168,6 +168,9 @@
         </div>
     </footer>
 
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/ProjectGM_JS/books-DB.js"></script>
     <script src="/ProjectGM_JS/resultado-busqueda.js"></script>
 </body>

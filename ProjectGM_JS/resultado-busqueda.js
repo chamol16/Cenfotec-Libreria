@@ -16,10 +16,11 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /*click on books*/
-const books = document.querySelectorAll(".bookImage");
+const books = document.querySelectorAll(".img-book");
 
 seleccionarLibro = (e) => {
   let libroSeleccionado = false;
+  console.log(e.target.id);
 
   listaLibros.forEach((libro) => {
     if (e.target.id == libro.id) {
@@ -43,14 +44,16 @@ const perfil = document.getElementById("slt-profile");
 const listas = document.getElementById("slt-list");
 
 redirectionPerfil = (e) => {
-  if (e.target.selectedIndex == 1) {
+  if (e.target.selectedIndex == 1 && userConnected) {
     window.location.href = "perfil.html";
-  } else if (e.target.selectedIndex == 2) {
-    window.location.href = "librofan.html";
-  } else if (e.target.selectedIndex == 3) {
-    window.location.href = "metodo-pago.html";
-  } else if (e.target.selectedIndex == 4) {
+  } else if (e.target.selectedIndex == 2 && userConnected) {
     window.location.href = "historial-pedidos.html";
+  } else {
+    Swal.fire({
+      icon: "warning",
+      title: "Esta acción requiere un usuario",
+      text: "Para comprar este libro primero debes iniciar sesión",
+    });
   }
 };
 
@@ -65,26 +68,28 @@ redirectionListas = (e) => {
 perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
-/* 
+/*acceso en footer*/
+const footerProfile = document.querySelectorAll(".acceso");
 
-
-const libros = document.querySelectorAll(".bookImage");
-
-const direccionar = (e) => {
-  console.log(e.target.id);
-  let libroSeleccionado = false;
-  listaLibros.forEach((libro) => {
-    if (e.target.id == libro.id) {
-      libroSeleccionado = true;
-      localStorage.setItem("libroSeleccionado", JSON.stringify(libro));
+noAcceso = (item) => {
+  if (userConnected) {
+    if (item.id == "perfil") {
+      window.location.href = "perfil.html";
+    } else if (item.id == "historial-pedidos") {
+      window.location.href = "historial-pedidos.html";
+    } else {
+      window.location.href = "librofan.html";
     }
-  });
-  if (libroSeleccionado) {
-    window.location.href = "articulo.html";
+  } else {
+    Swal.fire({
+      icon: "warning",
+      title: "Esta acción requiere un usuario",
+      text: "Para comprar este libro primero debes iniciar sesión",
+    });
   }
 };
-
-for (const libro of libros) {
-  libro.addEventListener("click", direccionar);
-}
- */
+footerProfile.forEach((item) => {
+  item.addEventListener("click", () => {
+    noAcceso(item);
+  });
+});

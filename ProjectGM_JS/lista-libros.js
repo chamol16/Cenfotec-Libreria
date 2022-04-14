@@ -18,10 +18,16 @@ const perfil = document.getElementById("slt-profile");
 const listas = document.getElementById("slt-list");
 
 redirectionPerfil = (e) => {
-  if (e.target.selectedIndex == 1) {
+  if (e.target.selectedIndex == 1 && userConnected) {
     window.location.href = "perfil.html";
-  } else if (e.target.selectedIndex == 2) {
+  } else if (e.target.selectedIndex == 2 && userConnected) {
     window.location.href = "historial-pedidos.html";
+  } else {
+    Swal.fire({
+      icon: "warning",
+      title: "Esta acción requiere un usuario",
+      text: "Para comprar este libro primero debes iniciar sesión",
+    });
   }
 };
 
@@ -82,3 +88,29 @@ seleccionarLibro = (e) => {
 for (const row of rows) {
   row.addEventListener("click", seleccionarLibro);
 }
+
+/*acceso en footer*/
+const footerProfile = document.querySelectorAll(".acceso");
+
+noAcceso = (item) => {
+  if (userConnected) {
+    if (item.id == "perfil") {
+      window.location.href = "perfil.html";
+    } else if (item.id == "historial-pedidos") {
+      window.location.href = "historial-pedidos.html";
+    } else {
+      window.location.href = "librofan.html";
+    }
+  } else {
+    Swal.fire({
+      icon: "warning",
+      title: "Esta acción requiere un usuario",
+      text: "Para comprar este libro primero debes iniciar sesión",
+    });
+  }
+};
+footerProfile.forEach((item) => {
+  item.addEventListener("click", () => {
+    noAcceso(item);
+  });
+});

@@ -143,3 +143,14 @@
 .link-container > a:hover {
   opacity: 100%;
 }
+
+.link-container > h2 {
+  cursor: pointer;
+  color: #ea784c;
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+.link-container > h2:hover {
+  opacity: 100%;
+}
