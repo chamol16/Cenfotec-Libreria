@@ -25,11 +25,11 @@ let isSelected = libroFan.checked;
 const confirma = () => {
   isSelected = libroFan.checked;
   if (isSelected) {
-    document.getElementById("descuento").innerHTML = "$2.000";
-    document.getElementById("pagar").innerHTML = "$17.500";
+    document.getElementById("descuento").innerHTML = "¢2.000";
+    document.getElementById("pagar").innerHTML = "¢17.500";
   } else {
-    document.getElementById("descuento").innerHTML = "$0";
-    document.getElementById("pagar").innerHTML = "$19.500";
+    document.getElementById("descuento").innerHTML = "¢0";
+    document.getElementById("pagar").innerHTML = "¢19.500";
   }
 };
 const confirmPay = () => {

@@ -1,40 +1,45 @@
-.style-flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.style-flex-column {
+.section {
   display: flex;
   flex-direction: column;
+  height: 150px;
+  width: 1050px;
+  align-items: flex-start;
+  padding-left: 50px;
+  justify-content: space-between;
 }
 
-/* .font-weight-600-border-bold {
-  font-weight: 600;
-  border-bottom: 5px solid black;
-} */
-
-/* .font-weight-500-border-regular {
-  font-weight: 500;
-  border-bottom: 2px solid black;
-}
- */
-section {
-  margin-left: 4em;
-  margin-right: 4em;
-}
-
-legend {
-  padding: 0 0.1em 0 0.1em;
-  margin: 0 0 1em 1em;
-}
-
-body {
+.date-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
   width: 100%;
+  justify-content: space-evenly;
+}
+
+.date-child {
+  border: 1px solid #e76f51;
+  border-radius: 5px;
+  height: 47px;
+  width: 200px;
+  color: #e76f51;
+}
+
+#button-buscar {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
 }
 
 h1 {
   font-size: 2em;
-  margin: 1em 1em 0.75em 1em;
+  margin-top: 1em;
+}
+
+#consulta-text {
+  font-size: 1em;
+  color: #e76f51;
+  font-weight: normal;
 }
 
 div#tipo-de-relatorio a h2 {
@@ -56,35 +61,6 @@ div#tipo-de-relatorio h2:hover {
 #tipo-de-relatorio {
   width: 90%;
   padding: 0 0 2.5em 0;
-}
-
-#fecha-pedido {
-  border: 1px solid #e76f51;
-  border-style: double;
-  margin-left: 10%;
-  margin-top: -5%;
-  padding: 2%;
-  border-radius: 5px;
-}
-
-#reporte-historial-pedido {
-  width: 90%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-}
-
-#reporte-form-atajos label {
-  padding: 0 0 0.5em 0;
-}
-
-#button-buscar {
-  height: 40px;
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: -3%;
-  align-self: flex-end;
 }
 
 hr {

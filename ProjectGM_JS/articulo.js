@@ -19,7 +19,7 @@ inicioElementoA.addEventListener("click", logOut);
 document.getElementById("book-name").textContent = bookSelected.name;
 document.getElementById("book-idiom").textContent = bookSelected.idiom;
 document.getElementById("book-gender").textContent = bookSelected.gender;
-document.getElementById("book-price").textContent = bookSelected.price;
+document.getElementById("book-price").textContent = `¢${bookSelected.price}`;
 const bookStock = document.getElementById("book-stock");
 document.getElementById("book-author").textContent = bookSelected.author;
 document.getElementById("book-img").setAttribute("src", bookSelected.img);

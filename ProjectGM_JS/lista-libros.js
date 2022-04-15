@@ -53,7 +53,7 @@ const mostrarDatos = () => {
     fila.className = "row";
     fila.insertCell().textContent = libro.name;
     fila.insertCell().textContent = libro.author;
-    fila.insertCell().textContent = libro.price;
+    fila.insertCell().textContent = `¢${libro.price}`;
     fila.insertCell().textContent = libro.gender;
     fila.insertCell().textContent = libro.idiom;
   });

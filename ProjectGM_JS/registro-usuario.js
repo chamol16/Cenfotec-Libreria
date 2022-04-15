@@ -90,17 +90,17 @@ validar = () => {
     }
 
     //password validation
-    if (passwordError) {
-      Swal.fire({
-        icon: "warning",
-        title: "Contraseña incorrecta",
-        text: "La contraseña debe ser entre 8 y 12 caracteres, alfanúmerica y al menos una letra mayúscula",
-      });
-    } else if (error) {
+    if (error) {
       Swal.fire({
         icon: "warning",
         title: "Usuario no registrado",
         text: "Por favor revise los campos resaltados",
+      });
+    } else if (passwordError) {
+      Swal.fire({
+        icon: "warning",
+        title: "Contraseña incorrecta",
+        text: "La contraseña debe ser entre 8 y 12 caracteres, alfanúmerica y al menos una letra mayúscula",
       });
     } else {
       Swal.fire({
@@ -108,7 +108,7 @@ validar = () => {
         title: "Usuario registrado correctamente",
         text: "Ahora puedes iniciar sesión",
       }).then(() => {
-        window.location.href = "iniciar-sesion.html";
+        window.location.href = "login.html";
       });
     }
   });

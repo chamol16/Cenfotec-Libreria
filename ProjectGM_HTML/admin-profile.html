@@ -19,26 +19,24 @@
 </head>
 
 <body>
+
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/admin-profile.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
-
-        <ul class="ul">
-            <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
+        <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
+            <!--   <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
             <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
+            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
-
     </nav>
 
     <!--content section-->
     <section class="sct-admin">
-        <div class="adminProfile">
-            <h1 class="h1Admin">¡Bienvenid@!</h1>
+        <div class="admin-information">
+            <h1>¡Bienvenid@!</h1>
             <div class="name">
                 <h2 id="nombre"></h2>
                 <h2 id="primer-apellido"></h2>
@@ -47,25 +45,43 @@
             <h2 id="correo"></h2>
             <h2 id="position"></h2>
             <h2 id="schedule"></h2>
+            <button type="button" id="btn-admin-editar" class="btn btn-admin-editar">Editar perfil</button>
         </div>
 
-        <div class="adminProfile">
-            <h1 class="h1Admin">¿Qué te gustaría hacer?</h1>
+        <div class="admin-tasks">
+            <!--  <img class="img" src="/ProjectGM_IMG/logo-producto-negro.png" alt="growthminateLogoNegro"> -->
+            <h1 id="orange-title">¿Qué te gustaría hacer?</h1>
             <ul class="lista">
-                <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
-                <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-                <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li>
+                <li>
+                    <select name="" class="slt-nav slt-tasks" id="slt-catalogos">
+                        <option value="" class="nav-slt">Administrar catálogos</option>
+                        <option value="">Libros</option>
+                        <option value="">Autores</option>
+                        <option value="">Clientes</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="" class="slt-nav slt-tasks" id="slt-panel">
+                        <option value="" class="nav-slt">Panel de configuración</option>
+                        <option value="">Puntos de retiro</option>
+                        <option value="">Premios de autores</option>
+                        <option value="">Géneros literarios</option>
+                        <option value="">Tipos de identificación</option>
+                        <option value="">Socios comerciales</option>
+                        <option value="">Editar descuentos</option>
+                    </select>
+                <li>
+                    <select name="" class="slt-nav slt-tasks" id="slt-reportes">
+                        <option value="" class="nav-slt">Generar reportes</option>
+                        <option value="">Top 10 más vendidos</option>
+                        <option value="">Total de ventas</option>
+                        <option value="">Clientes libro-fan</option>
+                        <option value="">Clientes normales </option>
+                    </select>
+                </li>
             </ul>
         </div>
-
-
-
-        <img class="img" src="/ProjectGM_IMG/logo-producto-negro.png" alt="growthminateLogoNegro">
-
     </section>
-    <div class="btn-container">
-        <button type="button" id="btn-admin-editar" class="btn-admin-editar">Editar perfil</button>
-    </div>
 
     <!--Footer-->
     <footer class="footer">
@@ -74,6 +90,8 @@
         </div>
     </footer>
 
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--js validation-->
     <script src="/ProjectGM_JS/admin-profile.js"></script>
     <!--DB for admin logged-->

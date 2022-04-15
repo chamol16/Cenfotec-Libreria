@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
     <!--own CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/iniciar-sesion.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -17,51 +18,37 @@
 </head>
 
 <body>
-
     <!--nav-->
     <nav class="nav">
-        <div class="brand-container">
-            <a href="/ProjectGM_HTML/libreria.html"><img class="logo-producto"
-                    src="/ProjectGM_IMG/logo-producto-blanco.png" alt=""></a>
-        </div>
-        <ul class="ul">
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
             <li>¿No tienes una cuenta?</li>
             <li><i class="fa-solid fa-arrow-right-long"></i></li>
             <li><a href="/ProjectGM_HTML/registro-usuario.html">Regístrate</a></li>
         </ul>
     </nav>
 
-    <!--Signin section-->
-    <section class="signin">
-        <form action="" class="form">
-            <div class="mt-3">
-                <label class="label" for="input-email">Correo electrónico:</label>
-                <input type="text" class="input" id="input-email" placeholder="Correo electrónico">
+    <section class="main-section">
+        <h1>Elige un tipo de usuario</h1>
+        <div class="users-container">
+            <div class="user" id="client">
+                <div class="content">
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Cliente</h2>
+                </div>
             </div>
-            <div class="mt-3">
-                <label class="label" for="input-password">Contraseña:</label>
-                <input type="password" class="input" id="input-password" placeholder="Contraseña">
-                <a href="#" id="btn-ver"><img class="eye" src="/ProjectGM_IMG/eye.png"></a>
-
-                <a href="/ProjectGM_HTML/recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+            <div class="user" id="admin">
+                <div class="content">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h2>Administrador</h2>
+                </div>
             </div>
-            <div class="mt-3">
-                <button type="button" class="btn-signin" id="btn-signin">Iniciar sesión</button>
-            </div>
-        </form>
-        <div class="create-container">
-            <h2>¿Eres un cliente nuevo?</h2>
-            <a class="btn-create" href="/ProjectGM_HTML/registro-usuario.html">Crea una cuenta</a>
         </div>
     </section>
-
-    <!--script sweet Alert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--DB users-->
-    <script src="/ProjectGM_JS/users-DB.js"></script>
-    <!--js iniciar sesion-->
-    <script src="/ProjectGM_JS/iniciar-sesion.js"></script>
-
 </body>
+
+<script src="/ProjectGM_JS/iniciar-sesion.js"></script>
 
 </html>

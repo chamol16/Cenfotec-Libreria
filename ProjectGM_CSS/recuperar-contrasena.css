@@ -1,9 +1,4 @@
 /*recover-password-section*/
-body {
-  background: #fffcf2;
-  color: #252422;
-}
-
 .recover-password-section {
   display: flex;
   align-items: center;
@@ -16,6 +11,9 @@ body {
 /*paragraph*/
 .recover-password-section > p {
   margin: 50px;
+  color: #ea784c;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 /*send-code*/
@@ -28,16 +26,9 @@ body {
 }
 
 .btn-send-code {
-  background: #403d39;
-  color: #fffcf2;
-  cursor: pointer;
   width: 130px;
   height: 30px;
   align-self: center;
-}
-
-.btn-send-code:hover {
-  background: #eb5e28;
 }
 
 /*received and change password*/
@@ -52,14 +43,6 @@ body {
   margin-top: 60px;
 }
 
-.required-field {
-  color: #403d39;
-}
-
-.required-field::placeholder {
-  color: #ccc5b9;
-}
-
 .mt-3 {
   height: 100px;
   width: 100%;
@@ -69,19 +52,35 @@ body {
 }
 
 .btn-save {
-  background: #403d39;
-  color: #fffcf2;
-  cursor: pointer;
   width: 130px;
   height: 30px;
   align-self: center;
 }
 
-.btn-save:hover {
-  background: #eb5e28;
-}
-
 /*fill fields*/
 .field-error {
   border: 2px solid #eb5e28;
+}
+
+/*nav*/
+.nav-ul {
+  color: #ea784c;
+  font-weight: bold;
+}
+
+.nav-ul > li > a {
+  font-weight: bold;
+  color: #ea784c;
+  opacity: 50%;
+  text-decoration: underline;
+}
+
+.nav-ul > li > a:hover {
+  opacity: 100%;
+}
+
+label {
+  color: #ea784c;
+  font-size: 22px;
+  font-weight: 600;
 }

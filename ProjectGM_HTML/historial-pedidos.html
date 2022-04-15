@@ -51,19 +51,22 @@
     </nav>
 
     <!--content section-->
+    <section class="section">
 
-    <h1>Historial de pedidos</h1>
-    <div id="reporte-historial-pedido">
-
-        <form action="" class="style-flex-column">
-            <label for="fecha-pedido"></label>
-            <br />
-            <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
+        <h1>Historial de pedidos</h1>
+        <form action="" class="date-container">
+            <!--  <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
                 onfocus="(this.type='date')" onblur="(this.type='text')">
-        </form>
-        <button type="submit" class="btn" id="button-buscar">Consultar</button>
+            <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
+                onfocus="(this.type='date')" onblur="(this.type='text')"> -->
+            <h2 id="consulta-text">Consulte por rango de fecha:</h1>
 
-    </div>
+                <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
+                <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
+                <button type="submit" class="btn" id="button-buscar">Consultar</button>
+
+        </form>
+
     </section>
 
     <section id="tabla-de-datos">

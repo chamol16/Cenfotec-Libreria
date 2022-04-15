@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/login.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--nav-->
+    <nav class="nav">
+        <a class="brand-container" href="/ProjectGM_HTML/libreria.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
+            <li>¿No eres un usuario administrador?</li>
+            <li><i class="fa-solid fa-arrow-right-long"></i></li>
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html">Cambia de tipo de usuario</a></li>
+        </ul>
+    </nav>
+
+    <!--Signin section-->
+    <section class="signin">
+        <form action="" class="form">
+            <div class="mt-3">
+                <label class="label" for="input-email">Correo electrónico:</label>
+                <input type="text" class="input" id="input-email" placeholder="Correo electrónico">
+            </div>
+            <div class="mt-3">
+                <label class="label" for="input-password">Contraseña:</label>
+                <input type="password" class="input" id="input-password" placeholder="Contraseña">
+                <a href="#" id="btn-ver"><img class="eye" src="/ProjectGM_IMG/eye.png"></a>
+
+                <a href="/ProjectGM_HTML/recuperar-contrasena.html">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="mt-3">
+                <button type="button" class="btn btn-signin" id="btn-signin">Iniciar sesión</button>
+            </div>
+        </form>
+ 
+    </section>
+
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--DB users-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
+    <!--js iniciar sesion-->
+    <script src="/ProjectGM_JS/login.js"></script>
+
+</body>
+
+</html>
