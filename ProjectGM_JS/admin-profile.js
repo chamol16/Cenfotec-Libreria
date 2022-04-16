@@ -34,11 +34,11 @@ const reportes = document.getElementById("slt-reportes");
 
 redirectionCatalogos = (e) => {
   if (e.target.selectedIndex == 1) {
-    window.location.href = "admin-libros-catalogo.html";
+    window.location.href = "admin-catalogo-libros.html";
   } else if (e.target.selectedIndex == 2) {
-    window.location.href = "admin-autores-catalogo.html";
+    window.location.href = "admin-catalogo-autores.html";
   } else {
-    window.location.href = "admin-filtrar-clientes.html";
+    window.location.href = "admin-catalogo-clientes.html";
   }
 };
 

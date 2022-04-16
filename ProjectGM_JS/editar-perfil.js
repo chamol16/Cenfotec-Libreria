@@ -58,15 +58,7 @@ const inputEmail = (document.getElementById("input-email").value =
   userConnected.correo);
 const inputPassword = (document.getElementById("input-password").value =
   userConnected.contrasena);
-/* const listaProvincias = document
-  .querySelector("#slt-province")
-  .options.add(new Option(userConnected.provincia));
-const listaCantones = document
-  .querySelector("#slt-canton")
-  .options.add(new Option(userConnected.canton));
-const listaDistritos = document
-  .querySelector("#slt-district")
-  .options.add(new Option(userConnected.distrito)); */
+
 const inputAddress = (document.getElementById("input-address").value =
   userConnected.direccion);
 const selectGenFav = document
@@ -76,16 +68,6 @@ const selectAutorFav = document
   .getElementById("autores-favoritos")
   .options.add(new Option(userConnected.autorFavorito));
 
-//document.getElementById("display-img").setAttribute("src", userConnected.img);
-
-/* const inputName = document.getElementById("input-name");
-const inputFirstLastName = document.getElementById("input-first-last-name");
-const inputSecondLastName = document.getElementById("input-second-last-name");
-const inputGender = document.getElementById("slt-gender");
-const inputTypeId = document.getElementById("input-type-id");
-const inputId = document.getElementById("input-id");
-const inputEmail = document.getElementById("input-email");
-const inputPassword = document.getElementById("input-password");*/
 const btnSave = document.getElementById("btn-save");
 const listaProvincias = document.querySelector("#slt-province");
 const listaCantones = document.querySelector("#slt-canton");

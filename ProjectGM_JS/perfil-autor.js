@@ -56,13 +56,13 @@ document.getElementById("fecha-defuncion").textContent =
   authorSelected.fechaDefuncion;
 document.getElementById("genero").textContent = authorSelected.genero;
 document.getElementById("libro-famoso").textContent =
-  authorSelected.librosPublicados[0];
+  authorSelected.libroFamoso;
 document.getElementById("resena").textContent = authorSelected.biografia;
 document
   .getElementById("img-container")
   .setAttribute("src", authorSelected.img);
 
-  /*acceso en footer*/
+/*acceso en footer*/
 const footerProfile = document.querySelectorAll(".acceso");
 
 noAcceso = (item) => {
