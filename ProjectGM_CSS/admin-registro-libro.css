@@ -114,11 +114,11 @@ h1 {
 /*btn registrar*/
 .btn-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
-.btn-register {
+.btn-size {
   cursor: pointer;
   height: 40px;
-  width: 40%;
+  width: 260px;
 }

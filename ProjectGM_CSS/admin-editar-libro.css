@@ -90,13 +90,13 @@ body {
 /*btn registrar*/
 .btn-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
 }
 
-.btn-register {
+.btn-size {
   cursor: pointer;
   height: 40px;
-  width: 40%;
+  width: 260px;
 }
 
 /*img-section(right-section)*/
@@ -133,42 +133,42 @@ body {
 }
 
 /*img-section(right-section)
-  .img-container {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 250px;
-    height: 250px;
-    padding-top: 10px;
-    margin-top: 50px;
-    border-radius: 20px;
-    border: 1px solid #ea784c;
-  }
-  
-  #display-img {
-    width: 120px;
-    height: 120px;
-    border: 1px solid rgb(165, 162, 162);
-    background-position: center;
-    background-size: cover;
-  }
-  
-  #input-img {
-    display: none;
-  }
-  
-  .custom-file-upload {
-    font-family: "Roboto", sans-serif;
-    cursor: pointer;
-    height: 25px;
-    width: 100px;
-    text-align: center;
-    padding-top: 5px;
-    font-size: 20px;
-    font-weight: bold;
-  }*/
+    .img-container {
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 250px;
+      height: 250px;
+      padding-top: 10px;
+      margin-top: 50px;
+      border-radius: 20px;
+      border: 1px solid #ea784c;
+    }
+    
+    #display-img {
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgb(165, 162, 162);
+      background-position: center;
+      background-size: cover;
+    }
+    
+    #input-img {
+      display: none;
+    }
+    
+    .custom-file-upload {
+      font-family: "Roboto", sans-serif;
+      cursor: pointer;
+      height: 25px;
+      width: 100px;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }*/
 
 h1 {
   color: #ea784c;
@@ -177,16 +177,11 @@ h1 {
   font-size: 28px;
 }
 
-#btn-save {
-  width: 280px;
-  height: 40px;
-}
-
 /*error inputs*/
 .field-error {
   border: 2px solid #eb5e28;
 }
 
-#slt-libros-publicados{
+#slt-stock {
   width: 280px;
 }

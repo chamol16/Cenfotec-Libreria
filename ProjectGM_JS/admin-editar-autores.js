@@ -33,7 +33,6 @@ getGender = () => {
 getGender();
 document.getElementById("slt-gender").value = sexo;
 
-console.log(listaLibros);
 const books = document.querySelector("#slt-libros-publicados");
 
 listaLibros.forEach((libro) => {
@@ -135,6 +134,13 @@ validar = () => {
     }
   });
 };
+
+//atras btn
+const btnCancelar = document
+  .getElementById("btn-cancel")
+  .addEventListener("click", () => {
+    window.location.href = "admin-catalogo-autores.html";
+  });
 
 //subir imagen de usuario
 const displayImgDiv = document.querySelector("#display-img");

@@ -106,7 +106,9 @@ const mostrarDistritos = (nombreCanton) => {
     }
   });
 };
+
 mostrarProvincias();
+
 listaProvincias.addEventListener("change", () => {
   provinciaSeleccionada = listaProvincias.value;
   mostrarCantones(provinciaSeleccionada);

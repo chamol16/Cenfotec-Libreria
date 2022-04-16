@@ -11,7 +11,7 @@
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--own CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/admin-registro-autores.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-editar-libro.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -61,25 +61,27 @@
 
             <div class="mt-3">
                 <label class="label" for="slt-author">Autor:</label>
-                <select class="select" id="slt-author">
+                <select class="select required-field" id="slt-author">
                     <option value="">-- Seleccione una opción --</option>
                 </select>
             </div>
 
             <div class="mt-3">
                 <label class="label" for="input-price">Precio:</label>
-                <input type="number" class="input" id="input-price">
+                <input type="number" class="input required-field" id="input-price">
             </div>
 
             <div class="mt-3">
-                <label class="label" for="input-stock">Stock:</label>
-                <input type="text" class="input" id="input-stock">
+                <label class="label" for="slt-stock">Stock:</label>
+                <select name="" id="slt-stock" class="required-field">
+                    <option value="1">Sí</option>
+                    <option value="2">No</option>
+                </select>
             </div>
-
 
             <div class="mt-3">
                 <label class="label" for="input-idiom">Idioma:</label>
-                <input type="text" class="input" id="input-idiom">
+                <input type="text" class="input required-field" id="input-idiom">
             </div>
 
             <div class="mt-3 mt-3-more-space">
@@ -102,24 +104,23 @@
 
             <div class="mt-3">
                 <label class="label" for="slt-gender">Género literario:</label>
-                <input type="text" class="input" disabled>
+                <select class="select required-field" id="slt-gender">
+                    <option value="">-- Seleccione una opción --</option>
+                </select>
             </div>
 
             <div class="mt-3">
                 <label class="label" for="slt-status">Estado:</label>
-                <select class="select" id="slt-status">
-                    <option value="">-- Seleccione una opción --</option>
+                <select class="select required-field" id="slt-status">
                     <option value="1">Activo</option>
                     <option value="2">Inactivo</option>
                 </select>
             </div>
-
-            <div class="mt-3 btn-container">
-                <button type="button" class="btn-save btn" id="btn-save">Guardar</button>
-            </div>
         </form>
-
-
+        <div class="mt-3 btn-container">
+            <button type="button" class="btn-save btn btn-size" id="btn-save">Guardar</button>
+            <button type="button" class="btn-cancel btn btn-size" id="btn-cancel">Cancelar</button>
+        </div>
     </section>
 
     <!--Footer-->
@@ -129,14 +130,18 @@
         </div>
     </footer>
 
+    <!--generos DB-->
+    <script src="/ProjectGM_JS/generos-literarios-DB.js"></script>
+    <!--authors DB-->
+    <script src="/ProjectGM_JS/autores-DB.js"></script>
     <!--books DB-->
     <script src="/ProjectGM_JS/books-DB.js"></script>
-    <!--script sweet Alert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--DB premios-->
     <script src="/ProjectGM_JS/premios-DB.js"></script>
     <!--admin autores js-->
     <script src="/ProjectGM_JS/admin-editar-libro.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

@@ -14,7 +14,7 @@ inicioElementoA.addEventListener("click", logOut);
 //subir imagen de usuario
 const displayImgDiv = document.querySelector("#display-img");
 const inputImg = document.querySelector("#input-img");
-const btnRegistrar = document.getElementById("btn-register");
+const btnGuardar = document.getElementById("btn-save");
 let uploadedImg = "";
 
 subirImagen = () => {
@@ -78,8 +78,15 @@ validar = () => {
   });
 };
 
+//atras btn
+const btnCancelar = document
+  .getElementById("btn-cancel")
+  .addEventListener("click", () => {
+    window.location.href = "admin-catalogo-autores.html";
+  });
+
 inputImg.addEventListener("change", subirImagen);
-btnRegistrar.addEventListener("click", validar);
+btnGuardar.addEventListener("click", validar);
 
 /* llenar premios */
 const firstAward = document.getElementById("first-award-won");
@@ -111,7 +118,3 @@ anularNobelYear = (e) => {
 };
 
 selectNobel.addEventListener("change", anularNobelYear);
-
-//document.getElementById("nobel-year").value = authorSelected.anoNobel;
-/*   document.getElementById("slt-nobel").setAttribute("disabled", true); */
-/*   document.getElementById("nobel-year").setAttribute("disabled", true); */
