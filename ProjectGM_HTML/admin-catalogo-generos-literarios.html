@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo libros</title>
+    <title>Catálogo autores</title>
     <!--reset CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
     <!--nav-footer CSS-->
@@ -29,33 +30,31 @@
         </a>
         <ul class="nav-ul">
             <!--   <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
-            <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
-            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
+        <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
+        <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
             <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
         </ul>
     </nav>
 
     <!--content section -->
     <section id="tabla-de-datos">
-        <h1>Catálogo de Libros</h1>
+        <h1>Catálogo de Géneros Literarios</h1>
 
-        <div>
-            <table class="contentTable" id="tbl-libros">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Autor </th>
-                        <th>Precio</th>
-                        <th>Género</th>
-                        <th>Idioma</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
-                    </tr>
-                </thead>
+        <table class="contentTable" id="tbl-generos">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
 
-                <tbody></tbody>
-            </table>
-        </div>
+            <tbody>
+
+            </tbody>
+        </table>
+
         <div class="btn-container">
             <button class="btn btn-size" id="btn-register">Registrar</button>
             <button class="btn btn-size" id="btn-cancel">Cancelar</button>
@@ -68,13 +67,15 @@
             <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
     </footer>
-    <!--DB for admin logged-->
-    <script src="/ProjectGM_JS/books-DB.js"></script>
-    <!--script sweet Alert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--js validation-->
-    <script src="/ProjectGM_JS/admin-catalogo-libros.js"></script>
 
+    <!--generos literarios DB-->
+    <script src="/ProjectGM_JS/generos-literarios-DB.js"></script>
+    <!--own js-->
+    <script src="/ProjectGM_JS/admin-catalogo-generos-literarios.js"></script>
+    <!--js validation-->
+    <script src="/ProjectGM_JS/admin-profile.js"></script>
+    <!--DB for admin logged-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ const validarCredenciales = () => {
       inputPassword.value == usuario.contrasena
     ) {
       localStorage.setItem("loggedUser", JSON.stringify(usuario));
-      user = usuario.tipo;
+      user = usuario.tipoUsuario;
       inputError = false;
       finalValidation(user, inputError);
     }

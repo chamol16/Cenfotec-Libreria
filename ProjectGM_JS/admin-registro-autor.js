@@ -57,7 +57,7 @@ validar = () => {
       //password validation
       Swal.fire({
         icon: "warning",
-        title: "Usuario no registrado",
+        title: "Autor no registrado",
         text: "Por favor revise los campos resaltados",
       });
     } else if (dateError) {
@@ -93,15 +93,11 @@ const firstAward = document.getElementById("first-award-won");
 const secondAward = document.getElementById("second-award-won");
 const thirdAward = document.getElementById("third-award-won");
 
-mostrarPremios = () => {
-  listaPremios.forEach((premio) => {
-    firstAward.options.add(new Option(premio.nombre));
-    secondAward.options.add(new Option(premio.nombre));
-    thirdAward.options.add(new Option(premio.nombre));
-  });
-};
-
-mostrarPremios();
+listaPremios.forEach((premio) => {
+  firstAward.options.add(new Option(premio.nombre));
+  secondAward.options.add(new Option(premio.nombre));
+  thirdAward.options.add(new Option(premio.nombre));
+});
 
 /*Nobel*/
 const selectNobel = document.getElementById("slt-nobel");

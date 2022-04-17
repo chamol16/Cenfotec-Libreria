@@ -11,6 +11,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "11",
     genderId: "6",
+    discountId: "",
   },
   {
     id: "2",
@@ -24,6 +25,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "12",
     genderId: "7",
+    discountId: "",
   },
   {
     id: "3",
@@ -37,6 +39,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "13",
     genderId: "8",
+    discountId: "",
   },
   {
     id: "4",
@@ -50,6 +53,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "14",
     genderId: "7",
+    discountId: "",
   },
   {
     id: "5",
@@ -63,6 +67,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "1",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "6",
@@ -76,6 +81,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "15",
     genderId: "9",
+    discountId: "",
   },
   {
     id: "7",
@@ -89,6 +95,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "16",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "8",
@@ -102,6 +109,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "17",
     genderId: "8",
+    discountId: "",
   },
   {
     id: "9",
@@ -115,6 +123,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "18",
     genderId: "10",
+    discountId: "",
   },
   {
     id: "10",
@@ -128,6 +137,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "19",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "11",
@@ -141,6 +151,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "1",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "12",
@@ -154,6 +165,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "1",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "13",
@@ -167,6 +179,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "1",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "14",
@@ -180,6 +193,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "2",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "15",
@@ -193,6 +207,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "2",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "16",
@@ -206,6 +221,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "2",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "17",
@@ -219,6 +235,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "3",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "18",
@@ -232,6 +249,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "3",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "19",
@@ -245,6 +263,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "3",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "20",
@@ -258,6 +277,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "3",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "21",
@@ -271,6 +291,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "4",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "22",
@@ -284,6 +305,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "4",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "23",
@@ -297,6 +319,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "4",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "24",
@@ -310,6 +333,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "4",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "25",
@@ -323,6 +347,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "5",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "26",
@@ -336,6 +361,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "5",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "27",
@@ -349,6 +375,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "6",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "28",
@@ -362,6 +389,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "6",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "29",
@@ -375,6 +403,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "6",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "30",
@@ -388,6 +417,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "6",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "31",
@@ -401,6 +431,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "7",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "32",
@@ -414,6 +445,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "7",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "33",
@@ -427,6 +459,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "7",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "34",
@@ -440,6 +473,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "7",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "35",
@@ -453,6 +487,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "8",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "36",
@@ -466,6 +501,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "8",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "37",
@@ -479,6 +515,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "8",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "38",
@@ -492,6 +529,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "8",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "39",
@@ -505,6 +543,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "9",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "40",
@@ -518,6 +557,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "9",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "41",
@@ -531,6 +571,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "9",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "42",
@@ -544,6 +585,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "9",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "43",
@@ -557,6 +599,7 @@ let listaLibros = [
     idiom: "Español",
     authorId: "10",
     genderId: "5",
+    discountId: "",
   },
   {
     id: "44",
@@ -570,5 +613,6 @@ let listaLibros = [
     idiom: "Español",
     authorId: "10",
     genderId: "5",
+    discountId: "",
   },
 ];

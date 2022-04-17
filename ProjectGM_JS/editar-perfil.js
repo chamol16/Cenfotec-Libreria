@@ -53,7 +53,8 @@ const inputGender = (document.getElementById("slt-gender").value =
   userConnected.genero);
 const inputTypeId = (document.getElementById("slt-type-id").value =
   userConnected.tipoId);
-const inputId = (document.getElementById("input-id").value = userConnected.id);
+const inputId = (document.getElementById("input-id").value =
+  userConnected.identificacion);
 const inputEmail = (document.getElementById("input-email").value =
   userConnected.correo);
 const inputPassword = (document.getElementById("input-password").value =

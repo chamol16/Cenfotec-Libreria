@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de puntos de retiro</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-registro-autor.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="nav">
+        <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
+            <!--   <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
+            <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
+            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!--content-->
+    <section class="section-form">
+        <h1>Registro de Punto de Retiro</h1>
+        <form action="" class="form-container">
+            <div class="mt-3">
+                <label class="label" for="input-id">Id:</label>
+                <input type="text" class="input required-field" id="input-id">
+            </div>
+            <div class="mt-3">
+                <label class="label" for="input-name">Nombre del punto de retiro:</label>
+                <input type="text" class="input required-field" id="input-name">
+            </div>
+            <div class="mt-3">
+                <label class="label" for="slt-provincia">Provincia:</label>
+                <select class="select required-field" id="slt-provincia">
+                    <option value="">-- Seleccione una opción --</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="slt-canton">Cantón:</label>
+                <select class="select required-field" id="slt-canton">
+                    <option value="">-- Seleccione una opción --</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="slt-distrito">Distrito:</label>
+                <select class="select required-field" id="slt-distrito">
+                    <option value="">-- Seleccione una opción --</option>
+                </select>
+            </div>
+
+            <div class="mt-3 textarea-container">
+                <label class="label label-textarea" for="input-name">Direccion exacta:</label>
+                <textarea class="textarea input" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-socio">Nombre del socio:</label>
+                <select class="select required-field" id="slt-socio">
+                    <option value="">-- Seleccione una opción --</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-socio-id">Id del socio comercial:</label>
+                <input type="text" class="input required-field" id="input-socio-id" disabled>
+            </div>
+
+            <div class="mt-3 btn-container">
+                <button type="button" class="btn-save btn btn-size" id="btn-save">Guardar</button>
+                <button type="button" class="btn-cancel btn btn-size" id="btn-cancel">Cancelar</button>
+            </div>
+        </form>
+
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div>
+            <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
+        </div>
+    </footer>
+
+    <!--script CR -->
+    <script src="/ProjectGM_JS/CostaRica-DB.js"></script>
+    <!--script socios comerciales -->
+    <script src="/ProjectGM_JS/socios-comerciales-DB.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--admin libros js-->
+    <script src="/ProjectGM_JS/admin-registro-punto-retiro.js"></script>
+</body>
+
+</html>

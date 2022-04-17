@@ -11,59 +11,72 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+//select autores
+const selectAutores = document.getElementById("slt-author");
+listaAutores.forEach((autor) => {
+  selectAutores.options.add(new Option(autor.nombreCompleto));
+});
+
+//select premios ganados
+const selectAward1 = document.getElementById("slt-award-1");
+const selectAward2 = document.getElementById("slt-award-2");
+const selectAward3 = document.getElementById("slt-award-3");
+
+listaPremios.forEach((premio) => {
+  selectAward1.options.add(new Option(premio.nombre));
+  selectAward2.options.add(new Option(premio.nombre));
+  selectAward3.options.add(new Option(premio.nombre));
+});
+//select descuentos && onchange get percentage
+const selectDescuentos = document.getElementById("slt-discount");
+listaDescuentos.forEach((descuento) => {
+  selectDescuentos.options.add(new Option(descuento.nombre));
+  selectDescuentos.addEventListener("change", () => {
+    if (selectDescuentos.value == descuento.nombre) {
+      document.getElementById("input-amount").value = descuento.porcentaje;
+    } else if (selectDescuentos.value == 0) {
+      document.getElementById("input-amount").value = "";
+    }
+  });
+});
+
 //validation
 const btnGuardar = document.getElementById("btn-save");
 
 validar = () => {
-  /*  const required = document.querySelectorAll(".required-field");
-  const nacimiento = document.getElementById("input-birth-date");
-  const defuncion = document.getElementById("input-death-date");
+  const required = document.querySelectorAll(".required-field");
 
   let error = false;
-  let dateError = false;
 
   //blank spaces valid
   required.forEach((field) => {
     if (field.value == "") {
       error = true;
       field.classList.add("field-error");
-      //dates validation
-    } else if (nacimiento.value != "" && defuncion.value == "") {
-      dateError = false;
-      nacimiento.classList.remove("field-error");
-    } else if (nacimiento.value > defuncion.value) {
-      dateError = true;
-      nacimiento.classList.add("field-error");
     } else {
       field.classList.remove("field-error");
-      nacimiento.classList.remove("field-error");
     }
 
     if (error) {
       //password validation
       Swal.fire({
         icon: "warning",
-        title: "Usuario no registrado",
+        title: "Libro no registrado",
         text: "Por favor revise los campos resaltados",
-      });
-    } else if (dateError) {
-      Swal.fire({
-        icon: "warning",
-        title: "Fecha incorrecta",
-        text: "La fecha de nacimiento no puede ser mayor a la fecha de defuncion",
       });
     } else {
       Swal.fire({
         icon: "success",
-        title: "Autor registrado correctamente",
+        title: "Libro registrado correctamente",
         text: "Puedes continuar trabajando",
       }).then(() => {
-        window.location.href = "admin-catalogo-autores.html";
+        window.location.href = "admin-catalogo-libros.html";
       });
     }
-  }); */
-  window.location.href = "admin-catalogo-libros.html";
+  });
 };
+
+btnGuardar.addEventListener("click", validar);
 
 //atras btn
 const btnCancelar = document
@@ -71,6 +84,3 @@ const btnCancelar = document
   .addEventListener("click", () => {
     window.location.href = "admin-catalogo-libros.html";
   });
-
-//btn forward
-btnGuardar.addEventListener("click", validar);

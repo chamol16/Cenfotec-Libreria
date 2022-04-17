@@ -80,7 +80,7 @@ document.getElementById("input-second-last-name").textContent =
   userConnected.segundoApellido;
 document.getElementById("slt-gender").textContent = userConnected.genero;
 document.getElementById("slt-type-id").textContent = userConnected.tipoId;
-document.getElementById("input-id").textContent = userConnected.id;
+document.getElementById("input-id").textContent = userConnected.identificacion;
 document.getElementById("input-email").textContent = userConnected.correo;
 document.getElementById("slt-province").textContent = userConnected.provincia;
 document.getElementById("slt-canton").textContent = userConnected.canton;

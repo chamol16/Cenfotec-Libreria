@@ -11,53 +11,49 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
-/*render data */
-const cuerpoTabla = document.querySelector("#tbl-libros tbody");
+/* fill table */
+const cuerpoTabla = document.querySelector("#tbl-premios tbody");
 
 cuerpoTabla.innerHTML = "";
-listaLibros.forEach((libro, idx) => {
+listaPremios.forEach((premio, idx) => {
   let fila = cuerpoTabla.insertRow();
   fila.id = idx + 1;
   fila.className = "row";
-  fila.insertCell().textContent = libro.name;
-  fila.insertCell().textContent = libro.author;
-  fila.insertCell().textContent = `¢${libro.price}`;
-  fila.insertCell().textContent = libro.gender;
-  fila.insertCell().textContent = libro.idiom;
+  fila.insertCell().textContent = premio.id;
+  fila.insertCell().textContent = premio.nombre;
   fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
   fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
 });
 
-/* editar del libro */
+/*editar del premio */
 const rows = document.querySelectorAll(".row");
 
-seleccionarLibro = (e) => {
+seleccionarPremio = (e) => {
   e.preventDefault();
   let rowId = e.target.parentElement.id;
-  let libroSeleccionado = false;
+  let premioSeleccionado = false;
 
-  listaLibros.forEach((libro) => {
-    if (rowId == libro.id) {
-      libroSeleccionado = true;
-      localStorage.setItem("bookClicked", JSON.stringify(libro));
+  listaPremios.forEach((premio) => {
+    if (rowId == premio.id) {
+      premioSeleccionado = true;
+      localStorage.setItem("awardClicked", JSON.stringify(premio));
     }
   });
 
-  if (libroSeleccionado) {
-    window.location.href = "admin-editar-libro.html";
+  if (premioSeleccionado) {
+    window.location.href = "admin-editar-premio.html";
   }
 };
 
 for (const row of rows) {
-  row.addEventListener("click", seleccionarLibro);
+  row.addEventListener("click", seleccionarPremio);
 }
 
-//botones un autor
+//botones
 document.getElementById("btn-register").addEventListener("click", () => {
-  window.location.href = "admin-registro-libro.html";
+  window.location.href = "admin-registro-premio.html";
 });
 
-//boton atras
 document.getElementById("btn-cancel").addEventListener("click", () => {
   window.location.href = "admin-profile.html";
 });

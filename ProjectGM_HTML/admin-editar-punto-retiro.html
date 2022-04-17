@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar punto de retiro</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-editar.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="nav">
+        <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
+            <!--   <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
+            <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
+            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!--content-->
+    <section class="section-form">
+
+        <h1>Editar Punto de Retiro</h1>
+
+        <form action="" class="form-container">
+            <div class="mt-3">
+                <label class="label" for="input-id">Id:</label>
+                <input type="number" class="input required-field" id="input-id">
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-socio">Socio:</label>
+                <input type="text" class="input required-field" id="input-socio">
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-provincia">Provincia:</label>
+                <input type="text" class="input required-field" id="input-provincia">
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-canton">Cantón:</label>
+                <input type="text" class="input required-field" id="input-canton">
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-distrito">Distrito:</label>
+                <input type="text" class="input required-field" id="input-distrito">
+            </div>
+
+            <div class="mt-3 textarea-container">
+                <label class="label label-textarea" for="input-direccion-exacta">Dirección exacta:</label>
+                <textarea class="textarea" name="" id="input-direccion-exacta" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+
+        <div class="mt-3 btn-container">
+            <button type="button" class="btn-save btn btn-size" id="btn-save">Guardar</button>
+            <button type="button" class="btn-cancel btn btn-size" id="btn-cancel">Cancelar</button>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div>
+            <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
+        </div>
+    </footer>
+
+    <!--puntos retiro DB-->
+    <script src="/ProjectGM_JS/puntos-retiro-DB.js"></script>
+    <!--admin autores js-->
+    <script src="/ProjectGM_JS/admin-editar-punto-retiro.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

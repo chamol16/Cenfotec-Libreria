@@ -57,4 +57,8 @@ validar = () => {
   });
 };
 
+//botones
+document.getElementById("btn-cancel").addEventListener("click", () => {
+  window.location.href = "admin-profile.html";
+});
 document.getElementById("btn-save").addEventListener("click", validar);

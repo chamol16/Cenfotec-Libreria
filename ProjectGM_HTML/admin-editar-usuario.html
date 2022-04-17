@@ -5,23 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo libros</title>
+    <title>Editar género literario</title>
     <!--reset CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
-    <!--table CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/tablas-format.css">
     <!--own CSS-->
-    <link rel="stylesheet" href="/ProjectGM_CSS/admin-catalogos.css">
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-editar.css">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
     <!--nav-->
     <nav class="nav">
         <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
@@ -35,30 +32,29 @@
         </ul>
     </nav>
 
-    <!--content section -->
-    <section id="tabla-de-datos">
-        <h1>Catálogo de Libros</h1>
+    <!--content-->
+    <section class="section-form">
 
-        <div>
-            <table class="contentTable" id="tbl-libros">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Autor </th>
-                        <th>Precio</th>
-                        <th>Género</th>
-                        <th>Idioma</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
-                    </tr>
-                </thead>
+        <h1>Editar Usuario</h1>
 
-                <tbody></tbody>
-            </table>
-        </div>
-        <div class="btn-container">
-            <button class="btn btn-size" id="btn-register">Registrar</button>
-            <button class="btn btn-size" id="btn-cancel">Cancelar</button>
+        <form action="" class="form-container">
+            <div class="mt-3">
+                <label class="label" for="input-email">Correo:</label>
+                <input type="email" class="input required-field" id="input-email">
+            </div>
+            <div class="mt-3">
+                <label class="label" for="input-password">Contraseña:</label>
+                <input type="password" class="input required-field" id="input-password">
+            </div>
+            <div class="mt-3">
+                <label class="label" for="input-confirm">Confirmar contraseña:</label>
+                <input type="password" class="input required-field" id="input-confirm">
+            </div>
+        </form>
+
+        <div class="mt-3 btn-container">
+            <button type="button" class="btn-save btn btn-size" id="btn-save">Guardar</button>
+            <button type="button" class="btn-cancel btn btn-size" id="btn-cancel">Cancelar</button>
         </div>
     </section>
 
@@ -68,12 +64,13 @@
             <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
     </footer>
-    <!--DB for admin logged-->
-    <script src="/ProjectGM_JS/books-DB.js"></script>
+
+    <!--users DB-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
+    <!--own js-->
+    <script src="/ProjectGM_JS/admin-editar-usuario.js"></script>
     <!--script sweet Alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!--js validation-->
-    <script src="/ProjectGM_JS/admin-catalogo-libros.js"></script>
 
 </body>
 

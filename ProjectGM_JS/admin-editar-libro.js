@@ -25,6 +25,19 @@ listaAutores.forEach((autor) => {
   }
 });
 
+//select descuentos && onchange get percentage
+const selectDescuentos = document.getElementById("slt-discount");
+listaDescuentos.forEach((descuento) => {
+  selectDescuentos.options.add(new Option(descuento.nombre));
+  selectDescuentos.addEventListener("change", () => {
+    if (selectDescuentos.value == descuento.nombre) {
+      document.getElementById("input-amount").value = descuento.porcentaje;
+    } else if (selectDescuentos.value == 0) {
+      document.getElementById("input-amount").value = 0;
+    }
+  });
+});
+
 document.getElementById("input-price").value = bookSelected.price;
 
 if (bookSelected.stock) {
@@ -36,7 +49,6 @@ document.getElementById("input-idiom").value = bookSelected.idiom;
 
 //select con generos literarios
 const selectGeneros = document.getElementById("slt-gender");
-
 listaGeneros.forEach((genero) => {
   selectGeneros.options.add(new Option(genero.name));
   if (bookSelected.genderId == genero.id) {
