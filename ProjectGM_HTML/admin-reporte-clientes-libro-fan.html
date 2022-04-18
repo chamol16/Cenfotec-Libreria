@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo libros</title>
+    <!--reset CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
+    <!--nav-footer CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--table CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/tablas-format.css">
+    <!--own CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/admin-catalogos.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!--nav-->
+    <nav class="nav">
+        <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
+            <div class="logo-producto"></div>
+        </a>
+        <ul class="nav-ul">
+            <!--   <li><a href="/ProjectGM_HTML/admin-catalogos.html">Administrar catálogos</a></li>
+            <li><a href="/ProjectGM_HTML/admin-panel-configuracion.html">Panel configuración</a></li>
+            <li><a href="/ProjectGM_HTML/admin-reportes.html">Generar reportes</a></li> -->
+            <li><a href="/ProjectGM_HTML/iniciar-sesion.html" id="iniciar-sesion-a">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <!--content section -->
+    <section id="tabla-de-datos">
+        <h1>Reporte clientes libro-fan</h1>
+
+        <div>
+            <table class="contentTable" id="tbl-orders">
+                <thead>
+                    <tr>
+                        <th>Fecha de realización</th>
+                        <th>Id pedido</th>
+                        <th>Precio </th>
+                        <th>Total de ventas </th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="btn-container">
+            <!--  <button class="btn btn-size" id="btn-register">Registrar</button> -->
+            <button class="btn btn-size" id="btn-cancel">Cancelar</button>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div>
+            <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
+        </div>
+    </footer>
+    <!--DB for admin logged-->
+    <script src="/ProjectGM_JS/pedidos-DB.js"></script>
+    <!--users DB-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--js validation-->
+    <script src="/ProjectGM_JS/admin-reporte-clientes-libro-fan.js"></script>
+
+</body>
+
+</html>

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
     <!--own CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/tablas-format.css">
+
+
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap" rel="stylesheet">
     <!--Font Awesome-->
@@ -51,106 +53,40 @@
     </nav>
 
     <!--content section-->
-    <section class="section">
 
-        <h1>Historial de pedidos</h1>
-        <form action="" class="date-container">
-            <!--  <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
+    <h1>Historial de pedidos</h1>
+    <form action="" class="date-container">
+        <!--  <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
                 onfocus="(this.type='date')" onblur="(this.type='text')">
             <input type="text" id="fecha-pedido" name="fecha-pedido" placeholder="Seleccione una fecha:"
                 onfocus="(this.type='date')" onblur="(this.type='text')"> -->
-            <h2 id="consulta-text">Consulte por rango de fecha:</h1>
+        <h2 id="consulta-text">Consulte por rango de fecha:</h1>
 
-                <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
-                <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
-                <button type="submit" class="btn" id="button-buscar">Consultar</button>
+            <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
+            <input type="text" class="date-child" placeholder="Seleccione una fecha:" onfocus="(this.type='date')">
+            <button type="submit" class="btn" id="button-buscar">Consultar</button>
+    </form>
 
-        </form>
+    <!--content section -->
+    <section class="table-data" id="tabla-de-datos">
+        <div>
+            <table id="tbl-orders">
+                <thead>
+                    <tr>
+                        <th>Fecha de realización</th>
+                        <th>Id pedido</th>
+                        <th>Precio </th>
+                        <th>Total de ventas </th>
+                    </tr>
+                </thead>
 
-    </section>
-
-    <section id="tabla-de-datos">
-        <hr />
-        <table>
-            <tr>
-                <th>Número de pedido</th>
-                <th>Descripción de artículo</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
-                <th>Fecha</th>
-
-            </tr>
-            <tr>
-                <td>#1</td>
-                <td>El Diario de Ana Frank</td>
-                <td>1</td>
-                <td>₡7000</td>
-                <td>04/10/2022</td>
-            </tr>
-            <tr>
-                <td>#2</td>
-                <td>Harry Potter and the Sorcerer's Stone</td>
-                <td>1</td>
-                <td>₡6000</td>
-                <td>04/07/2022</td>
-            </tr>
-            <tr>
-                <td>#3</td>
-                <td>The Hunger Games: Catching Fire</td>
-                <td>1</td>
-                <td>₡6500</td>
-                <td>04/07/2022</td>
-            </tr>
-            <tr>
-                <td>#4</td>
-                <td>The Lord Of The Rings</td>
-                <td>3</td>
-                <td>₡8000</td>
-                <td>04/06/2022</td>
-            </tr>
-            <tr>
-                <td>#5</td>
-                <td>Harry Potter and the Deathly Hallows</td>
-                <td>1</td>
-                <td>₡8000</td>
-                <td>04/04/2022</td>
-            </tr>
-            <tr>
-                <td>#6</td>
-                <td>La Metamorfosis</td>
-                <td>1</td>
-                <td>₡12000</td>
-                <td>04/03/2022</td>
-            </tr>
-            <tr>
-                <td>#7</td>
-                <td>The Hunger Games: Mockingjay </td>
-                <td>2</td>
-                <td>₡9500</td>
-                <td>03/21/2022</td>
-            </tr>
-            <tr>
-                <td>#8</td>
-                <td>The Stand: Stephen King</td>
-                <td>3</td>
-                <td>₡11500</td>
-                <td>03/20/2022</td>
-            </tr>
-            <tr>
-                <td>#9</td>
-                <td>The Fault in Our Stars</td>
-                <td>2</td>
-                <td>₡3200</td>
-                <td>02/09/2022</td>
-            </tr>
-            <tr>
-                <td>#10</td>
-                <td>The Notebook: Nicholas Sparks</td>
-                <td>1</td>
-                <td>₡15400</td>
-                <td>01/01/2022</td>
-            </tr>
-        </table>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="btn-container">
+            <!--  <button class="btn btn-size" id="btn-register">Registrar</button> -->
+            <button class="btn btn-size" id="btn-cancel">Cancelar</button>
+        </div>
     </section>
 
     <!--footer-->
@@ -178,12 +114,17 @@
         </div>
     </footer>
 
+    <!--books DB-->
+    <script src="/ProjectGM_JS/books-DB.js"></script>
+    <!--users DB-->
+    <script src="/ProjectGM_JS/users-DB.js"></script>
+    <!--pedidos DB-->
+    <script src="/ProjectGM_JS/pedidos-DB.js"></script>
+    <!--script historial pedidos js-->
     <script src="/ProjectGM_JS/historial-pedidos.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
-<!--script sweet Alert-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!--script historial pedidos js-->
-<script src="/ProjectGM_JS/historial-pedidos.js"></script>
 
 </html>

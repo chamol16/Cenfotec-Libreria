@@ -51,13 +51,13 @@ redirectionCatalogos = (e) => {
 
 redirectionReportes = (e) => {
   if (e.target.selectedIndex == 1) {
-    window.location.href = "admin-reportes-top-10.html";
+    window.location.href = "admin-reporte-clientes-libro-fan.html";
   } else if (e.target.selectedIndex == 2) {
-    window.location.href = "admin-reportes-total-ventas.html";
+    window.location.href = "admin-reporte-clientes-normales.html";
   } else if (e.target.selectedIndex == 3) {
-    window.location.href = "admin-reportes-clientes-libro-fan.html";
+    window.location.href = "admin-reporte-top-10.html";
   } else {
-    window.location.href = "admin-reportes-clientes-normales.html";
+    window.location.href = "admin-reporte-total-ventas.html";
   }
 };
 

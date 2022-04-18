@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.table-data{
+  height: 500px;
+}
+
 .date-container {
   display: flex;
   flex-direction: row;
@@ -118,4 +122,17 @@ h3 {
 
 .row:hover {
   background-color: #feddc1;
+}
+
+/*btn registrar*/
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px;
+}
+
+.btn-size {
+  cursor: pointer;
+  height: 40px;
+  width: 260px;
 }
