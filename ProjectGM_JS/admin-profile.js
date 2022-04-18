@@ -49,6 +49,12 @@ redirectionCatalogos = (e) => {
   }
 };
 
+redirectionPanel = (e) => {
+  if (e.target.selectedIndex == 1) {
+    window.location.href = "admin-config-descuentos.html";
+  }
+};
+
 redirectionReportes = (e) => {
   if (e.target.selectedIndex == 1) {
     window.location.href = "admin-reporte-clientes-libro-fan.html";
@@ -62,4 +68,5 @@ redirectionReportes = (e) => {
 };
 
 catalogos.addEventListener("change", redirectionCatalogos);
+panelConfig.addEventListener("change", redirectionPanel);
 reportes.addEventListener("change", redirectionReportes);
