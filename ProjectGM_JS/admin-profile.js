@@ -52,6 +52,8 @@ redirectionCatalogos = (e) => {
 redirectionPanel = (e) => {
   if (e.target.selectedIndex == 1) {
     window.location.href = "admin-config-descuentos.html";
+  } else if(e.target.selectedIndex == 2){
+    window.location.href = "admin-config-libro-fan.html";
   }
 };
 
