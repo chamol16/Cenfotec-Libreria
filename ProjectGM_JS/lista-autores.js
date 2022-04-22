@@ -44,12 +44,20 @@ listas.addEventListener("change", redirectionListas);
 
 /* render data */
 const cuerpoTabla = document.querySelector("#tbl-autores tbody");
+let listaAutores = [];
+let rows = [];
+let deleteIcons = [];
 
-const mostrarDatos = () => {
+const inicializarListas = async () => {
+  listaAutores = await obtenerDatos("/obtener-autores");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
   cuerpoTabla.innerHTML = "";
   listaAutores.forEach((autor, idx) => {
     let fila = cuerpoTabla.insertRow();
-    fila.id = idx + 1;
+    fila.id = autor._id;
     fila.className = "row";
     fila.insertCell().textContent = autor.nombreCompleto;
     fila.insertCell().textContent = autor.paisNacimiento;
@@ -61,12 +69,21 @@ const mostrarDatos = () => {
       fila.insertCell().textContent = "No";
     }
   });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarAutor);
+  }
+
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarUsuario);
+  }
 };
 
-mostrarDatos();
+inicializarListas();
 
 /*redirijir al perfil del autor */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarAutor = (e) => {
   e.preventDefault();
@@ -74,12 +91,9 @@ seleccionarAutor = (e) => {
   let autorSeleccionado = false;
 
   listaAutores.forEach((autor) => {
-    if (rowId == autor.id) {
+    if (rowId == autor._id) {
       autorSeleccionado = true;
       localStorage.setItem("authorClicked", JSON.stringify(autor));
-      /*    if (libroSeleccionado) {
-        window.location.href = "perfil-libro.html";
-      } */
     }
   });
 

@@ -45,13 +45,13 @@ perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
 /* data */
-document.getElementById("name").textContent = bookSelected.name;
-document.getElementById("author").textContent = bookSelected.author;
-document.getElementById("price").textContent = `¢${bookSelected.price}`;
-document.getElementById("gender").textContent = bookSelected.gender;
-document.getElementById("idiom").textContent = bookSelected.idiom;
+document.getElementById("name").textContent = bookSelected.nombre;
+document.getElementById("author").textContent = bookSelected.autor;
+document.getElementById("price").textContent = `¢${bookSelected.precio}`;
+document.getElementById("gender").textContent = bookSelected.generoLiterario;
+document.getElementById("idiom").textContent = bookSelected.idioma;
 
-document.getElementById("img-container").setAttribute("src", bookSelected.img);
+document.getElementById("img-container").setAttribute("src", bookSelected.foto);
 
 /*acceso en footer*/
 const footerProfile = document.querySelectorAll(".acceso");

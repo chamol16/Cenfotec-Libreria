@@ -36,6 +36,28 @@
         <form action="" class="form-container">
 
             <div class="mt-3">
+                <label class="label" for="input-email">Correo electrónico:</label>
+                <input type="email " class="input required-field" id="input-email">
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="slt-type-id">Tipo de indentificación:</label>
+                <select class="select required-field" id="slt-type-id">
+                    <option value="">-- Seleccione una opción --</option>
+                    <option>Cédula de identidad</option>
+                    <option>Número de Seguro Social</option>
+                    <option>Tarjeta de residencia (DIMEX)</option>
+                    <option>Documento de identificación diplomático</option>
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <label class="label" for="input-id">Número de identificación:</label>
+                <input type="text" class="input required-field" id="input-id">
+            </div>
+
+
+            <div class="mt-3">
                 <label class="label" for="input-name">Nombre:</label>
                 <input type="text" class="input required-field" id="input-name">
             </div>
@@ -60,26 +82,7 @@
                 </select>
             </div>
 
-            <div class="mt-3">
-                <label class="label" for="input-type-id">Tipo de indentificación:</label>
-                <select class="select required-field" id="slt-type-id">
-                    <option value="">-- Seleccione una opción --</option>
-                    <option>Cédula de identidad</option>
-                    <option>Número de Seguro Social</option>
-                    <option>Tarjeta de residencia (DIMEX)</option>
-                    <option>Documento de identificación diplomático</option>
-                </select>
-            </div>
 
-            <div class="mt-3">
-                <label class="label" for="input-id">Número de identificación:</label>
-                <input type="text" class="input required-field" id="input-id">
-            </div>
-
-            <div class="mt-3">
-                <label class="label" for="input-email">Correo electrónico:</label>
-                <input type="email " class="input required-field" id="input-email">
-            </div>
 
             <div class="mt-3">
                 <label class="label" for="input-password">Contraseña:</label>
@@ -111,9 +114,9 @@
             </div>
 
             <div class="textarea-container">
-                <label class="label-textarea" for="input-address">Dirección exacta:</label>
-                <textarea name="" id="" cols="30" rows="10" class="input textarea required-field"
-                    id="input-address"></textarea>
+                <label class="label-textarea" for="textarea-address">Dirección exacta:</label>
+                <textarea name="" id="textarea-address" cols="30" rows="10"
+                    class="input textarea required-field"></textarea>
             </div>
 
             <div class="google-maps-container">
@@ -128,7 +131,7 @@
                     <br>(Opcional)</label>
 
                 <div class="select-container">
-                    <select class="favoritos-select" id="generos-favoritos">
+                    <select class="favoritos-select" id="genero-favorito-1">
                         <option value="">-- Seleccione una opción --</option>
                         <option>Narrativo</option>
                         <option>Lírico</option>
@@ -136,7 +139,7 @@
                         <option>Didáctico</option>
                     </select>
 
-                    <select class="favoritos-select" id="generos-favoritos">
+                    <select class="favoritos-select" id="genero-favorito-2">
                         <option value="">-- Seleccione una opción --</option>
                         <option>Narrativo</option>
                         <option>Lírico</option>
@@ -144,7 +147,7 @@
                         <option>Didáctico</option>
                     </select>
 
-                    <select name="generos-favoritos" class="favoritos-select" id="generos-favoritos">
+                    <select name="generos-favoritos" class="favoritos-select" id="genero-favorito-3">
                         <option value="">-- Seleccione una opción --</option>
                         <option>Narrativo</option>
                         <option>Lírico</option>
@@ -159,21 +162,21 @@
 
                 <div class="select-container">
 
-                    <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                    <select name="autores-favoritos" class="favoritos-select" id="autor-favorito-1">
                         <option value="">-- Seleccione una opción --</option>
                         <option value="">Gabriel García Márquez</option>
                         <option value="">Miguel de Cervantes</option>
                         <option value="">Stephen King</option>
                     </select>
 
-                    <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                    <select name="autores-favoritos" class="favoritos-select" id="autor-favorito-2">
                         <option value="">-- Seleccione una opción --</option>
                         <option value="">Gabriel García Márquez</option>
                         <option value="">Miguel de Cervantes</option>
                         <option value="">Stephen King</option>
                     </select>
 
-                    <select name="autores-favoritos" class="favoritos-select" id="autores-favoritos">
+                    <select name="autores-favoritos" class="favoritos-select" id="autor-favorito-3">
                         <option value="">-- Seleccione una opción --</option>
                         <option value="">Gabriel García Márquez</option>
                         <option value="">Miguel de Cervantes</option>
@@ -195,15 +198,19 @@
                 Buscar
             </label>
         </div>
-        
+
     </section>
 
-    <!--script sweet Alert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--js Costa Rica-->
     <script src="/ProjectGM_JS/CostaRica-DB.js"></script>
     <!--js registro de usuarios-->
     <script src="/ProjectGM_JS/registro-usuario.js"></script>
+    <!--script sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--API Google maps-->
     <!--   <script

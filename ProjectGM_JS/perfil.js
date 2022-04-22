@@ -14,7 +14,6 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /*editar perfil btn*/
-
 document.getElementById("btn-editar-perfil").addEventListener("click", () => {
   window.location.href = "editar-perfil.html";
 });
@@ -86,8 +85,23 @@ document.getElementById("slt-province").textContent = userConnected.provincia;
 document.getElementById("slt-canton").textContent = userConnected.canton;
 document.getElementById("slt-district").textContent = userConnected.distrito;
 document.getElementById("input-address").textContent = userConnected.direccion;
-document.getElementById("generos-favoritos").textContent =
-  userConnected.generoFavorito;
-document.getElementById("autores-favoritos").textContent =
-  userConnected.autorFavorito;
-document.getElementById("img-profile").setAttribute("src", userConnected.img);
+
+const genFavorito = document.querySelectorAll(".genero-favorito");
+genFavorito.forEach((genero, idx) => {
+  if (userConnected.generosFavoritos[idx] == undefined) {
+    genero.textContent = "";
+  } else {
+    genero.textContent = userConnected.generosFavoritos[idx];
+  }
+});
+
+const autorFavorito = document.querySelectorAll(".autor-favorito");
+autorFavorito.forEach((autor, idx) => {
+  if (userConnected.autoresFavoritos[idx] == undefined) {
+    autor.textContent = "";
+  } else {
+    autor.textContent = userConnected.autoresFavoritos[idx];
+  }
+});
+
+document.getElementById("img-profile").setAttribute("src", userConnected.foto);

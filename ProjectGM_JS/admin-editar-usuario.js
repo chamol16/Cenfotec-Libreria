@@ -13,13 +13,13 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-listaUsuarios.forEach((usuario) => {
-  if (userSelected.id == usuario.id) {
-    document.getElementById("input-email").value = usuario.correo;
-    document.getElementById("input-password").value = usuario.contrasena;
-    document.getElementById("input-confirm").value = usuario.contrasena;
-  }
-});
+/* listaUsuarios.forEach((usuario) => {
+  if (userSelected.id == usuario._id) { */
+    document.getElementById("input-email").value = userSelected.correo;
+    document.getElementById("input-password").value = userSelected.contrasena;
+    document.getElementById("input-confirm").value = userSelected.contrasena;
+/*   }
+}); */
 
 const btnGuardar = document.getElementById("btn-save");
 

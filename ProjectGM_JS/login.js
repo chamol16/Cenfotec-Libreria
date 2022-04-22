@@ -2,7 +2,14 @@ const inputEmail = document.getElementById("input-email");
 const inputPassword = document.getElementById("input-password");
 const btnSignIn = document.getElementById("btn-signin");
 
+//initialize DB
+let listaUsuarios = [];
+const inicializarListas = async () => {
+  listaUsuarios = await obtenerDatos("/obtener-usuarios");
+};
+
 const validarCredenciales = () => {
+  inicializarListas();
   let inputError = false;
 
   listaUsuarios.forEach((usuario) => {
@@ -11,7 +18,7 @@ const validarCredenciales = () => {
     if (inputEmail.value == "" || inputPassword.value == "") {
       inputEmail.classList.add("field-error");
       inputPassword.classList.add("field-error");
-      user = usuario.tipo;
+      user = usuario.tipoUsuario;
       inputError = true;
       finalValidation(user, inputError);
     } else if (
@@ -51,7 +58,8 @@ finalValidation = (tipoDeUsuario, error) => {
 btnSignIn.addEventListener("click", validarCredenciales);
 
 /*ojito pass */
-document.getElementById("btn-ver").addEventListener("click", () => {
+document.getElementById("btn-ver").addEventListener("click", (e) => {
+  e.preventDefault();
   if (inputPassword.type == "password") {
     inputPassword.type = "text";
   } else {

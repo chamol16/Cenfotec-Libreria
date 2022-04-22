@@ -44,25 +44,41 @@ listas.addEventListener("change", redirectionListas);
 
 /*render data */
 const cuerpoTabla = document.querySelector("#tbl-libros tbody");
+let listaLibros = [];
+let rows = [];
+let deleteIcons = [];
 
-const mostrarDatos = () => {
+const inicializarListas = async () => {
+  listaLibros = await obtenerDatos("/obtener-libros");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
   cuerpoTabla.innerHTML = "";
   listaLibros.forEach((libro, idx) => {
     let fila = cuerpoTabla.insertRow();
-    fila.id = idx + 1;
+    fila.id = libro._id;
     fila.className = "row";
-    fila.insertCell().textContent = libro.name;
-    fila.insertCell().textContent = libro.author;
-    fila.insertCell().textContent = `¢${libro.price}`;
-    fila.insertCell().textContent = libro.gender;
-    fila.insertCell().textContent = libro.idiom;
+    fila.insertCell().textContent = libro.nombre;
+    fila.insertCell().textContent = libro.autor;
+    fila.insertCell().textContent = `¢${libro.precio}`;
+    fila.insertCell().textContent = libro.generoLiterario;
+    fila.insertCell().textContent = libro.idioma;
   });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarLibro);
+  }
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarLibro);
+  }
 };
 
-mostrarDatos();
+inicializarListas();
 
 /*redirijir al perfil del libro */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarLibro = (e) => {
   e.preventDefault();
@@ -70,12 +86,9 @@ seleccionarLibro = (e) => {
   let libroSeleccionado = false;
 
   listaLibros.forEach((libro) => {
-    if (rowId == libro.id) {
+    if (rowId == libro._id) {
       libroSeleccionado = true;
       localStorage.setItem("bookClicked", JSON.stringify(libro));
-      /*    if (libroSeleccionado) {
-        window.location.href = "perfil-libro.html";
-      } */
     }
   });
 

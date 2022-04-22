@@ -55,12 +55,10 @@ document.getElementById("fecha-nacimiento").textContent =
 document.getElementById("fecha-defuncion").textContent =
   authorSelected.fechaDefuncion;
 document.getElementById("genero").textContent = authorSelected.genero;
-document.getElementById("libro-famoso").textContent =
-  authorSelected.libroFamoso;
 document.getElementById("resena").textContent = authorSelected.biografia;
 document
   .getElementById("img-container")
-  .setAttribute("src", authorSelected.img);
+  .setAttribute("src", authorSelected.foto);
 
 /*acceso en footer*/
 const footerProfile = document.querySelectorAll(".acceso");

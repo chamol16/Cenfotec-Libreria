@@ -14,7 +14,7 @@ const inputName = document.getElementById("input-name");
 const inputFirstLastName = document.getElementById("input-first-last-name");
 const inputSecondLastName = document.getElementById("input-second-last-name");
 const inputGender = document.getElementById("slt-gender");
-const inputTypeId = document.getElementById("input-type-id");
+const inputTypeId = document.getElementById("slt-type-id");
 const inputId = document.getElementById("input-id");
 const inputEmail = document.getElementById("input-email");
 const inputPassword = document.getElementById("input-password");
@@ -22,6 +22,13 @@ const btnRegistrar = document.getElementById("btn-register");
 const listaProvincias = document.querySelector("#slt-province");
 const listaCantones = document.querySelector("#slt-canton");
 const listaDistritos = document.querySelector("#slt-district");
+const direccion = document.getElementById("textarea-address");
+const generoFavorito1 = document.querySelector("#genero-favorito-1");
+const generoFavorito2 = document.querySelector("#genero-favorito-2");
+const generoFavorito3 = document.querySelector("#genero-favorito-3");
+const autorFavorito1 = document.querySelector("#autor-favorito-1");
+const autorFavorito2 = document.querySelector("#autor-favorito-2");
+const autorFavorito3 = document.querySelector("#autor-favorito-3");
 
 let provinciaSeleccionada;
 let cantonSeleccionado;
@@ -41,6 +48,7 @@ const mostrarCantones = (nombreProvincia) => {
     }
   });
 };
+console.log(direccion.value);
 const mostrarDistritos = (nombreCanton) => {
   listaDistritos.innerHTML = "";
   listaDistritos.options.add(new Option("-- Seleccione un distrito --"));
@@ -65,6 +73,20 @@ listaCantones.addEventListener("change", () => {
   cantonSeleccionado = listaCantones.value;
   mostrarDistritos(cantonSeleccionado);
 });
+
+//subir imagen de usuario
+const displayImgDiv = document.querySelector("#display-img");
+const inputImg = document.querySelector("#input-img");
+let uploadedImg = "";
+subirImagen = () => {
+  const reader = new FileReader();
+  const file = inputImg.files[0];
+  reader.addEventListener("load", (files) => {
+    uploadedImg = reader.result;
+    displayImgDiv.style.backgroundImage = `url(${uploadedImg})`;
+  });
+  reader.readAsDataURL(file);
+};
 
 //validation
 validar = () => {
@@ -91,6 +113,8 @@ validar = () => {
 
     //password validation
     if (error) {
+      console.log(uploadedImg.value);
+
       Swal.fire({
         icon: "warning",
         title: "Usuario no registrado",
@@ -107,26 +131,43 @@ validar = () => {
         icon: "success",
         title: "Usuario registrado correctamente",
         text: "Ahora puedes iniciar sesión",
-      }).then(() => {
-        window.location.href = "login.html";
-      });
+      })
+        .then(() => {
+          let usuario = {
+            correo: inputEmail.value,
+            identificacion: inputId.value,
+            tipoUsuario: 2,
+            tipoId: inputTypeId.value,
+            nombre: inputName.value,
+            primerApellido: inputFirstLastName.value,
+            segundoApellido: inputSecondLastName.value,
+            contrasena: inputPassword.value,
+            genero: inputGender.value,
+            provincia: listaProvincias.value,
+            canton: listaCantones.value,
+            distrito: listaDistritos.value,
+            direccion: direccion.value,
+            generosFavoritos: [
+              generoFavorito1.value,
+              generoFavorito2.value,
+              generoFavorito3.value,
+            ],
+            autoresFavoritos: [
+              autorFavorito1.value,
+              autorFavorito2.value,
+              autorFavorito3.value,
+            ],
+            foto: uploadedImg,
+            libroFan: false,
+          };
+          registrarDatos(usuario, "/registrar-usuario");
+        })
+        .then(() => {
+          /*   window.location.href = "login.html"; */
+        });
     }
   });
 };
 
-//subir imagen de usuario
-const displayImgDiv = document.querySelector("#display-img");
-const inputImg = document.querySelector("#input-img");
-let uploadedImg = "";
-
-subirImagen = () => {
-  const reader = new FileReader();
-  const file = inputImg.files[0];
-  reader.addEventListener("load", (files) => {
-    uploadedImg = reader.result;
-    displayImgDiv.style.backgroundImage = `url(${uploadedImg})`;
-  });
-  reader.readAsDataURL(file);
-};
 inputImg.addEventListener("change", subirImagen);
 btnRegistrar.addEventListener("click", validar);
