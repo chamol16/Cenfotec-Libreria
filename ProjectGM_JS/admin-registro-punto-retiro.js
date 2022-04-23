@@ -11,21 +11,33 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
-//select socios comerciales
+/* consulta DB */
 const selectSocios = document.getElementById("slt-socio");
 const socioId = document.getElementById("input-socio-id");
+const cuerpoTabla = document.querySelector("#tbl-puntos-retiro tbody");
+let listaSocios = [];
 
-listaSocios.forEach((socio) => {
-  selectSocios.options.add(new Option(socio.nombre));
-  selectSocios.addEventListener("change", () => {
-    if (selectSocios.value == socio.nombre) {
-      socioId.value = socio.id;
-    } else if (selectSocios.value == 0) {
-      socioId.value = "";
-    }
+const inicializarListas = async () => {
+  listaSocios = await obtenerDatos("/obtener-socios-comerciales");
+  llenarSelect();
+};
+
+llenarSelect = () => {
+  listaSocios.forEach((socio) => {
+    selectSocios.options.add(new Option(socio.nombre));
+    selectSocios.addEventListener("change", () => {
+      if (selectSocios.value == socio.nombre) {
+        socioId.value = socio._id;
+      } else if (selectSocios.value == 0) {
+        socioId.value = "";
+      }
+    });
   });
-});
+};
 
+inicializarListas();
+
+//Costa Rica
 const listaProvincias = document.querySelector("#slt-provincia");
 const listaCantones = document.querySelector("#slt-canton");
 const listaDistritos = document.querySelector("#slt-distrito");

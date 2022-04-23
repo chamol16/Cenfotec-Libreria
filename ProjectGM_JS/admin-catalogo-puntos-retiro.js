@@ -41,6 +41,7 @@ const mostrarTabla = () => {
       }
     });
   });
+
   rows = document.querySelectorAll(".row");
   deleteIcons = document.querySelectorAll("#delete");
   for (const row of rows) {

@@ -48,7 +48,6 @@ const mostrarCantones = (nombreProvincia) => {
     }
   });
 };
-console.log(direccion.value);
 const mostrarDistritos = (nombreCanton) => {
   listaDistritos.innerHTML = "";
   listaDistritos.options.add(new Option("-- Seleccione un distrito --"));
