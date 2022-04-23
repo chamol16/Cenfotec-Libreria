@@ -13,12 +13,9 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-listaPremios.forEach((premio) => {
-  if (premioSelected.id == premio.id) {
-    document.getElementById("input-name").value = premioSelected.nombre;
-    document.getElementById("input-id").value = premioSelected.id;
-  }
-});
+document.getElementById("input-id").value = premioSelected._id;
+document.getElementById("input-name").value = premioSelected.nombre;
+
 
 const btnGuardar = document.getElementById("btn-save");
 

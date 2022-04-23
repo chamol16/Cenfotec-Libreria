@@ -1,12 +1,13 @@
 "use strict";
 
-const registrarDatos = async (datos, endPoint) => {
+const registrarDatos = async (data, endPoint) => {
   let url = `http://localhost:3000/api${endPoint}`;
 
   await axios({
     method: "post",
     url: url,
-    data: datos,
+    responseType: "json",
+    data: data,
   });
 };
 
@@ -17,6 +18,7 @@ const obtenerDatos = async (endPoint) => {
   await axios({
     method: "get",
     url: url,
+    responseType: "json",
   }).then((response) => {
     listaDatos = response.data;
   });

@@ -12,68 +12,77 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
-/* fill inputs */
-document.getElementById("input-id").value = bookSelected.id;
-document.getElementById("input-name").value = bookSelected.name;
-
-//select con todos los autores
+//lista de libros
 const selectAutores = document.getElementById("slt-author");
-listaAutores.forEach((autor) => {
-  selectAutores.options.add(new Option(autor.nombreCompleto));
-  if (bookSelected.authorId == autor.id) {
-    selectAutores[autor.id].selected = true;
-  }
-});
-
-//select descuentos && onchange get percentage
 const selectDescuentos = document.getElementById("slt-discount");
-listaDescuentos.forEach((descuento) => {
-  selectDescuentos.options.add(new Option(descuento.nombre));
-  selectDescuentos.addEventListener("change", () => {
-    if (selectDescuentos.value == descuento.nombre) {
-      document.getElementById("input-amount").value = descuento.porcentaje;
-    } else if (selectDescuentos.value == 0) {
-      document.getElementById("input-amount").value = 0;
+const selectGeneros = document.getElementById("slt-gender");
+
+let listaAutores = [];
+let listaDescuentos = [];
+let listaGeneros = [];
+
+const inicializarListas = async () => {
+  listaAutores = await obtenerDatos("/obtener-autores");
+  listaDescuentos = await obtenerDatos("/obtener-descuentos");
+  listaGeneros = await obtenerDatos("/obtener-generos-literarios");
+  mostrarListas();
+};
+
+const mostrarListas = () => {
+  //autores
+  listaAutores.forEach((autor) => {
+    selectAutores.options.add(new Option(autor.nombreCompleto));
+    if (bookSelected.autor == autor.nombreCompleto) {
+      // selectAutores[autor._id].selected = true;
     }
   });
-});
+  //decuentos
+  listaDescuentos.forEach((descuento) => {
+    selectDescuentos.options.add(new Option(descuento.nombre));
+    selectDescuentos.addEventListener("change", () => {
+      if (selectDescuentos.value == descuento.nombre) {
+        document.getElementById("input-amount").value = descuento.porcentaje;
+      } else if (selectDescuentos.value == 0) {
+        document.getElementById("input-amount").value = 0;
+      }
+    });
+  });
 
-document.getElementById("input-price").value = bookSelected.price;
+  //generoslitearios
+  listaGeneros.forEach((genero) => {
+    selectGeneros.options.add(new Option(genero.name));
+    if (bookSelected.generoLiterario == genero.name) {
+      //   selectGeneros[genero.name].selected = true;
+    }
+  });
+};
+
+inicializarListas();
+
+/* fill inputs */
+document.getElementById("input-id").value = bookSelected._id;
+document.getElementById("input-name").value = bookSelected.nombre;
+document.getElementById("input-price").value = bookSelected.precio;
 
 if (bookSelected.stock) {
   document.getElementById("slt-stock").value = 1;
 } else {
   document.getElementById("slt-stock").value = 2;
 }
-document.getElementById("input-idiom").value = bookSelected.idiom;
+document.getElementById("input-idiom").value = bookSelected.idioma;
 
-//select con generos literarios
-const selectGeneros = document.getElementById("slt-gender");
-listaGeneros.forEach((genero) => {
-  selectGeneros.options.add(new Option(genero.name));
-  if (bookSelected.genderId == genero.id) {
-    selectGeneros[genero.id].selected = true;
-  }
-});
-
-/*status */
-console.log(bookSelected.active);
 if (bookSelected.active) {
   document.getElementById("slt-status").value = 1;
 } else {
   document.getElementById("slt-status").value = 2;
 }
 
-/*descuentos select */
-//ids => first-discount,2n,3rd
-
 const btnGuardar = document.getElementById("btn-save");
+
 //validation
 validar = () => {
   const required = document.querySelectorAll(".required-field");
-
   let error = false;
-  let dateError = false;
 
   //blank spaces valid
   required.forEach((field) => {
@@ -123,5 +132,7 @@ subirImagen = () => {
   });
   reader.readAsDataURL(file);
 };
+
+//botones
 inputImg.addEventListener("change", subirImagen);
 btnGuardar.addEventListener("click", validar);

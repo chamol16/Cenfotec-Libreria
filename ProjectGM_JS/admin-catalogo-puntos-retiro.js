@@ -13,23 +13,47 @@ inicioElementoA.addEventListener("click", logOut);
 
 /* fill table */
 const cuerpoTabla = document.querySelector("#tbl-puntos-retiro tbody");
+let listaPuntosRetiro = [];
+let listaSocios = [];
+let rows = [];
+let deleteIcons = [];
 
-cuerpoTabla.innerHTML = "";
-listaPuntosRetiro.forEach((punto, idx) => {
-  let fila = cuerpoTabla.insertRow();
-  fila.id = idx + 1;
-  fila.className = "row";
-  fila.insertCell().textContent = punto.id;
-  fila.insertCell().textContent = punto.socioName;
-  fila.insertCell().textContent = punto.provincia;
-  fila.insertCell().textContent = punto.canton;
-  fila.insertCell().textContent = punto.distrito;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
-});
+const inicializarListas = async () => {
+  listaPuntosRetiro = await obtenerDatos("/obtener-puntos-retiro");
+  listaSocios = await obtenerDatos("/obtener-socios-comerciales");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaPuntosRetiro.forEach((punto, idx) => {
+    listaSocios.forEach((socio) => {
+      if (punto.socioId == socio._id) {
+        let fila = cuerpoTabla.insertRow();
+        fila.id = punto._id;
+        fila.className = "row";
+        fila.insertCell().textContent = socio.nombre;
+        fila.insertCell().textContent = punto.provincia;
+        fila.insertCell().textContent = punto.canton;
+        fila.insertCell().textContent = punto.distrito;
+        fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
+        fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
+      }
+    });
+  });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarPunto);
+  }
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarUsuario);
+  }
+};
+inicializarListas();
 
 /*redirijir al editar del punto de retiro */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarPunto = (e) => {
   e.preventDefault();
@@ -37,7 +61,7 @@ seleccionarPunto = (e) => {
   let puntoSeleccionado = false;
 
   listaPuntosRetiro.forEach((punto) => {
-    if (rowId == punto.id) {
+    if (rowId == punto._id) {
       puntoSeleccionado = true;
       localStorage.setItem("pointClicked", JSON.stringify(punto));
     }
@@ -51,6 +75,11 @@ seleccionarPunto = (e) => {
 for (const row of rows) {
   row.addEventListener("click", seleccionarPunto);
 }
+
+//eliminar
+eliminarUsuario = () => {
+  console.log(`eliminar`);
+};
 
 //botones
 document.getElementById("btn-register").addEventListener("click", () => {

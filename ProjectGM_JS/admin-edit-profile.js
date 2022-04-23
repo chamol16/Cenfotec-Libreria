@@ -21,7 +21,7 @@ document.getElementById("second-last-name").value =
 document.getElementById("phone").value = adminConnected.telefono;
 document.getElementById("email").value = adminConnected.correo;
 document.getElementById("address").value = adminConnected.direccion;
-document.getElementById("id").value = adminConnected.id;
+document.getElementById("id").value = adminConnected.identificacion;
 document.getElementById("password").value = adminConnected.contrasena;
 document.getElementById("confirm-password").value = adminConnected.contrasena;
 

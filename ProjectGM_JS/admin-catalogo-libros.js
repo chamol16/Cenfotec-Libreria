@@ -13,23 +13,44 @@ inicioElementoA.addEventListener("click", logOut);
 
 /*render data */
 const cuerpoTabla = document.querySelector("#tbl-libros tbody");
+let listaLibros = [];
+let rows = [];
+let deleteIcons = [];
 
-cuerpoTabla.innerHTML = "";
-listaLibros.forEach((libro, idx) => {
-  let fila = cuerpoTabla.insertRow();
-  fila.id = idx + 1;
-  fila.className = "row";
-  fila.insertCell().textContent = libro.name;
-  fila.insertCell().textContent = libro.author;
-  fila.insertCell().textContent = `¢${libro.price}`;
-  fila.insertCell().textContent = libro.gender;
-  fila.insertCell().textContent = libro.idiom;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
-});
+const inicializarListas = async () => {
+  listaLibros = await obtenerDatos("/obtener-libros");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaLibros.forEach((libro, idx) => {
+    let fila = cuerpoTabla.insertRow();
+    fila.id = libro._id;
+    fila.className = "row";
+    fila.insertCell().textContent = libro.nombre;
+    fila.insertCell().textContent = libro.autor;
+    fila.insertCell().textContent = `¢${libro.precio}`;
+    fila.insertCell().textContent = libro.generoLiterario;
+    fila.insertCell().textContent = libro.idioma;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
+  });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarLibro);
+  }
+
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarUsuario);
+  }
+};
+
+inicializarListas();
 
 /* editar del libro */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarLibro = (e) => {
   e.preventDefault();
@@ -37,7 +58,7 @@ seleccionarLibro = (e) => {
   let libroSeleccionado = false;
 
   listaLibros.forEach((libro) => {
-    if (rowId == libro.id) {
+    if (rowId == libro._id) {
       libroSeleccionado = true;
       localStorage.setItem("bookClicked", JSON.stringify(libro));
     }
@@ -51,6 +72,11 @@ seleccionarLibro = (e) => {
 for (const row of rows) {
   row.addEventListener("click", seleccionarLibro);
 }
+
+//eliminar
+eliminarUsuario = () => {
+  console.log(`eliminar`);
+};
 
 //botones un autor
 document.getElementById("btn-register").addEventListener("click", () => {

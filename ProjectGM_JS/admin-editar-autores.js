@@ -22,36 +22,51 @@ document.getElementById("input-death-date").value =
 
 let sexo;
 getGender = () => {
-  if (authorSelected.genero == "masculino") {
+  if (authorSelected.genero.toLowerCase() == "masculino") {
     sexo = 1;
-  } else if (authorSelected.genero == "femenino") {
+  } else if (authorSelected.genero.toLowerCase() == "femenino") {
     sexo = 2;
   } else {
     sexo = 3;
   }
+  document.getElementById("slt-gender").value = sexo;
 };
 getGender();
-document.getElementById("slt-gender").value = sexo;
+
+//lista de libros
+let listaLibros = [];
+let listaPremios = [];
 
 const books = document.querySelector("#slt-libros-publicados");
-
-listaLibros.forEach((libro) => {
-  if (libro.authorId == authorSelected.id) {
-    books.options.add(new Option(libro.name));
-  }
-});
-
-//awards won
 const firstAward = document.querySelector("#first-award-won");
 const secondAward = document.querySelector("#second-award-won");
 const thirdAward = document.querySelector("#third-award-won");
 
-//cargar premios
-listaPremios.forEach((premio) => {
-  firstAward.options.add(new Option(premio.nombre));
-  secondAward.options.add(new Option(premio.nombre));
-  thirdAward.options.add(new Option(premio.nombre));
-});
+const inicializarListas = async () => {
+  listaLibros = await obtenerDatos("/obtener-libros");
+  listaPremios = await obtenerDatos("/obtener-premios");
+  mostrarListas();
+};
+
+const mostrarListas = () => {
+  listaLibros.forEach((libro) => {
+    if (libro.autor == authorSelected.nombreCompleto) {
+      books.options.add(new Option(libro.nombre));
+    }
+  });
+
+  listaPremios.forEach((premio) => {
+    if (premio.nombre == authorSelected.premiosGanados) {
+      firstAward.options.add(new Option(premio.nombre));
+      secondAward.options.add(new Option(premio.nombre));
+      thirdAward.options.add(new Option(premio.nombre));
+    }
+  });
+};
+
+inicializarListas();
+
+//awards won
 
 //cargar el nobel
 const selectNobel = document.getElementById("slt-nobel");

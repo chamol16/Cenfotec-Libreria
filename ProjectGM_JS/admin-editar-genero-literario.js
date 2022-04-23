@@ -13,12 +13,8 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-listaGeneros.forEach((genero) => {
-  if (generoSelected.id == genero.id) {
-    document.getElementById("input-name").value = genero.name;
-    document.getElementById("input-id").value = genero.id;
-  }
-});
+document.getElementById("input-name").value = generoSelected.name;
+document.getElementById("input-id").value = generoSelected._id;
 
 const btnGuardar = document.getElementById("btn-save");
 
