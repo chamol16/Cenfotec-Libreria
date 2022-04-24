@@ -19,9 +19,13 @@ const obtenerDatos = async (endPoint) => {
     method: "get",
     url: url,
     responseType: "json",
-  }).then((response) => {
-    listaDatos = response.data;
-  });
+  })
+    .then((response) => {
+      listaDatos = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
   return listaDatos;
 };

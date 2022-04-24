@@ -13,6 +13,9 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
+const displayImgDiv = document.querySelector("#display-img");
+displayImgDiv.style.backgroundImage = `url(${authorSelected.foto})`;
+
 document.getElementById("input-name").value = authorSelected.nombreCompleto;
 document.getElementById("slt-country").value = authorSelected.paisNacimiento;
 document.getElementById("input-birth-date").value =
@@ -33,40 +36,46 @@ getGender = () => {
 };
 getGender();
 
-//lista de libros
+//libros
 let listaLibros = [];
-let listaPremios = [];
 
 const books = document.querySelector("#slt-libros-publicados");
-const firstAward = document.querySelector("#first-award-won");
-const secondAward = document.querySelector("#second-award-won");
-const thirdAward = document.querySelector("#third-award-won");
 
 const inicializarListas = async () => {
   listaLibros = await obtenerDatos("/obtener-libros");
-  listaPremios = await obtenerDatos("/obtener-premios");
   mostrarListas();
 };
 
 const mostrarListas = () => {
   listaLibros.forEach((libro) => {
-    if (libro.autor == authorSelected.nombreCompleto) {
+    if (libro.autorId == authorSelected._id) {
       books.options.add(new Option(libro.nombre));
-    }
-  });
-
-  listaPremios.forEach((premio) => {
-    if (premio.nombre == authorSelected.premiosGanados) {
-      firstAward.options.add(new Option(premio.nombre));
-      secondAward.options.add(new Option(premio.nombre));
-      thirdAward.options.add(new Option(premio.nombre));
     }
   });
 };
 
 inicializarListas();
 
-//awards won
+//premios
+const premio1 = document.getElementById("premio-1");
+const premio2 = document.getElementById("premio-2");
+const premio3 = document.getElementById("premio-3");
+
+premio1.value = authorSelected.premiosGanados[0];
+premio2.value = authorSelected.premiosGanados[1];
+premio3.value = authorSelected.premiosGanados[2];
+
+if (premio1.value == "undefined") {
+  premio1.value = "";
+}
+
+if (premio2.value == "undefined") {
+  premio2.value = "";
+}
+
+if (premio3.value == "undefined") {
+  premio3.value = "";
+}
 
 //cargar el nobel
 const selectNobel = document.getElementById("slt-nobel");
@@ -158,7 +167,6 @@ const btnCancelar = document
   });
 
 //subir imagen de usuario
-const displayImgDiv = document.querySelector("#display-img");
 const inputImg = document.querySelector("#input-img");
 let uploadedImg = "";
 
@@ -171,5 +179,6 @@ subirImagen = () => {
   });
   reader.readAsDataURL(file);
 };
+
 inputImg.addEventListener("change", subirImagen);
 btnGuardar.addEventListener("click", validar);

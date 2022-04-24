@@ -13,6 +13,8 @@ inicioElementoA.addEventListener("click", logOut);
 
 //validation
 const btnGuardar = document.getElementById("btn-save");
+const inputNombre = document.getElementById("input-name");
+const inputFecha = document.getElementById("input-date");
 
 validar = () => {
   const required = document.querySelectorAll(".required-field");
@@ -40,9 +42,17 @@ validar = () => {
         icon: "success",
         title: "Socio comercial registrado correctamente",
         text: "Puedes continuar trabajando",
-      }).then(() => {
-        window.location.href = "admin-catalogo-socios-comerciales.html";
-      });
+      })
+        .then(() => {
+          let socio = {
+            nombre: inputNombre.value,
+            fechaInicio: inputFecha.value,
+          };
+          registrarDatos(socio, "/registrar-socio-comercial");
+        })
+        .then(() => {
+          window.location.href = "admin-catalogo-socios-comerciales.html";
+        });
     }
   });
 };

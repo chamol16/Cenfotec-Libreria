@@ -41,6 +41,7 @@ inicializarListas();
 const listaProvincias = document.querySelector("#slt-provincia");
 const listaCantones = document.querySelector("#slt-canton");
 const listaDistritos = document.querySelector("#slt-distrito");
+const inputDireccion = document.getElementById("direccion");
 
 let provinciaSeleccionada;
 let cantonSeleccionado;
@@ -114,9 +115,20 @@ validar = () => {
         icon: "success",
         title: "Punto de retiro registrado correctamente",
         text: "Puedes continuar trabajando",
-      }).then(() => {
-        window.location.href = "admin-catalogo-puntos-retiro.html";
-      });
+      })
+        .then(() => {
+          let punto = {
+            provincia: listaProvincias.value,
+            canton: listaCantones.value,
+            distrito: listaDistritos.value,
+            direccion: inputDireccion.value,
+            socioId: socioId.value,
+          };
+          registrarDatos(punto, "/registrar-punto-retiro");
+        })
+        .then(() => {
+          window.location.href = "admin-catalogo-puntos-retiro.html";
+        });
     }
   });
 };

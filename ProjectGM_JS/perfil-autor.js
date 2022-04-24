@@ -16,6 +16,14 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+/* render data */
+document.getElementById("premio-1").textContent =
+  authorSelected.premiosGanados[0];
+document.getElementById("premio-2").textContent =
+  authorSelected.premiosGanados[1];
+document.getElementById("premio-3").textContent =
+  authorSelected.premiosGanados[2];
+
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
 const listas = document.getElementById("slt-list");

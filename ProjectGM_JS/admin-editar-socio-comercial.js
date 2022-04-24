@@ -13,13 +13,9 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-listaSocios.forEach((socio) => {
-  if (socioSelected.id == socio.id) {
-    document.getElementById("input-id").value = socio.id;
-    document.getElementById("input-name").value = socio.nombre;
-    document.getElementById("input-date").value = socio.fechaInicio;
-  }
-});
+document.getElementById("input-id").value = socioSelected._id;
+document.getElementById("input-name").value = socioSelected.nombre;
+document.getElementById("input-date").value = socioSelected.fechaInicio;
 
 const btnGuardar = document.getElementById("btn-save");
 

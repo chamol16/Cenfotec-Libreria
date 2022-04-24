@@ -13,6 +13,7 @@ inicioElementoA.addEventListener("click", logOut);
 
 //validation
 const btnGuardar = document.getElementById("btn-save");
+const inputNombre = document.getElementById("input-name");
 
 validar = () => {
   const required = document.querySelectorAll(".required-field");
@@ -40,9 +41,16 @@ validar = () => {
         icon: "success",
         title: "Género literario registrado correctamente",
         text: "Puedes continuar trabajando",
-      }).then(() => {
-        window.location.href = "admin-catalogo-generos-literarios.html";
-      });
+      })
+        .then(() => {
+          let genero = {
+            nombre: inputNombre.value,
+          };
+          registrarDatos(genero, "/registrar-genero-literario");
+        })
+        .then(() => {
+          window.location.href = "admin-catalogo-generos-literarios.html";
+        });
     }
   });
 };

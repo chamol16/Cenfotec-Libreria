@@ -11,6 +11,11 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+/* llenar premios */
+const premio1 = document.getElementById("premio-1");
+const premio2 = document.getElementById("premio-2");
+const premio3 = document.getElementById("premio-3");
+
 //subir imagen de usuario
 const displayImgDiv = document.querySelector("#display-img");
 const inputImg = document.querySelector("#input-img");
@@ -22,16 +27,22 @@ subirImagen = () => {
   const file = inputImg.files[0];
   reader.addEventListener("load", (files) => {
     uploadedImg = reader.result;
-    displayImgDiv.style.backgroundImage = `url(${uploadedImg})`;
+    displayImgDiv.setAttribute("src", `${uploadedImg}`);
   });
   reader.readAsDataURL(file);
 };
 
+//variables de inputs
+const nombre = document.getElementById("input-name");
+const paisNacimiento = document.getElementById("slt-country");
+const fechaNacimiento = document.getElementById("input-birth-date");
+const fechaDefuncion = document.getElementById("input-death-date");
+const genero = document.getElementById("slt-gender");
+const resena = document.getElementById("text-review");
+
 //validation
 validar = () => {
   const required = document.querySelectorAll(".required-field");
-  const nacimiento = document.getElementById("input-birth-date");
-  const defuncion = document.getElementById("input-death-date");
 
   let error = false;
   let dateError = false;
@@ -42,15 +53,15 @@ validar = () => {
       error = true;
       field.classList.add("field-error");
       //dates validation
-    } else if (nacimiento.value != "" && defuncion.value == "") {
+    } else if (fechaNacimiento.value != "" && fechaDefuncion.value == "") {
       dateError = false;
-      nacimiento.classList.remove("field-error");
-    } else if (nacimiento.value > defuncion.value) {
+      fechaNacimiento.classList.remove("field-error");
+    } else if (fechaNacimiento.value > fechaDefuncion.value) {
       dateError = true;
-      nacimiento.classList.add("field-error");
+      fechaNacimiento.classList.add("field-error");
     } else {
       field.classList.remove("field-error");
-      nacimiento.classList.remove("field-error");
+      fechaNacimiento.classList.remove("field-error");
     }
 
     if (error) {
@@ -71,9 +82,25 @@ validar = () => {
         icon: "success",
         title: "Autor registrado correctamente",
         text: "Puedes continuar trabajando",
-      }).then(() => {
-        window.location.href = "admin-catalogo-autores.html";
-      });
+      })
+        .then(() => {
+          let autor = {
+            nombreCompleto: nombre.value,
+            foto: uploadedImg,
+            paisNacimiento: paisNacimiento.value,
+            fechaNacimiento: fechaNacimiento.value,
+            fechaDefuncion: fechaDefuncion.value,
+            genero: genero.value,
+            nobel: esNobel,
+            anoNobel: nobelYear.value,
+            premiosGanados: [premio1.value, premio2.value, premio3.value],
+            biografia: resena.value,
+          };
+          registrarDatos(autor, "/registrar-autor");
+        })
+        .then(() => {
+          window.location.href = "admin-catalogo-autores.html";
+        });
     }
   });
 };
@@ -88,28 +115,20 @@ const btnCancelar = document
 inputImg.addEventListener("change", subirImagen);
 btnGuardar.addEventListener("click", validar);
 
-/* llenar premios */
-const firstAward = document.getElementById("first-award-won");
-const secondAward = document.getElementById("second-award-won");
-const thirdAward = document.getElementById("third-award-won");
-
-listaPremios.forEach((premio) => {
-  firstAward.options.add(new Option(premio.nombre));
-  secondAward.options.add(new Option(premio.nombre));
-  thirdAward.options.add(new Option(premio.nombre));
-});
-
 /*Nobel*/
 const selectNobel = document.getElementById("slt-nobel");
-
+const nobelYear = document.getElementById("nobel-year");
+let esNobel = false;
 anularNobelYear = (e) => {
   if (e.target.value == 1) {
-    document.getElementById("nobel-year").removeAttribute("disabled");
+    esNobel = true;
+    nobelYear.removeAttribute("disabled");
   } else if (e.target.value == 2) {
-    document.getElementById("nobel-year").value = "";
-    document.getElementById("nobel-year").setAttribute("disabled", true);
-    document.getElementById("nobel-year").classList.remove("field-error");
-    document.getElementById("nobel-year").classList.remove("required-field");
+    esNobel = false;
+    nobelYear.value = "";
+    nobelYear.setAttribute("disabled", true);
+    nobelYear.classList.remove("field-error");
+    nobelYear.classList.remove("required-field");
   }
 };
 

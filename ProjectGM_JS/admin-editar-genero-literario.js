@@ -13,7 +13,7 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-document.getElementById("input-name").value = generoSelected.name;
+document.getElementById("input-name").value = generoSelected.nombre;
 document.getElementById("input-id").value = generoSelected._id;
 
 const btnGuardar = document.getElementById("btn-save");

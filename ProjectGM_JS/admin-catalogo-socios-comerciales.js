@@ -13,21 +13,42 @@ inicioElementoA.addEventListener("click", logOut);
 
 /* fill table */
 const cuerpoTabla = document.querySelector("#tbl-socios tbody");
-console.log(cuerpoTabla);
-cuerpoTabla.innerHTML = "";
-listaSocios.forEach((socio, idx) => {
-  let fila = cuerpoTabla.insertRow();
-  fila.id = idx + 1;
-  fila.className = "row";
-  fila.insertCell().textContent = socio.id;
-  fila.insertCell().textContent = socio.nombre;
-  fila.insertCell().textContent = socio.fechaInicio;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
-});
+
+let rows = [];
+let deleteIcons = [];
+let listaSocios = [];
+
+const inicializarListas = async () => {
+  listaSocios = await obtenerDatos("/obtener-socios-comerciales");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaSocios.forEach((socio, idx) => {
+    let fila = cuerpoTabla.insertRow();
+    fila.id = socio._id;
+    fila.className = "row";
+    fila.insertCell().textContent = socio.nombre;
+    fila.insertCell().textContent = socio.fechaInicio;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
+  });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarSocio);
+  }
+
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarUsuario);
+  }
+};
+
+inicializarListas();
 
 /*redirijir al editar del autor */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarSocio = (e) => {
   e.preventDefault();
@@ -35,7 +56,7 @@ seleccionarSocio = (e) => {
   let socioSeleccionado = false;
 
   listaSocios.forEach((socio) => {
-    if (rowId == socio.id) {
+    if (rowId == socio._id) {
       socioSeleccionado = true;
       localStorage.setItem("socioClicked", JSON.stringify(socio));
     }
@@ -49,6 +70,11 @@ seleccionarSocio = (e) => {
 for (const row of rows) {
   row.addEventListener("click", seleccionarSocio);
 }
+
+//eliminar
+eliminarUsuario = () => {
+  console.log(`eliminar`);
+};
 
 //botones
 document.getElementById("btn-register").addEventListener("click", () => {

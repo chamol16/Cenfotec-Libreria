@@ -77,6 +77,7 @@ listaCantones.addEventListener("change", () => {
 const displayImgDiv = document.querySelector("#display-img");
 const inputImg = document.querySelector("#input-img");
 let uploadedImg = "";
+
 subirImagen = () => {
   const reader = new FileReader();
   const file = inputImg.files[0];
@@ -112,7 +113,7 @@ validar = () => {
 
     //password validation
     if (error) {
-      console.log(uploadedImg.value);
+      console.log(uploadedImg);
 
       Swal.fire({
         icon: "warning",
@@ -162,7 +163,7 @@ validar = () => {
           registrarDatos(usuario, "/registrar-usuario");
         })
         .then(() => {
-          /*   window.location.href = "login.html"; */
+          window.location.href = "login.html";
         });
     }
   });

@@ -28,7 +28,7 @@ const mostrarTabla = () => {
     let fila = cuerpoTabla.insertRow();
     fila.id = genero._id;
     fila.className = "row";
-    fila.insertCell().textContent = genero.name;
+    fila.insertCell().textContent = genero.nombre;
     fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
     fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
   });

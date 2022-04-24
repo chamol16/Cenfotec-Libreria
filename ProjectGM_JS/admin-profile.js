@@ -39,10 +39,8 @@ redirectionCatalogos = (e) => {
   } else if (e.target.selectedIndex == 3) {
     window.location.href = "admin-catalogo-libros.html";
   } else if (e.target.selectedIndex == 4) {
-    window.location.href = "admin-catalogo-premios.html";
-  } else if (e.target.selectedIndex == 5) {
     window.location.href = "admin-catalogo-puntos-retiro.html";
-  } else if (e.target.selectedIndex == 6) {
+  } else if (e.target.selectedIndex == 5) {
     window.location.href = "admin-catalogo-socios-comerciales.html";
   } else {
     window.location.href = "admin-catalogo-usuarios.html";
@@ -52,7 +50,7 @@ redirectionCatalogos = (e) => {
 redirectionPanel = (e) => {
   if (e.target.selectedIndex == 1) {
     window.location.href = "admin-config-descuentos.html";
-  } else if(e.target.selectedIndex == 2){
+  } else if (e.target.selectedIndex == 2) {
     window.location.href = "admin-config-libro-fan.html";
   }
 };

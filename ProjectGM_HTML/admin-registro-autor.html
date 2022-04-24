@@ -46,7 +46,8 @@ una fotografía,
             <div class="mt-3 mt-3-more-space">
                 <label class="label" for="input-name">Fotografía del autor:</label>
                 <div class="img-container">
-                    <div id="display-img"></div>
+                    <img src="" id="display-img">
+                    <!--foto-->
                     <label for="input-img" class="custom-file-upload btn">
                         <input type="file" id="input-img" accept="image/jpg">
                         Buscar
@@ -332,32 +333,13 @@ una fotografía,
                 </select>
             </div>
 
-            <!--      <div class="mt-3 mt-3-more-space">
-                <label class="label" for="">Libros publicados:</label>
-                <div class="select-container">
-                    <input type="text" class="input required-field" placeholder="Libro 1">
-                    <input type="text" class="input" placeholder="Libro 2">
-                    <input type="text" class="input" placeholder="Libro 3">
-                </div>
-            </div> -->
-
             <div class="mt-3 mt-3-more-space">
-                <label class="label" for="slt-awards-won">Premios ganados:</label>
+                <label class="label" for="">Premios ganados:</label>
                 <div class="select-container">
-
-                    <select class="select" id="first-award-won">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
-
-                    <select class="select" id="second-award-won">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
-
-                    <select class="select" id="third-award-won">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
+                    <input type="text" id="premio-1" class="input">
+                    <input type="text" id="premio-2" class="input">
+                    <input type="text" id="premio-3" class="input">
                 </div>
-
             </div>
 
             <div class="mt-3">
@@ -393,8 +375,10 @@ una fotografía,
         </div>
     </footer>
 
-    <!--premios DB-->
-    <script src="/ProjectGM_JS/premios-DB.js"></script>
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--script sweet Alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--admin autores js-->
