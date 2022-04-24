@@ -78,17 +78,11 @@
             </div>
 
             <div class="mt-3 mt-3-more-space">
-                <label class="label" for="slt-award">Premios ganados:</label>
+                <label class="label" for="">Premios ganados:</label>
                 <div class="award-container">
-                    <select class="select" id="slt-award-1">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
-                    <select class="select" id="slt-award-2">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
-                    <select class="select" id="slt-award-3">
-                        <option value="">-- Seleccione una opción --</option>
-                    </select>
+                    <input type="text" class="input" id="premio-1">
+                    <input type="text" class="input" id="premio-2">
+                    <input type="text" class="input" id="premio-3">
                 </div>
             </div>
 
@@ -130,8 +124,8 @@
             <div class="mt-3">
                 <label class="label" for="slt-idiom">Idioma:</label>
                 <select class="select" id="slt-idiom">
-                    <option value="1">Español</option>
-                    <option value="2">Inglés</option>
+                    <option>Español</option>
+                    <option>Inglés</option>
                 </select>
             </div>
         </form>
@@ -150,14 +144,11 @@
         </div>
     </footer>
 
-    <!--script autores DB-->
-    <script src="/ProjectGM_JS/autores-DB.js"></script>
-    <!--script premios DB-->
-    <script src="/ProjectGM_JS/premios-DB.js"></script>
-    <!--script descuentos DB-->
-    <script src="/ProjectGM_JS//descuentos-DB.js"></script>
-    <!--script sweet Alert-->
+    <!--axios and Sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--admin libros js-->
     <script src="/ProjectGM_JS/admin-registro-libro.js"></script>
 </body>

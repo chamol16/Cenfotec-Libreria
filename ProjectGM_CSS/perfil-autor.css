@@ -46,6 +46,7 @@
   align-items: flex-end;
   width: 350px;
   height: 100px;
+  text-align: right;
 }
 #resena {
   width: 350px;

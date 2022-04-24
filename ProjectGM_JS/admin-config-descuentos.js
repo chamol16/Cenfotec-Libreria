@@ -13,29 +13,49 @@ inicioElementoA.addEventListener("click", logOut);
 
 /* fill table */
 const cuerpoTabla = document.querySelector("#tbl-descuentos tbody");
+let listaDescuentos = [];
+let rows = [];
 
-cuerpoTabla.innerHTML = "";
-listaDescuentos.forEach((descuento, idx) => {
-  let fila = cuerpoTabla.insertRow();
-  fila.id = idx + 1;
-  fila.className = "row";
-  fila.insertCell().textContent = descuento.id;
-  fila.insertCell().textContent = descuento.nombre;
-  fila.insertCell().textContent = `${descuento.porcentaje}%`;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
-  fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
-});
+const inicializarListas = async () => {
+  listaDescuentos = await obtenerDatos("/obtener-descuentos");
+  mostrarDatos();
+};
+
+mostrarDatos = () => {
+  cuerpoTabla.innerHTML = "";
+
+  listaDescuentos.forEach((descuento) => {
+    let fila = cuerpoTabla.insertRow();
+    fila.id = descuento._id;
+    fila.className = "row";
+    fila.insertCell().textContent = descuento.nombre;
+    fila.insertCell().textContent = `${descuento.porcentaje}%`;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-pen" id="edit"></i>`;
+    fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can" id="delete"></i>`;
+  });
+  rows = document.querySelectorAll(".row");
+  deleteIcons = document.querySelectorAll("#delete");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarDescuento);
+  }
+
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarUsuario);
+  }
+};
+
+inicializarListas();
 
 /*redirijir al editar del punto de retiro */
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
-seleccionarPunto = (e) => {
+seleccionarDescuento = (e) => {
   e.preventDefault();
   let rowId = e.target.parentElement.id;
   let descuentoSeleccionado = false;
 
   listaDescuentos.forEach((descuento) => {
-    if (rowId == descuento.id) {
+    if (rowId == descuento._id) {
       descuentoSeleccionado = true;
       localStorage.setItem("discountClicked", JSON.stringify(descuento));
     }
@@ -49,6 +69,11 @@ seleccionarPunto = (e) => {
 for (const row of rows) {
   row.addEventListener("click", seleccionarPunto);
 }
+
+//eliminar
+eliminarUsuario = () => {
+  console.log(`eliminar`);
+};
 
 //botones
 document.getElementById("btn-register").addEventListener("click", () => {

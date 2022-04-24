@@ -29,8 +29,21 @@
   justify-content: space-between;
 }
 
+.mt-3-more-space {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .img-container {
   height: 300px;
   width: 240px;
   box-shadow: 0px 0px 14px 4px #ea784c;
+}
+
+#resena {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  height: 80px;
+  width: 400px;
 }

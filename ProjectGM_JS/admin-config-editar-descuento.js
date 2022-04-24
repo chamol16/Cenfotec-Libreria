@@ -13,13 +13,10 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /* fill inputs */
-listaDescuentos.forEach((descuento) => {
-  if (descuentoSelected.id == descuento.id) {
-    document.getElementById("input-id").value = descuento.id;
-    document.getElementById("input-name").value = descuento.nombre;
-    document.getElementById("input-percentage").value = descuento.porcentaje;
-  }
-});
+document.getElementById("input-id").value = descuentoSelected._id;
+document.getElementById("input-name").value = descuentoSelected.nombre;
+document.getElementById("input-percentage").value =
+  descuentoSelected.porcentaje;
 
 const btnGuardar = document.getElementById("btn-save");
 

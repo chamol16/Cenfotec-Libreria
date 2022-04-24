@@ -50,6 +50,7 @@ document.getElementById("author").textContent = bookSelected.autor;
 document.getElementById("price").textContent = `¢${bookSelected.precio}`;
 document.getElementById("gender").textContent = bookSelected.generoLiterario;
 document.getElementById("idiom").textContent = bookSelected.idioma;
+document.getElementById("resena").textContent = bookSelected.resena;
 
 document.getElementById("img-container").setAttribute("src", bookSelected.foto);
 
