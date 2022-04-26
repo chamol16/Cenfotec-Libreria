@@ -78,8 +78,12 @@ for (const row of rows) {
 }
 
 //eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+eliminarUsuario = (e) => {
+  // eliminarDatos(); servicio general
+  //swettalert
+  //window.location.reload();
+  e.preventDefault();
+  console.log(`eliminar${e.target.parentElement.parentElement.id}`);
 };
 
 //botones
