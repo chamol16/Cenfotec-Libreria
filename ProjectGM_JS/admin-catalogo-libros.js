@@ -73,9 +73,16 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarLibro);
 }
 
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(`/eliminar-libro/${e.target.parentElement.parentElement.id}`);
+  Swal.fire({
+    icon: "success",
+    title: "Libro eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones un autor

@@ -93,7 +93,7 @@ seleccionarLibro = (e) => {
   });
 
   if (libroSeleccionado) {
-    window.location.href = "articulo.html";
+    window.location.href = "perfil-libro.html";
   }
 };
 
@@ -103,7 +103,6 @@ for (const book of books) {
 
 /*click on autors*/
 const authors = document.querySelectorAll(".autor");
-
 seleccionarAutor = (e) => {
   let autorSeleccionado = false;
 

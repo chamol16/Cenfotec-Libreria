@@ -84,9 +84,16 @@ seleccionarUsuario = (e) => {
   }
 };
 
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(`/eliminar-usuario/${e.target.parentElement.parentElement.id}`);
+  Swal.fire({
+    icon: "success",
+    title: "Usuario eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //atras btn

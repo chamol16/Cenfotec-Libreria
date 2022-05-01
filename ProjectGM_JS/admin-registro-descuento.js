@@ -12,6 +12,9 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 //validation
+const inputNombreDescuento = document.getElementById("input-name");
+const inputPorcentaje = document.getElementById("input-percentage");
+
 const btnGuardar = document.getElementById("btn-save");
 
 validar = () => {
@@ -40,9 +43,17 @@ validar = () => {
         icon: "success",
         title: "Descuento registrado correctamente",
         text: "Puedes continuar trabajando",
-      }).then(() => {
-        window.location.href = "admin-config-descuentos.html";
-      });
+      })
+        .then(() => {
+          let descuento = {
+            nombre: inputNombreDescuento.value,
+            porcentaje: inputPorcentaje.value,
+          };
+          registrarDatos(descuento, "/registrar-descuento");
+        })
+        .then(() => {
+          window.location.href = "admin-config-descuentos.html";
+        });
     }
   });
 };

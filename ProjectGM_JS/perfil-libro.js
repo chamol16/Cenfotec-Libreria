@@ -79,3 +79,13 @@ footerProfile.forEach((item) => {
     noAcceso(item);
   });
 });
+
+/*atras btn */
+document.getElementById("btn-atras").addEventListener("click", () => {
+  window.location.href = "lista-libros.html";
+});
+
+/*comprar btn*/
+document.getElementById("btn-comprar").addEventListener("click", () => {
+  window.location.href = "articulo.html";
+});

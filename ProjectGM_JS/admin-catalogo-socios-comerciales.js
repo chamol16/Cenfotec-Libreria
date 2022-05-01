@@ -71,9 +71,18 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarSocio);
 }
 
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(
+    `/eliminar-socio-comercial/${e.target.parentElement.parentElement.id}`
+  );
+  Swal.fire({
+    icon: "success",
+    title: "Socio comercial eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones

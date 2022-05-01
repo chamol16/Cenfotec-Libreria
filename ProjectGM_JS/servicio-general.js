@@ -30,14 +30,19 @@ const obtenerDatos = async (endPoint) => {
   return listaDatos;
 };
 
-const eliminarDatos = async (endPoint, _id) => {
+const eliminarDatos = async (endPoint) => {
   let url = `http://localhost:3000/api${endPoint}`;
+  let listaDatos = [];
+
   await axios({
     method: "delete",
     url: url,
     responseType: "json",
-    data: {
-      _id,
-    },
-  });
+  })
+    .then((response) => {
+      listaDatos = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };

@@ -95,3 +95,17 @@
 .feathers a.active {
   opacity: 100%;
 }
+
+/*btn atras*/
+
+.btn-atras-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+
+#btn-atras {
+  width: 350px;
+}

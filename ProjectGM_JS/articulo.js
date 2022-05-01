@@ -18,7 +18,8 @@ inicioElementoA.addEventListener("click", logOut);
 //colect data from DB
 document.getElementById("book-name").textContent = bookSelected.nombre;
 document.getElementById("book-idiom").textContent = bookSelected.idioma;
-document.getElementById("book-gender").textContent = bookSelected.generoLiterario;
+document.getElementById("book-gender").textContent =
+  bookSelected.generoLiterario;
 document.getElementById("book-price").textContent = `¢${bookSelected.precio}`;
 const bookStock = document.getElementById("book-stock");
 document.getElementById("book-author").textContent = bookSelected.autor;
@@ -139,4 +140,9 @@ footerProfile.forEach((item) => {
   item.addEventListener("click", () => {
     noAcceso(item);
   });
+});
+
+/*atras btn */
+document.getElementById("btn-atras").addEventListener("click", () => {
+  window.location.href = "libreria.html";
 });

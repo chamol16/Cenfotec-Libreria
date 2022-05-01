@@ -77,13 +77,18 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarPunto);
 }
 
-//eliminar
+//eliminar process
 eliminarUsuario = (e) => {
-  // eliminarDatos(); servicio general
-  //swettalert
-  //window.location.reload();
   e.preventDefault();
-  console.log(`eliminar${e.target.parentElement.parentElement.id}`);
+  eliminarDatos(
+    `/eliminar-punto-retiro/${e.target.parentElement.parentElement.id}`
+  );
+  Swal.fire({
+    icon: "success",
+    title: "Punto de retiro eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones

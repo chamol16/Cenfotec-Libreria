@@ -106,3 +106,8 @@ footerProfile.forEach((item) => {
     noAcceso(item);
   });
 });
+
+/*atras btn */
+document.getElementById("btn-atras").addEventListener("click", () => {
+  window.location.href = "lista-autores.html";
+});

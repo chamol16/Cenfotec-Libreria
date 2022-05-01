@@ -70,9 +70,16 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarPunto);
 }
 
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(`/eliminar-descuento/${e.target.parentElement.parentElement.id}`);
+  Swal.fire({
+    icon: "success",
+    title: "Descuento eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones

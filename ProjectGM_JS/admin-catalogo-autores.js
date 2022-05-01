@@ -76,10 +76,18 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarAutor);
 }
 
-
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(
+    `/eliminar-autor/${e.target.parentElement.parentElement.id}`
+  );
+  Swal.fire({
+    icon: "success",
+    title: "Autor eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones

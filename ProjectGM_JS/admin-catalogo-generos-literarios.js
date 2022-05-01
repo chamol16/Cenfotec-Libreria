@@ -69,9 +69,18 @@ for (const row of rows) {
   row.addEventListener("click", seleccionarGenero);
 }
 
-//eliminar
-eliminarUsuario = () => {
-  console.log(`eliminar`);
+//eliminar process
+eliminarUsuario = (e) => {
+  e.preventDefault();
+  eliminarDatos(
+    `/eliminar-genero-literario/${e.target.parentElement.parentElement.id}`
+  );
+  Swal.fire({
+    icon: "success",
+    title: "Género literario eliminado satisfactoriamente",
+    text: "Puedes continuar trabajando",
+  });
+  inicializarListas();
 };
 
 //botones
