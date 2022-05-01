@@ -24,6 +24,10 @@ document.getElementById("premio-2").textContent =
 document.getElementById("premio-3").textContent =
   authorSelected.premiosGanados[2];
 
+if (authorSelected.premiosGanados[0] == "") {
+  document.getElementById("premio-1").textContent = "Ninguno";
+}
+
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
 const listas = document.getElementById("slt-list");
@@ -60,9 +64,18 @@ document.getElementById("pais-nacimiento").textContent =
   authorSelected.paisNacimiento;
 document.getElementById("fecha-nacimiento").textContent =
   authorSelected.fechaNacimiento;
-document.getElementById("fecha-defuncion").textContent =
-  authorSelected.fechaDefuncion;
-document.getElementById("genero").textContent = authorSelected.genero;
+
+if (authorSelected.fechaDefuncion) {
+  document.getElementById("fecha-defuncion").textContent =
+    authorSelected.fechaDefuncion;
+} else {
+  document.getElementById("fecha-defuncion").textContent = "Sigue con vida";
+}
+
+//convertir primera en capital y hacer slice del texto
+let gender = authorSelected.genero.charAt(0).toUpperCase() + authorSelected.genero.slice(1);
+document.getElementById("genero").textContent = gender;
+
 document.getElementById("resena").textContent = authorSelected.biografia;
 document
   .getElementById("img-container")

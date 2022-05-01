@@ -12,21 +12,42 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
+/* fill table */
+const cuerpoTabla = document.querySelector("#tbl-usuarios tbody");
+let listaUsuarios = [];
+let listaPedidos = [];
+let listaLibros = [];
+
+const inicializarListas = async () => {
+  listaUsuarios = await obtenerDatos("/obtener-usuarios");
+  listaPedidos = await obtenerDatos("/obtener-pedidos");
+  listaLibros = await obtenerDatos("/obtener-libros");
+  mostrarTabla();
+};
+
 /* fill inputs */
-let texto = "";
-listaPedidos.forEach((pedidoDB) => {
-  pedidoDB.books.forEach((librodelPedido) => {
-    listaLibros.forEach((libroDB) => {
-      if (pedidoSelected.id == pedidoDB.id && libroDB.id == librodelPedido.id) {
-        texto += `${libroDB.name} ${librodelPedido.quantity}\n`;
-        document.getElementById("order-date").textContent = pedidoDB.date;
-        document.getElementById("order-id").textContent = pedidoDB.id;
-        document.getElementById("order-books").textContent = texto;
-        document.getElementById("order-price").textContent = pedidoDB.price;
-      }
+const mostrarTabla = () => {
+  let texto = "";
+  listaPedidos.forEach((pedido) => {
+    pedido.libros.forEach((librosdelPedido, idx) => {
+      listaLibros.forEach((libro) => {
+        if (
+          pedidoSelected._id == pedido._id &&
+          libro._id == librosdelPedido.libroId
+        ) {
+          texto += `${libro.nombre} ${librosdelPedido.libroCantidad}\n`;
+          document.getElementById("order-date").textContent =
+            pedido.fechaRealizacion;
+          document.getElementById("order-id").textContent = pedido._id;
+          document.getElementById("order-books").textContent = texto;
+          document.getElementById("order-price").textContent = pedido.precio;
+        }
+      });
     });
   });
-});
+};
+
+inicializarListas();
 
 //atras btn
 const btnCancelar = document

@@ -16,13 +16,13 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 //colect data from DB
-document.getElementById("book-name").textContent = bookSelected.name;
-document.getElementById("book-idiom").textContent = bookSelected.idiom;
-document.getElementById("book-gender").textContent = bookSelected.gender;
-document.getElementById("book-price").textContent = `¢${bookSelected.price}`;
+document.getElementById("book-name").textContent = bookSelected.nombre;
+document.getElementById("book-idiom").textContent = bookSelected.idioma;
+document.getElementById("book-gender").textContent = bookSelected.generoLiterario;
+document.getElementById("book-price").textContent = `¢${bookSelected.precio}`;
 const bookStock = document.getElementById("book-stock");
-document.getElementById("book-author").textContent = bookSelected.author;
-document.getElementById("book-img").setAttribute("src", bookSelected.img);
+document.getElementById("book-author").textContent = bookSelected.autor;
+document.getElementById("book-img").setAttribute("src", bookSelected.foto);
 
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
@@ -54,10 +54,10 @@ perfil.addEventListener("change", redirectionPerfil);
 listas.addEventListener("change", redirectionListas);
 
 //consultar stock
-if (bookSelected.stock) {
+if (bookSelected.activo) {
   bookStock.textContent = "En inventario";
 } else {
-  bookStock.textContent = "No disponible temporalmente";
+  bookStock.textContent = "No disponible";
 }
 
 //anadir al carrito

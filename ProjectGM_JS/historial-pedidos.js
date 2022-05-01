@@ -13,27 +13,49 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
-/*render data */
+//lista de pedidos
 const cuerpoTabla = document.querySelector("#tbl-orders tbody");
+let rows = [];
+let listaPedidos = [];
+let listaUsuarios = [];
 let totalVentas = 0;
-cuerpoTabla.innerHTML = "";
-listaPedidos.forEach((pedido, idx) => {
-  listaUsuarios.forEach((usuario) => {
-    if (pedido.userId == userConnected.id && userConnected.id == usuario.id) {
-      let fila = cuerpoTabla.insertRow();
-      totalVentas += pedido.price;
-      fila.id = idx + 1;
-      fila.className = "row";
-      fila.insertCell().textContent = pedido.date;
-      fila.insertCell().textContent = pedido.id;
-      fila.insertCell().textContent = `¢${pedido.price}`;
-      fila.insertCell().textContent = `¢${totalVentas}`;
-    }
+
+const iniciarlizarlistas = async () => {
+  listaPedidos = await obtenerDatos("/obtener-pedidos");
+  listaUsuarios = await obtenerDatos("/obtener-usuarios");
+  mostrarTabla();
+};
+
+/*render data */
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaPedidos.forEach((pedido, idx) => {
+    listaUsuarios.forEach((usuario) => {
+      if (
+        pedido.userId == userConnected._id &&
+        userConnected._id == usuario._id
+      ) {
+        let fila = cuerpoTabla.insertRow();
+        totalVentas += pedido.precio;
+        fila.id = pedido._id;
+        fila.className = "row";
+        fila.insertCell().textContent = pedido.fechaRealizacion;
+        fila.insertCell().textContent = pedido._id;
+        fila.insertCell().textContent = `¢${pedido.precio}`;
+        fila.insertCell().textContent = `¢${totalVentas}`;
+      }
+    });
   });
-});
+  rows = document.querySelectorAll(".row");
+  for (const row of rows) {
+    row.addEventListener("click", seleccionarPedido);
+  }
+};
+
+iniciarlizarlistas();
 
 //click events
-const rows = document.querySelectorAll(".row");
+rows = document.querySelectorAll(".row");
 
 seleccionarPedido = (e) => {
   e.preventDefault();
@@ -41,7 +63,7 @@ seleccionarPedido = (e) => {
   let pedidoSeleccionado = false;
 
   listaPedidos.forEach((pedido) => {
-    if (rowId == pedido.id) {
+    if (rowId == pedido._id) {
       pedidoSeleccionado = true;
       localStorage.setItem("orderClicked", JSON.stringify(pedido));
     }
@@ -51,10 +73,6 @@ seleccionarPedido = (e) => {
     window.location.href = "pedido.html";
   }
 };
-
-for (const row of rows) {
-  row.addEventListener("click", seleccionarPedido);
-}
 
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
@@ -87,17 +105,7 @@ listas.addEventListener("change", redirectionListas);
 const botonSubmit = document.querySelector("#button-buscar");
 const inputFechaCalendario = document.querySelector("#fecha-pedido");
 
-const obtenerDatos = () => {
-  // console.log(`Fecha: ${inputFechaCalendario.value}`);
-
-  Swal.fire({
-    icon: "success",
-    title: "Historial de pedidos actualizado",
-    text: "Puedes ver los pedidos realizados en la fecha indicada",
-  });
-};
-
-botonSubmit.addEventListener("click", obtenerDatos);
+//botonSubmit.addEventListener("click", );
 
 /*acceso en footer*/
 const footerProfile = document.querySelectorAll(".acceso");
@@ -124,7 +132,6 @@ footerProfile.forEach((item) => {
     noAcceso(item);
   });
 });
-
 
 //boton atras
 document.getElementById("btn-cancel").addEventListener("click", () => {

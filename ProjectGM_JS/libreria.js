@@ -70,13 +70,23 @@ footerProfile.forEach((item) => {
 });
 
 /*click on books*/
+let listaLibros = [];
+let listaAutores = [];
+
 const books = document.querySelectorAll(".book");
 
+const inicializarListas = async () => {
+  listaLibros = await obtenerDatos("/obtener-libros");
+  listaAutores = await obtenerDatos("/obtener-autores");
+};
+
+inicializarListas();
+
+//evento despues de seleccionar libro
 seleccionarLibro = (e) => {
   let libroSeleccionado = false;
-
   listaLibros.forEach((libro) => {
-    if (e.target.id == libro.id) {
+    if (e.target.id == libro._id) {
       libroSeleccionado = true;
       localStorage.setItem("bookClicked", JSON.stringify(libro));
     }
@@ -98,7 +108,7 @@ seleccionarAutor = (e) => {
   let autorSeleccionado = false;
 
   listaAutores.forEach((autor) => {
-    if (e.target.id == autor.id) {
+    if (e.target.id == autor._id) {
       autorSeleccionado = true;
       localStorage.setItem("authorClicked", JSON.stringify(autor));
     }

@@ -113,7 +113,8 @@ validar = () => {
 
     //password validation
     if (error) {
-      console.log(uploadedImg);
+      //TEST foto
+     // console.log(uploadedImg);
 
       Swal.fire({
         icon: "warning",
