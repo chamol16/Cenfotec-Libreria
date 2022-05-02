@@ -29,11 +29,48 @@ document.getElementById("total-pagar").textContent = `Total a pagar: ¢${
 }`;
 cantidad.addEventListener("change", () => {
   total = bookSelected.precio * cantidad.value;
-  //console.log(typeof total);
   document.getElementById(
     "total-pagar"
   ).textContent = `Total a pagar: ¢${total}`;
 });
+
+//llenar selects con DB
+let listaMetodosPago = [];
+let listaPuntosRetiro = [];
+let listaSociosComerciales = [];
+
+const inicializarListas = async () => {
+  listaMetodosPago = await obtenerDatos("/obtener-metodos-pago");
+  listaPuntosRetiro = await obtenerDatos("/obtener-puntos-retiro");
+  listaSociosComerciales = await obtenerDatos("/obtener-socios-comerciales");
+  llenarSelects();
+};
+
+const llenarSelects = () => {
+  const selectMetodoPago = document.getElementById("slt-metodo-pago");
+  const selectDireccionEnvio = document.getElementById("slt-direccion-envio");
+
+  listaMetodosPago.forEach((metodo) => {
+    if (userConnected._id == metodo.userId) {
+      selectMetodoPago.options.add(
+        new Option(`${metodo.proveedor}: ${metodo.numeroTarjeta}`)
+      );
+    }
+  });
+  listaPuntosRetiro.forEach((punto) => {
+    listaSociosComerciales.forEach((socio) => {
+      if (socio._id == punto.socioId) {
+        selectDireccionEnvio.options.add(
+          new Option(
+            `${socio.nombre}: ${punto.provincia}, ${punto.canton}, ${punto.distrito}`
+          )
+        );
+      }
+    });
+  });
+};
+
+inicializarListas();
 
 //delete icon
 const eliminarArticulo = () => {
@@ -53,7 +90,6 @@ document
   .addEventListener("click", eliminarArticulo);
 
 /* registro en DB*/
-
 const validar = () => {
   let error = false;
 
