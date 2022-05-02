@@ -1,6 +1,5 @@
 //clear local storage
 let userConnected = JSON.parse(localStorage.getItem("loggedUser"));
-let bookSelected = JSON.parse(localStorage.getItem("bookClicked"));
 const inicioElementoA = document.getElementById("iniciar-sesion-a");
 
 if (userConnected) {
@@ -16,8 +15,20 @@ logOut = () => {
 inicioElementoA.addEventListener("click", logOut);
 
 /*add card */
+const inputNombre = document.getElementById("input-name");
+const inputNumero = document.getElementById("input-number");
+const inputMonth = document.getElementById("input-month");
+const inputYear = document.getElementById("input-year");
+const inputCVV = document.getElementById("input-cvv");
+const radioProveedor = document.querySelectorAll(".card-radio");
+let provider = "";
+radioProveedor.forEach((radio) => {
+  radio.addEventListener("change", () => {
+    provider = radio.value;
+  });
+});
+
 const inputs = document.querySelectorAll(".fill");
-const btnGuardar = document.getElementById("btn-save");
 
 const validar = () => {
   let error = false;
@@ -41,14 +52,30 @@ const validar = () => {
   } else {
     Swal.fire({
       icon: "success",
-      title: "Tarjeta guardada",
+      title: "Tarjeta agregada satisfactoriamente",
       text: "Accediendo a tus métodos de pago",
-    }).then(() => {
-      window.location.href = "metodo-pago.html";
-    });
+    })
+      .then(() => {
+        let metodoPago = {
+          proveedor: provider,
+          nombreTarjeta: inputNombre.value,
+          numeroTarjeta: inputNumero.value,
+          fechaExp: `${inputMonth.value}/${inputYear.value}`,
+          cvvCode: inputCVV.value,
+          userId: userConnected._id,
+        };
+        registrarDatos(metodoPago, "/registrar-metodo-pago");
+      })
+      .then(() => {
+        window.location.href = "metodo-pago.html";
+      });
   }
 };
-btnGuardar.addEventListener("click", validar);
+
+document.getElementById("btn-save").addEventListener("click", validar);
+document.getElementById("btn-cancel").addEventListener("click", () => {
+  window.location.href = "metodo-pago.html";
+});
 
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");

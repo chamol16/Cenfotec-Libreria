@@ -57,28 +57,35 @@
         <div class="container">
 
             <div class="icon-container">
-                <i class="fa fa-cc-visa icon" style="color:rgb(25, 25, 184);"></i>
-                <i class="fa fa-cc-mastercard icon" style="color:red;"></i>
+                <div class="radio-container">
+                    <i class="fa fa-cc-visa icon" style="color:rgb(25, 25, 184);"></i>
+                    <input type="radio" name="provider" value="Visa" class="card-radio">
+                </div>
+                <div class="radio-container">
+                    <i class="fa fa-cc-mastercard icon" style="color:red;"></i>
+                    <input type="radio" name="provider" value="MasterCard" class="card-radio">
+                </div>
             </div>
             <div class="mt-3">
-                <label for="">Nombre de la tarjeta</label>
-                <input type="text" class="fill" placeholder="Nombre Completo">
+                <label for="input-name">Nombre de la tarjeta</label>
+                <input type="text" id="input-name" class="fill" placeholder="Nombre Completo">
             </div>
             <div class="mt-3">
-                <label for="">Número de tarjeta</label>
-                <input type="number" id="card-number" class="fill" placeholder="**** **** **** ****">
+                <label for="input-number">Número de tarjeta</label>
+                <input type="number" id="input-number" class="fill" placeholder="**** **** **** ****">
             </div>
             <div class="mt-3">
                 <label for="">Fecha de expiración</label>
                 <div class="input-number-container">
-                    <input type="number" class="fill small" placeholder="01">
-                    <input type="number" class="fill small" placeholder="22" />
+                    <input type="number" class="small fill" placeholder="01" id="input-month">
+                    <input type="number" class="small fill" placeholder="22" id="input-year" />
                     <label for="">CVV</label>
-                    <input type="number" class="fill small" placeholder="111" min="001" max="999">
+                    <input type="number" class="small fill" placeholder="111" min="001" max="999" id="input-cvv">
                 </div>
             </div>
-            <div class="mt-3">
+            <div class="btn-container mt-3">
                 <button type="button" class="btn btn-save" id="btn-save">Guardar tarjeta</button>
+                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
             </div>
         </div>
 
@@ -109,9 +116,12 @@
         </div>
     </footer>
 
-
+    <!--axios and sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
+    <!--own js-->
     <script src="/ProjectGM_JS/agregar-metodo-pago.js"></script>
 </body>
 

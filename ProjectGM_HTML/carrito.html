@@ -57,42 +57,60 @@
         </div>
 
         <div class="cart-container">
+
             <div class="cart-item">
-                <input type="number" value="1" class="cantidad">
-                <img class="img-container" id="itemImage1"></img>
+                <input type="number" class="cantidad" id="book-quantity">
+                <img src="" alt="" class="img-container" id="book-photo">
                 <div class="book-name-container">
-                    <h3>The Hunger Games</h3>
+                    <h3 id="book-name"></h3>
                 </div>
-                <h3>¢6500</h3>
-                <i class="fa-solid fa-trash-can"></i>
+                <input type="number" id="book-price" disabled>
+                <i class="fa-solid fa-trash-can" id="delete-icon"></i>
             </div>
-            <div class="cart-item">
-                <input type="number" value="1" class="cantidad">
-                <img class="img-container" id="itemImage2"></img>
-                <div class="book-name-container">
-                    <h3>El Diario de Ana Frank</h3>
+
+            <div class="preferencias-container">
+                <div class="eleccion-container">
+                    <div class="metodo-direccion-container">
+                        <label for="">Seleccionar método de pago</label>
+                        <select name="" id="" class="slt-nav">
+                            <option value="">VISA 9087</option>
+                            <option value="">MCARD 8319</option>
+                        </select>
+                    </div>
+                    <div class="metodo-direccion-container">
+                        <label for="">Elige tu dirección de envío</label>
+                        <select name="" id="" class="slt-nav">
+                            <option value="">Domicilio registrado</option>
+                            <option value="">Walmart - Tibás</option>
+                            <option value="">MC Donals - Paseo Colón</option>
+                            <option value="">Farmacía Fischel - San Rafael Heredia</option>
+                            <option value="">Peri - Cartago</option>
+                        </select>
+                    </div>
                 </div>
-                <h3>¢7000</h3>
-                <i class="fa-solid fa-trash-can"></i>
             </div>
-            <div class="cart-item">
-                <input type="number" value="1" class="cantidad">
-                <img class="img-container" id="itemImage3"></img>
-                <div class="book-name-container">
-                    <h3>Harry Potter and the Sorcerer's Stone</h3>
+            <div class="descuento-container">
+                <div class="descuento" id="paymetsContainer">
+                    <div class="">
+                        <input id="libroFanCheckbox" type="checkbox">
+                        <label for="libroFanCheckbox">¿Aplicar descuento libro fan?</label>
+                    </div>
+                    <div class="descuento-child">
+                        <div class="calculo-final">
+                            <h3>Total descuento:</h3>
+                            <h3 id="descuento">¢0</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>¢6000</h3>
-                <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>
 
         <div class="cart-footer">
-            <h3 class="negrita">Total a pagar: ¢19.500</h3>
+            <h3 class="negrita" id="total-pagar"></h3>
             <button class="btn" id="btn-comprar">Comprar</button>
         </div>
 
     </section>
-
 
     <!--footer-->
     <footer class="footer">
@@ -119,6 +137,11 @@
         </div>
     </footer>
 
+    <!--axios and sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>r
     <!--script cart js-->
     <script src="/ProjectGM_JS/carrito.js"></script>
 

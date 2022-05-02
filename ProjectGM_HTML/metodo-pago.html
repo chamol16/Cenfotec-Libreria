@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="/ProjectGM_CSS/reset.css">
     <!--nav-footer CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/nav-footer.css">
+    <!--tablas format CSS-->
+    <link rel="stylesheet" href="/ProjectGM_CSS/tablas-format.css">
     <!--own CSS-->
     <link rel="stylesheet" href="/ProjectGM_CSS/metodo-pago.css">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/1564ee1284.js" crossorigin="anonymous"></script>
 </head>
@@ -51,62 +53,28 @@
         </ul>
     </nav>
 
-    <!--Contenido-->
-    <section class="metodo-pago-section">
-        <h1>Métodos de pago</h1>
 
-        <div class="container">
-            <form>
-                <p class="card-title mx-auto"> Tarjetas guardadas </p>
+    <!--content section -->
+    <h1>Métodos de pago</h1>
+    <section id="tabla-de-datos">
+            <table class="contentTable" id="tbl-tarjetas">
+                <thead>
+                    <tr>
+                        <th>Proveedor</th>
+                        <th>Nombre de tarjeta</th>
+                        <th>Número de tarjeta</th>
+                        <th>Fecha de expiración</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
 
-                <div class="tarjetaGuardada" id="tarjeta-1">
-                    <div class="col-2"><img class="img-fluid"
-                            src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /></div>
-                    <div class="col-7">
-                        <input type="text" class="saved-card" id="saved-card-1" placeholder="**** **** **** 3193">
-                    </div>
-                    <div class="col-3 d-flex justify-content-center"> <a href="#" id="remove-1">Remover tarjeta</a>
-                    </div>
-                </div>
-
-                <div class="tarjetaGuardada" id="tarjeta-2">
-                    <div class="col-2"><img class="img-fluid"
-                            src="https://img.icons8.com/color/48/000000/mastercard-logo.png" />
-                    </div>
-                    <div class="col-7">
-                        <input type="text" class="saved-card" placeholder="**** **** **** 2502">
-                    </div>
-                    <div class="col-3 d-flex justify-content-center">
-                        <a href="#" id="remove-2">Remover tarjeta</a>
-                    </div>
-                </div>
-                <div class="tarjetaGuardada" id="tarjeta-3">
-                    <div class="col-2">
-                        <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
-                    </div>
-                    <div class="col-7">
-                        <input type="text" class="saved-card" placeholder="**** **** **** 1746">
-                    </div>
-                    <div class="col-3 d-flex justify-content-center">
-                        <a href="#" id="remove-3">Remover tarjeta</a>
-                    </div>
-                </div>
-
-                <div class="tarjetaGuardada" id="tarjeta-4">
-                    <div class="col-2">
-                        <img class="img-fluid" src="https://img.icons8.com/color/48/000000/visa.png" />
-                    </div>
-                    <div class="col-7">
-                        <input type="text" class="saved-card" placeholder="**** **** **** 0187">
-                    </div>
-                    <div class="col-3 d-flex justify-content-center">
-                        <a href="#" id="remove-4">Remover tarjeta</a>
-                    </div>
-                </div>
-                <button class="btn btn-add" id="btn-add">Agregar nueva tarjeta</button>
-            </form>
-        </div>
+                <tbody></tbody>
+            </table>
     </section>
+
+    <div class="btn-container">
+        <button class="btn btn-size" id="btn-add">Agregar nueva tarjeta</button>
+    </div>
 
     <!--footer-->
     <footer class="footer">
@@ -133,9 +101,11 @@
         </div>
     </footer>
 
-
-    <!--js Sweet alert-->
+    <!--axios and sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--js metodo de pago-->
     <script src="/ProjectGM_JS/metodo-pago.js"></script>
 

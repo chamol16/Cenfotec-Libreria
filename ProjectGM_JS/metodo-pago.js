@@ -13,59 +13,59 @@ logOut = () => {
 
 inicioElementoA.addEventListener("click", logOut);
 
-/*go to add payment method*/
-document.getElementById("btn-add").addEventListener("click", (e) => {
-  e.preventDefault();
-  window.location.href = "agregar-metodo-pago.html";
-});
+/*inicializar Listas */
+const form = document.getElementById("form");
+let listaTarjetas = [];
+let proveedor = "";
+const cuerpoTabla = document.querySelector("#tbl-tarjetas tbody");
 
-/*hide cards*/
+const inicializarListas = async () => {
+  listaTarjetas = await obtenerDatos("/obtener-metodos-pago");
+  mostrarTabla();
+};
 
-const tarjeta1 = document.getElementById("tarjeta-1");
-const tarjeta2 = document.getElementById("tarjeta-2");
-const tarjeta3 = document.getElementById("tarjeta-3");
-const tarjeta4 = document.getElementById("tarjeta-4");
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaTarjetas.forEach((tarjeta) => {
+    if (userConnected._id == tarjeta.userId) {
+      let fila = cuerpoTabla.insertRow();
 
-const remove1 = document.getElementById("remove-1");
-const remove2 = document.getElementById("remove-2");
-const remove3 = document.getElementById("remove-3");
-const remove4 = document.getElementById("remove-4");
+      if (tarjeta.proveedor == "Visa") {
+        proveedor = "https://img.icons8.com/color/48/000000/visa.png";
+      } else if (tarjeta.proveedor == "MasterCard") {
+        proveedor =
+          "https://img.icons8.com/color/48/000000/mastercard-logo.png";
+      }
 
-remover1 = (e) => {
-  e.preventDefault();
+      fila.insertCell().innerHTML = `<img src="${proveedor}">
+    `;
+      fila.insertCell().textContent = tarjeta.nombreTarjeta;
+      fila.insertCell().textContent = tarjeta.numeroTarjeta;
+      fila.insertCell().textContent = tarjeta.fechaExp;
+      fila.insertCell().innerHTML = `<i class="fa-solid fa-trash-can delete" id="${tarjeta._id}"></i>`;
+    }
+  });
 
-  if (tarjeta1.id == "tarjeta-1") {
-    tarjeta1.style.display = "none";
+  deleteIcons = document.querySelectorAll(".delete");
+  for (const icon of deleteIcons) {
+    icon.addEventListener("click", eliminarTarjeta);
   }
 };
 
-remover2 = (e) => {
+inicializarListas();
+
+/*delete cards*/
+const eliminarTarjeta = (e) => {
   e.preventDefault();
-
-  if (tarjeta2.id == "tarjeta-2") {
-    tarjeta2.style.display = "none";
-  }
+  eliminarDatos(`/eliminar-metodo-pago/${e.target.id}`);
+  Swal.fire({
+    icon: "success",
+    title: "Método de pago eliminado satisfactoriamente",
+    text: "Puedes continuar comprando",
+  }).then(() => {
+    inicializarListas();
+  });
 };
-
-remover3 = (e) => {
-  e.preventDefault();
-
-  if (tarjeta3.id == "tarjeta-3") {
-    tarjeta3.style.display = "none";
-  }
-};
-
-remover4 = (e) => {
-  e.preventDefault();
-  if (tarjeta4.id == "tarjeta-4") {
-    tarjeta4.style.display = "none";
-  }
-};
-
-remove1.addEventListener("click", remover1);
-remove2.addEventListener("click", remover2);
-remove3.addEventListener("click", remover3);
-remove4.addEventListener("click", remover4);
 
 /*perfil and listas*/
 const perfil = document.getElementById("slt-profile");
@@ -118,4 +118,10 @@ footerProfile.forEach((item) => {
   item.addEventListener("click", () => {
     noAcceso(item);
   });
+});
+
+/*go to add payment method*/
+document.getElementById("btn-add").addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.href = "agregar-metodo-pago.html";
 });

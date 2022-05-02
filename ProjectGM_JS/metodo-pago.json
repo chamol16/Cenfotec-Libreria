@@ -1,0 +1,50 @@
+ [
+     {
+    "proveedor": "Visa",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 123456123,
+    "fechaExp":"01/25",
+    "cvvCode":"999",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+},
+{
+    "proveedor": "MasterCard",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 456123456,
+    "fechaExp":"02/28",
+    "cvvCode":"188",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+},
+{
+    "proveedor": "MasterCard",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 456564789,
+    "fechaExp":"02/28",
+    "cvvCode":"188",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+},
+{
+    "proveedor": "MasterCard",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 723187892,
+    "fechaExp":"02/28",
+    "cvvCode":"188",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+},
+{
+    "proveedor": "MasterCard",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 315234561,
+    "fechaExp":"02/28",
+    "cvvCode":"188",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+},
+{
+    "proveedor": "MasterCard",
+    "nombreTarjeta": "Fernando Sancho",
+    "numeroTarjeta": 698874452,
+    "fechaExp":"02/28",
+    "cvvCode":"188",
+    "userId":"626d7fba1e91ae7f3229dc8b"
+}
+ ]

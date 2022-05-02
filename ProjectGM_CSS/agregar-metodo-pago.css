@@ -16,7 +16,7 @@ h1 {
 
 body {
   width: auto;
-  background: #fffcf2;
+  background: #fff;
   color: #252422;
 }
 
@@ -26,7 +26,6 @@ h1 {
   color: #ea784c;
   width: 50%;
 }
-
 
 .container {
   display: flex;
@@ -41,10 +40,8 @@ h1 {
   height: 450px;
 }
 
-
-label{
+label {
   width: 275px;
-
 }
 
 .mt-3 {
@@ -100,4 +97,30 @@ span.price {
 /*error inputs*/
 .field-error {
   border: 2px solid #eb5e28;
+}
+
+input[type="radio"] {
+  height: 0.8em;
+  margin-bottom: 30px;
+}
+
+.icon-container {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.radio-container {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-container {
+  height: 200px;
 }

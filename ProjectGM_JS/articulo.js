@@ -68,7 +68,7 @@ const cantidad = document.getElementById("input-cantidad");
 addToCart = () => {
   if (userConnected) {
     let error = false;
-    if (cantidad.value == 0 || cantidad.value == "") {
+    if (cantidad.value <= 0 || cantidad.value == "") {
       error = true;
       cantidad.classList.add("field-error");
     } else {
@@ -87,6 +87,7 @@ addToCart = () => {
         title: "Artículo añadido al carrito",
         text: "Ingresando al carrito de compras",
       }).then(() => {
+        localStorage.setItem("quantity", cantidad.value);
         window.location.href = "carrito.html";
       });
     }
