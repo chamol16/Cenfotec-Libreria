@@ -18,26 +18,32 @@ inicioElementoA.addEventListener("click", logOut);
 //llenar valores del carrito
 const cantidad = document.getElementById("book-quantity");
 cantidad.value = quantitySelected;
-let total = 0;
 let today = new Date().toISOString().slice(0, 10);
-
+let total = 0;
 document.getElementById("book-photo").setAttribute("src", bookSelected.foto);
 document.getElementById("book-name").textContent = bookSelected.nombre;
 document.getElementById("book-price").value = bookSelected.precio;
 document.getElementById("total-pagar").textContent = `Total a pagar: ¢${
   bookSelected.precio * cantidad.value
 }`;
+
+//funcion total
 cantidad.addEventListener("change", () => {
   total = bookSelected.precio * cantidad.value;
   document.getElementById(
     "total-pagar"
   ).textContent = `Total a pagar: ¢${total}`;
+  // console.log(`total: ${total}`);
 });
+// console.log(`total: ${total}`);
 
 //llenar selects con DB
 let listaMetodosPago = [];
 let listaPuntosRetiro = [];
 let listaSociosComerciales = [];
+const selectMetodoPago = document.getElementById("slt-metodo-pago");
+const selectDireccionEnvio = document.getElementById("slt-direccion-envio");
+let domicilio = "";
 
 const inicializarListas = async () => {
   listaMetodosPago = await obtenerDatos("/obtener-metodos-pago");
@@ -47,16 +53,27 @@ const inicializarListas = async () => {
 };
 
 const llenarSelects = () => {
-  const selectMetodoPago = document.getElementById("slt-metodo-pago");
-  const selectDireccionEnvio = document.getElementById("slt-direccion-envio");
-
+  //metodo pago
   listaMetodosPago.forEach((metodo) => {
     if (userConnected._id == metodo.userId) {
       selectMetodoPago.options.add(
         new Option(`${metodo.proveedor}: ${metodo.numeroTarjeta}`)
       );
+
+      selectMetodoPago.addEventListener("change", (e) => {
+        e.preventDefault();
+        if (
+          selectMetodoPago.value ==
+          `${metodo.proveedor}: ${metodo.numeroTarjeta}`
+        ) {
+          selectMetodoPago.id = metodo._id;
+          //  console.log(selectMetodoPago.id);
+        }
+      });
     }
   });
+
+  //direccion
   listaPuntosRetiro.forEach((punto) => {
     listaSociosComerciales.forEach((socio) => {
       if (socio._id == punto.socioId) {
@@ -65,6 +82,20 @@ const llenarSelects = () => {
             `${socio.nombre}: ${punto.provincia}, ${punto.canton}, ${punto.distrito}`
           )
         );
+        selectDireccionEnvio.addEventListener("change", (e) => {
+          e.preventDefault();
+          if (
+            selectDireccionEnvio.value ==
+            `${socio.nombre}: ${punto.provincia}, ${punto.canton}, ${punto.distrito}`
+          ) {
+            selectDireccionEnvio.id = punto._id;
+            domicilio = "";
+            //   console.log(selectDireccionEnvio.id);
+          } else if (selectDireccionEnvio.value == 0) {
+            domicilio = `${userConnected.provincia}, ${userConnected.canton}, ${userConnected.distrito}, ${userConnected.direccion}`;
+            selectDireccionEnvio.id = "";
+          }
+        });
       }
     });
   });
@@ -96,14 +127,19 @@ const validar = () => {
   //validate quantity
   if (cantidad.value <= 0 || cantidad.value == "") {
     error = true;
+  } else if (
+    selectDireccionEnvio.id == "slt-direccion-envio" ||
+    selectMetodoPago.id == "slt-metodo-pago"
+  ) {
+    error = true;
   }
 
   //final validation
   if (error) {
     Swal.fire({
       icon: "warning",
-      title: "Libro no registrado",
-      text: "Debes indicar una cantidad correcta",
+      title: "Pedido no realizado",
+      text: "Debes indicar datos correctos",
     });
   } else {
     Swal.fire({
@@ -121,12 +157,15 @@ const validar = () => {
               libroCantidad: cantidad.value,
             },
           ],
+          metodoPagoId: selectMetodoPago.id,
+          direccionDomiciliar: domicilio,
+          puntoRetiroId: selectDireccionEnvio.id,
           userId: userConnected._id,
         };
         registrarDatos(pedido, "/registrar-pedido");
       })
       .then(() => {
-        window.location.href = "resumen-compra.html";
+        window.location.href = "confirmacion-compra.html";
       });
   }
 };
