@@ -53,22 +53,20 @@
 
     <!--content-->
     <section class="info-compra">
-        <div id="compra-container">
+        <div class="compra-container">
             <div class="title-confirm">
-                <h1 class="negrita"> Gracias, su compra se ha realizado con éxito</h1>
+                <h1 id="thanks" class="negrita"></h1>
                 <i class="fa-solid fa-circle-check"></i>
             </div>
-            <div>
-                <h3>Hemos enviado la factura a tu correo electrónico.</h3>
+            <div class="title-confirm">
+                <h3 id="factura"></h3>
             </div>
-
-            <div class="info-pedido">
-                <p>Número de pedido: <span class="negrita"> # 125-110-422</span></p>
-                <p>Fecha de compra: <span class="negrita"> 11/04/2022</span></p>
-                <p>Monto Pagado: <span class="negrita"> ¢ 19.500</span></p>
-            </div>
-
+            <p id="tipo-entrega"></p>
+            <p id="order-address"></p>
+            <p id="order-date"></p>
+            <p id="order-price"></p>
         </div>
+
         <div class="btn-container">
             <button type="button" class="btn" id="btn-continuar">Continuar</button>
         </div>
@@ -100,6 +98,11 @@
         </div>
     </footer>
 
+
+    <!--axios-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--script confirmation js-->
     <script src="/ProjectGM_JS/confirmacion-compra.js"></script>
 

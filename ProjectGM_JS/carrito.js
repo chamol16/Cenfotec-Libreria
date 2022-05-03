@@ -19,7 +19,7 @@ inicioElementoA.addEventListener("click", logOut);
 const cantidad = document.getElementById("book-quantity");
 cantidad.value = quantitySelected;
 let today = new Date().toISOString().slice(0, 10);
-let total = 0;
+let total = bookSelected.precio * cantidad.value;
 document.getElementById("book-photo").setAttribute("src", bookSelected.foto);
 document.getElementById("book-name").textContent = bookSelected.nombre;
 document.getElementById("book-price").value = bookSelected.precio;
@@ -33,9 +33,7 @@ cantidad.addEventListener("change", () => {
   document.getElementById(
     "total-pagar"
   ).textContent = `Total a pagar: ¢${total}`;
-  // console.log(`total: ${total}`);
 });
-// console.log(`total: ${total}`);
 
 //llenar selects con DB
 let listaMetodosPago = [];
@@ -162,6 +160,7 @@ const validar = () => {
           puntoRetiroId: selectDireccionEnvio.id,
           userId: userConnected._id,
         };
+        localStorage.setItem("orderBought", JSON.stringify(pedido));
         registrarDatos(pedido, "/registrar-pedido");
       })
       .then(() => {
