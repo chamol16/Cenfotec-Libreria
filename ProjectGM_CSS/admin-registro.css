@@ -132,7 +132,6 @@ h1 {
 }
 
 /*awards*/
-
 .award-container {
   display: flex;
   flex-direction: column;
@@ -149,6 +148,8 @@ h1 {
   width: 100%;
   background: #ea784c;
   color: #fff;
+  bottom: 0;
+  position: absolute;
 }
 
 .footer > div > a {
@@ -156,6 +157,6 @@ h1 {
   color: #fffcf2;
 }
 
-.label-small{
+.label-small {
   width: 300px;
 }
