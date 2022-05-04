@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <!--nav-->
     <nav class="nav">
         <a class="brand-container" href="/ProjectGM_HTML/admin-profile.html">
@@ -43,8 +42,10 @@
             <table class="contentTable" id="tbl-orders">
                 <thead>
                     <tr>
-                        <th>Fecha de realización</th>
+                        <th>Correo del cliente</th>
+                        <th>Libro Fan</th>
                         <th>Id pedido</th>
+                        <th>Fecha de realización</th>
                         <th>Precio </th>
                         <th>Total de ventas </th>
                     </tr>
@@ -54,7 +55,7 @@
             </table>
         </div>
         <div class="btn-container">
-           <!--  <button class="btn btn-size" id="btn-register">Registrar</button> -->
+            <!--  <button class="btn btn-size" id="btn-register">Registrar</button> -->
             <button class="btn btn-size" id="btn-cancel">Cancelar</button>
         </div>
     </section>
@@ -65,10 +66,12 @@
             <a href="/ProjectGM_HTML/admin-profile.html">Growthminate® 2022</a>
         </div>
     </footer>
-    <!--DB for admin logged-->
-    <script src="/ProjectGM_JS/pedidos-DB.js"></script>
-    <!--script sweet Alert-->
+
+    <!--axios and sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--servicio general-->
+    <script src="/ProjectGM_JS/servicio-general.js"></script>
     <!--js validation-->
     <script src="/ProjectGM_JS/admin-reporte-total-ventas.js"></script>
 

@@ -13,57 +13,33 @@ inicioElementoA.addEventListener("click", logOut);
 
 /*render data */
 const cuerpoTabla = document.querySelector("#tbl-orders tbody");
-let libro1 = 0,
-  libro2 = 0;
+let listaPedidos = [];
+let listaLibros = [];
 
-cuerpoTabla.innerHTML = "";
-
-/*top 10 */
-let fila = cuerpoTabla.insertRow();
-let fila2 = cuerpoTabla.insertRow();
-
-listaPedidos.forEach((pedido, idx, array) => {
-  pedido.books.forEach((libro, index, array) => {
-    /*    console.log(
-      `Pedido:${pedido.id}, libro:${libro.id}, cantidad:${libro.quantity}`
-    ); */
-    if (libro.id == 1) {
-      libro1 += libro.quantity;
-    } else if (libro.id == 2) {
-      libro2 += libro.quantity;
-    }
-  });
-  fila.id = idx + 1;
-  fila.className = "row";
-});
-fila.insertCell().textContent = 1;
-fila.insertCell().textContent = libro1;
-fila2.insertCell().textContent = 2;
-fila2.insertCell().textContent = libro2;
-
-//click events
-const rows = document.querySelectorAll(".row");
-
-seleccionarPedido = (e) => {
-  e.preventDefault();
-  let rowId = e.target.parentElement.id;
-  let pedidoSeleccionado = false;
-
-  listaPedidos.forEach((pedido) => {
-    if (rowId == libro.id) {
-      pedidoSeleccionado = true;
-      localStorage.setItem("orderClicked", JSON.stringify(pedido));
-    }
-  });
-
-  if (pedidoSeleccionado) {
-    window.location.href = "admin-pedido-visualizar.html";
-  }
+const inicializarListas = async () => {
+  listaPedidos = await obtenerDatos("/obtener-pedidos");
+  listaLibros = await obtenerDatos("/obtener-libros");
+  mostrarDatos();
 };
 
-for (const row of rows) {
-  row.addEventListener("click", seleccionarPedido);
-}
+//render table
+const mostrarDatos = () => {
+  cuerpoTabla.innerHTML = "";
+  listaPedidos.forEach((pedido) => {
+    pedido.libros.forEach((libro) => {
+      listaLibros.forEach((libroDB) => {
+        if (libro.libroId == libroDB._id) {
+          let fila = cuerpoTabla.insertRow();
+          fila.insertCell().textContent = pedido._id;
+          fila.insertCell().textContent = libroDB.nombre;
+          fila.insertCell().textContent = libro.libroCantidad;
+        }
+      });
+    });
+  });
+};
+
+inicializarListas();
 
 //boton atras
 document.getElementById("btn-cancel").addEventListener("click", () => {

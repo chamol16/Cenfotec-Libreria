@@ -14,42 +14,39 @@ inicioElementoA.addEventListener("click", logOut);
 /*render data */
 const cuerpoTabla = document.querySelector("#tbl-orders tbody");
 let totalVentas = 0;
+let listaPedidos = [];
+let listaUsuarios = [];
 
-cuerpoTabla.innerHTML = "";
-listaPedidos.forEach((pedido, idx) => {
-  let fila = cuerpoTabla.insertRow();
-  totalVentas += pedido.price;
-  fila.id = idx + 1;
-  fila.className = "row";
-  fila.insertCell().textContent = pedido.date;
-  fila.insertCell().textContent = pedido.id;
-  fila.insertCell().textContent = `¢${pedido.price}`;
-  fila.insertCell().textContent = `¢${totalVentas}`;
-});
-
-//click events
-const rows = document.querySelectorAll(".row");
-
-seleccionarPedido = (e) => {
-  e.preventDefault();
-  let rowId = e.target.parentElement.id;
-  let pedidoSeleccionado = false;
-
-  listaPedidos.forEach((pedido) => {
-    if (rowId == pedido.id) {
-      pedidoSeleccionado = true;
-      localStorage.setItem("orderClicked", JSON.stringify(pedido));
-    }
-  });
-
-  if (pedidoSeleccionado) {
-    window.location.href = "admin-pedido.html";
-  }
+const inicializarListas = async () => {
+  listaPedidos = await obtenerDatos("/obtener-pedidos");
+  listaUsuarios = await obtenerDatos("/obtener-usuarios");
+  mostrarDatos();
 };
 
-for (const row of rows) {
-  row.addEventListener("click", seleccionarPedido);
-}
+const mostrarDatos = () => {
+  cuerpoTabla.innerHTML = "";
+  listaPedidos.forEach((pedido) => {
+    listaUsuarios.forEach((usuario) => {
+      if (pedido.userId == usuario._id) {
+        let fila = cuerpoTabla.insertRow();
+        totalVentas += pedido.precio;
+        fila.insertCell().textContent = usuario.correo;
+
+        if (usuario.libroFan) {
+          fila.insertCell().textContent = `Sí`;
+        } else {
+          fila.insertCell().textContent = `No`;
+        }
+        fila.insertCell().textContent = pedido._id;
+        fila.insertCell().textContent = pedido.fechaRealizacion;
+        fila.insertCell().textContent = `¢${pedido.precio}`;
+        fila.insertCell().textContent = `¢${totalVentas}`;
+      }
+    });
+  });
+};
+
+inicializarListas();
 
 //boton atras
 document.getElementById("btn-cancel").addEventListener("click", () => {

@@ -13,25 +13,40 @@ inicioElementoA.addEventListener("click", logOut);
 
 /*render data */
 const cuerpoTabla = document.querySelector("#tbl-orders tbody");
+let listaPedidos = [];
+let listaUsuarios = [];
 let totalVentas = 0;
-cuerpoTabla.innerHTML = "";
-listaPedidos.forEach((pedido, idx) => {
-  listaUsuarios.forEach((usuario) => {
-    if (pedido.userId == usuario.id && usuario.libroFan) {
-      let fila = cuerpoTabla.insertRow();
-      totalVentas += pedido.price;
-      fila.id = idx + 1;
-      fila.className = "row";
-      fila.insertCell().textContent = pedido.date;
-      fila.insertCell().textContent = pedido.id;
-      fila.insertCell().textContent = `¢${pedido.price}`;
-      fila.insertCell().textContent = `¢${totalVentas}`;
-    }
+
+const inicialiarListas = async () => {
+  listaPedidos = await obtenerDatos("/obtener-pedidos");
+  listaUsuarios = await obtenerDatos("/obtener-usuarios");
+  mostrarTabla();
+};
+
+const mostrarTabla = () => {
+  cuerpoTabla.innerHTML = "";
+  listaPedidos.forEach((pedido, idx) => {
+    listaUsuarios.forEach((usuario) => {
+      if (pedido.userId == usuario._id && usuario.libroFan) {
+        let fila = cuerpoTabla.insertRow();
+        totalVentas += pedido.precio;
+        // fila.id = idx + 1;
+        // fila.className = "row";
+        fila.insertCell().textContent = usuario.correo;
+        fila.insertCell().textContent = pedido._id;
+        fila.insertCell().textContent = pedido.fechaRealizacion;
+        fila.insertCell().textContent = `¢${pedido.precio}`;
+        fila.insertCell().textContent = `¢${totalVentas}`;
+      }
+    });
   });
-});
+};
+
+inicialiarListas();
 
 //click events
-const rows = document.querySelectorAll(".row");
+
+/* const rows = document.querySelectorAll(".row");
 
 seleccionarPedido = (e) => {
   e.preventDefault();
@@ -52,7 +67,7 @@ seleccionarPedido = (e) => {
 
 for (const row of rows) {
   row.addEventListener("click", seleccionarPedido);
-}
+} */
 
 //boton atras
 document.getElementById("btn-cancel").addEventListener("click", () => {
