@@ -50,8 +50,8 @@ const mostrarListas = () => {
 
   //generoslitearios
   listaGeneros.forEach((genero) => {
-    selectGeneros.options.add(new Option(genero.name));
-    if (bookSelected.generoLiterario == genero.name) {
+    selectGeneros.options.add(new Option(genero.nombre));
+    if (bookSelected.generoLiterario == genero.nombre) {
       //   selectGeneros[genero.name].selected = true;
     }
   });

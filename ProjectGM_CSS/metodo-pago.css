@@ -8,5 +8,9 @@
 
 .footer {
   bottom: 0;
-  position: fixed;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 50px;
 }
